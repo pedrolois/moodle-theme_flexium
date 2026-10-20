@@ -1,0 +1,8 @@
+import{useEffect as g,useState as c}from"react";import{saveCatalogLayout as y}from"./repository";/**
+ * State of the catalogue editor (edit mode, site administrators): the draft filter layout, card
+ * settings, page options and features, compared with the saved ones, and saving them.
+ *
+ * @module     theme_flexium/catalog/useCatalogEditor
+ * @copyright  2026 Pedro Lois {@link https://github.com/pedrolois}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */const w=(e,u)=>{if(!e)return;const o=s=>{s.preventDefault()},a=s=>{s.target?.closest('.editmode-switch-form, input[name="setmode"]')&&(window.confirm(u)?window.removeEventListener("beforeunload",o):(s.preventDefault(),s.stopImmediatePropagation()))};return window.addEventListener("beforeunload",o),document.addEventListener("click",a,!0),()=>{window.removeEventListener("beforeunload",o),document.removeEventListener("click",a,!0)}};function E(e,u){const o=e?{layout:e.layout,card:e.card,options:e.options,features:e.features}:null,[a,s]=c(o),[t,r]=c(o),[p,i]=c("idle"),d=JSON.stringify(a)!==JSON.stringify(t);return g(()=>w(d,e?.strings.editor_leaveunsaved??""),[d,e]),{draft:t,dirty:d,status:p,setLayout:n=>t&&r({...t,layout:n}),setCard:n=>t&&r({...t,card:n}),setOptions:n=>t&&r({...t,options:n}),setFeature:(n,l)=>t&&r({...t,features:{...t.features,[n]:l}}),save:()=>{t&&(i("saving"),y(t.layout,t.card,t.options,t.features).then(([n,l,v,m])=>{const f={layout:n,card:l,options:v,features:m};return s(f),r(f),i("saved"),u(),f}).catch(()=>i("error")))},reset:()=>{r(a),i("idle")}}}export{E as default,w as warnOnLeave};

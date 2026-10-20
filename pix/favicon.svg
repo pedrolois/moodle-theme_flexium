@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Flexium favicon: the default course image (pix/course/default1.svg) as a square, its graduation cap over an
+       open book in solid white with thicker lines so it stays readable at 16-32 px. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1668e3"/>
+      <stop offset="1" stop-color="#7a3fd1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g transform="translate(9.5 10.5) scale(0.094)" fill="none" stroke="#ffffff" stroke-width="34"
+    stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 230 Q 120 190 240 230 Q 360 190 480 230 L480 420 Q 360 380 240 420 Q 120 380 0 420 Z"
+      fill="#ffffff" fill-opacity="0.18"/>
+    <path d="M240 230 L240 420"/>
+    <path d="M240 20 L470 110 L240 200 L10 110 Z" fill="#ffffff" fill-opacity="0.35"/>
+    <path d="M110 150 L110 240 Q 240 300 370 240 L370 150"/>
+    <path d="M470 110 L470 200"/>
+    <circle cx="470" cy="222" r="26" fill="#ffffff" stroke="none"/>
+  </g>
+</svg>

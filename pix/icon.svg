@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Same frame as the other plugins: blue on the left, purple on the right. -->
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1668e3"/>
+      <stop offset="1" stop-color="#7a3fd1"/>
+    </linearGradient>
+    <linearGradient id="blueHalf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2167e0"/>
+      <stop offset="1" stop-color="#1747b8"/>
+    </linearGradient>
+    <linearGradient id="purpleHalf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f44d6"/>
+      <stop offset="1" stop-color="#5a2fb8"/>
+    </linearGradient>
+    <linearGradient id="paint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff9f1a"/>
+      <stop offset="0.5" stop-color="#ff5d8f"/>
+      <stop offset="1" stop-color="#2ec27e"/>
+    </linearGradient>
+    <clipPath id="tileclip">
+      <rect x="14" y="14" width="484" height="484" rx="48"/>
+    </clipPath>
+    <filter id="tagshadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#2a1a6e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Tile: white, thick blue-to-purple frame -->
+  <rect x="14" y="14" width="484" height="484" rx="48" fill="#ffffff"/>
+  <!-- Bottom band with the author name -->
+  <rect x="14" y="420" width="484" height="78" fill="url(#frame)" clip-path="url(#tileclip)"/>
+  <rect x="14" y="14" width="484" height="484" rx="48" fill="none" stroke="url(#frame)" stroke-width="14"/>
+  <text x="256" y="469" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700"
+    letter-spacing="0.6" fill="#ffffff">PEDRO LUIS GARCIA LEIVA</text>
+
+  <!-- Shield: blue rim, white stripe, body split blue | purple -->
+  <g transform="translate(256 222) scale(1.06) translate(-256 -230)">
+    <path d="M256 56 L404 100 Q412 103 412 112 L412 230 Q412 334 256 404 Q100 334 100 230 L100 112 Q100 103 108 100 Z"
+      fill="#1b4fc4"/>
+    <path d="M256 68 L400 110 L400 230 Q400 326 256 390 Q112 326 112 230 L112 110 Z" fill="#ffffff"/>
+    <path d="M256 80 L388 119 L388 230 Q388 318 256 376 Z" fill="url(#purpleHalf)"/>
+    <path d="M256 80 L124 119 L124 230 Q124 318 256 376 Z" fill="url(#blueHalf)"/>
+
+    <!-- The catalogue: a grid of course cards (image + two lines of text) -->
+    <g>
+      <g transform="translate(160 112)">
+        <rect width="78" height="64" rx="8" fill="#ffffff"/>
+        <rect x="6" y="6" width="66" height="28" rx="5" fill="#8fb4ff"/>
+        <rect x="6" y="40" width="50" height="6" rx="3" fill="#1b4fc4"/>
+        <rect x="6" y="51" width="34" height="6" rx="3" fill="#b8c6e8"/>
+      </g>
+      <g transform="translate(248 112)">
+        <rect width="78" height="64" rx="8" fill="#ffffff"/>
+        <rect x="6" y="6" width="66" height="28" rx="5" fill="#c3a6ff"/>
+        <rect x="6" y="40" width="50" height="6" rx="3" fill="#5a2fb8"/>
+        <rect x="6" y="51" width="34" height="6" rx="3" fill="#d4c6ee"/>
+      </g>
+      <g transform="translate(160 184)" opacity="0.85">
+        <rect width="78" height="64" rx="8" fill="#ffffff"/>
+        <rect x="6" y="6" width="66" height="28" rx="5" fill="#ffd08a"/>
+        <rect x="6" y="40" width="50" height="6" rx="3" fill="#1b4fc4"/>
+        <rect x="6" y="51" width="34" height="6" rx="3" fill="#b8c6e8"/>
+      </g>
+      <g transform="translate(248 184)" opacity="0.85">
+        <rect width="78" height="64" rx="8" fill="#ffffff"/>
+        <rect x="6" y="6" width="66" height="28" rx="5" fill="#9fe3c2"/>
+        <rect x="6" y="40" width="50" height="6" rx="3" fill="#5a2fb8"/>
+        <rect x="6" y="51" width="34" height="6" rx="3" fill="#d4c6ee"/>
+      </g>
+    </g>
+
+    <!-- The brush painting a stroke across the catalogue -->
+    <path d="M176 236 Q228 206 268 222 Q302 236 336 210" fill="none" stroke="url(#paint)" stroke-width="13"
+      stroke-linecap="round"/>
+    <g transform="translate(-10 10) rotate(-38 352 176)">
+      <!-- Handle -->
+      <rect x="342" y="92" width="20" height="78" rx="10" fill="#ffffff" stroke="#1b4fc4" stroke-width="4"/>
+      <!-- Ferrule -->
+      <rect x="338" y="166" width="28" height="18" rx="3" fill="#c9d3ea" stroke="#1b4fc4" stroke-width="4"/>
+      <!-- Bristles, wet with paint -->
+      <path d="M340 184 L364 184 Q368 206 352 222 Q336 206 340 184 Z" fill="#2ec27e" stroke="#1b4fc4" stroke-width="4"
+        stroke-linejoin="round"/>
+    </g>
+
+    <!-- Name inside the shield, with the small line under it -->
+    <text x="256" y="292" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700"
+      letter-spacing="0.5" fill="#ffffff">FLEXIUM</text>
+    <text x="256" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700"
+      letter-spacing="2" fill="#ffffff" fill-opacity="0.95">MOODLE THEME</text>
+    <line x1="226" y1="330" x2="286" y2="330" stroke="#ffffff" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Filters badge on the left rim (the catalogue filters, arranged by drag and drop) -->
+  <g filter="url(#tagshadow)">
+    <circle cx="98" cy="268" r="36" fill="#ffffff" stroke="url(#frame)" stroke-width="4"/>
+    <path d="M78 254 H118 L103 272 V286 L93 280 V272 Z" fill="none" stroke="#1b4fc4" stroke-width="5"
+      stroke-linejoin="round"/>
+    <circle cx="120" cy="251" r="8" fill="#ff9f1a" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- React sticker on the rim of the shield, top right -->
+  <g transform="rotate(-10 412 84)" filter="url(#tagshadow)">
+    <rect x="348" y="62" width="128" height="44" rx="22" fill="#ffffff" stroke="url(#frame)" stroke-width="4"/>
+    <g transform="translate(374 84)" fill="none" stroke="#1fa2e0" stroke-width="2.6">
+      <ellipse rx="14" ry="5.5"/>
+      <ellipse rx="14" ry="5.5" transform="rotate(60)"/>
+      <ellipse rx="14" ry="5.5" transform="rotate(-60)"/>
+      <circle r="2.8" fill="#1fa2e0" stroke="none"/>
+    </g>
+    <text x="428" y="93" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800"
+      fill="#5a2fb8">REACT</text>
+  </g>
+</svg>
