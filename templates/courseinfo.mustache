@@ -1,0 +1,72 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_flexium/courseinfo
+
+    Course information of the enrolment page (users not enrolled), as on UN e-learning portals: the course name
+    as a label, the course image full width, then the summary beside a column of facts (icon, label, value).
+    The quick view of the catalogue (catalog/QuickView.tsx) uses the same layout and classes.
+
+    Context variables required for this template:
+    * fullname - Formatted course name
+    * image - Course image URL
+    * summary - Formatted summary (HTML)
+    * hassummary - Whether the course has a summary or sections
+    * sections - List of {label, value (HTML)}: long custom fields (text areas) shown under the summary
+    * hasfacts - Whether there are facts
+    * facts - List of {icon, label, value (HTML)}: dates, teachers and custom fields visible to everyone
+
+    Example context (json):
+    {
+        "fullname": "Introduction to data analysis",
+        "image": "https://moodle.example/theme/flexium/pix/course/default1.svg",
+        "summary": "<p>Learn the basics.</p>",
+        "hassummary": true,
+        "sections": [{"label": "Learning outcomes", "value": "<p>Read and present data.</p>"}],
+        "hasfacts": true,
+        "facts": [
+            {"icon": "fa-regular fa-calendar-days", "label": "When", "value": "1 November 2026 – 1 March 2027"},
+            {"icon": "fa-solid fa-globe", "label": "Language", "value": "English"}
+        ]
+    }
+}}
+<div class="flexium-courseinfo">
+    <p class="flexium-courseinfo__name">{{{fullname}}}</p>
+    <div class="flexium-courseinfo__image" style="background-image: url('{{image}}');"
+        role="img" aria-label="{{fullname}}"></div>
+    <div class="flexium-courseinfo__body{{^hassummary}} flexium-courseinfo__body--nosummary{{/hassummary}}">
+        {{#hassummary}}
+        <div class="flexium-courseinfo__summary">
+            {{{summary}}}
+            {{#sections}}
+            <h3 class="flexium-courseinfo__sectiontitle">{{label}}</h3>
+            <div class="flexium-courseinfo__section">{{{value}}}</div>
+            {{/sections}}
+        </div>
+        {{/hassummary}}
+        {{#hasfacts}}
+        <ul class="flexium-courseinfo__facts">
+            {{#facts}}
+            <li class="flexium-courseinfo__fact">
+                <i class="{{icon}} flexium-courseinfo__facticon" aria-hidden="true"></i>
+                <span><strong>{{label}}</strong> {{{value}}}</span>
+            </li>
+            {{/facts}}
+        </ul>
+        {{/hasfacts}}
+    </div>
+</div>

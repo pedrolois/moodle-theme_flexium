@@ -1,0 +1,78 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_flexium/breadcrumbs
+
+    Breadcrumbs as configured in the theme settings (Breadcrumbs tab): optional home item, items shortened to a
+    maximum length (full text as tooltip), middle items collapsed into an expandable "…", separator, style and
+    behaviour on small screens.
+
+    Context variables required for this template:
+    * items - List of {text, title, url, hidden, islast, isparent, ishome, homeicon, hometext} or {ellipsis, collapsed}
+    * separator - Separator character
+    * style - plain, pills or boxed
+    * mobile - full, parent or hidden
+
+    Example context (json):
+    {
+        "separator": "›",
+        "style": "plain",
+        "mobile": "parent",
+        "items": [
+            {"text": "Home", "title": "Home", "url": "#", "ishome": true, "homeicon": true, "hometext": false},
+            {"ellipsis": true, "collapsed": [{"text": "Courses", "title": "Courses", "url": "#"}]},
+            {"text": "Data analysis", "title": "Data analysis", "url": "#", "isparent": true},
+            {"text": "Quiz 1", "title": "Quiz 1", "url": "", "islast": true}
+        ]
+    }
+}}
+<nav aria-label="{{#str}}breadcrumb, access{{/str}}"
+    class="flexium-breadcrumbs flexium-breadcrumbs--{{style}} flexium-breadcrumbs--mobile-{{mobile}}">
+    <ol class="breadcrumb" style="--bs-breadcrumb-divider: '{{separator}}';">
+        {{#items}}
+            {{#ellipsis}}
+                <li class="breadcrumb-item flexium-breadcrumbs__ellipsis">
+                    <details>
+                        <summary aria-label="{{#str}}showmore, core{{/str}}">…</summary>
+                        <ul class="flexium-breadcrumbs__collapsed">
+                            {{#collapsed}}
+                                <li>{{#url}}<a href="{{url}}" title="{{title}}">{{text}}</a>{{/url}}{{^url}}<span title="{{title}}">{{text}}</span>{{/url}}</li>
+                            {{/collapsed}}
+                        </ul>
+                    </details>
+                </li>
+            {{/ellipsis}}
+            {{^ellipsis}}
+                <li class="breadcrumb-item{{#hidden}} dimmed_text{{/hidden}}{{#isparent}} flexium-breadcrumbs__parent{{/isparent}}{{#islast}} flexium-breadcrumbs__current{{/islast}}">
+                    {{#url}}
+                        <a href="{{url}}" {{#islast}}aria-current="page"{{/islast}} title="{{title}}">
+                            {{#ishome}}
+                                {{#homeicon}}<i class="fa fa-house" aria-hidden="true"></i>{{/homeicon}}
+                                {{#hometext}}<span class="flexium-breadcrumbs__hometext">{{text}}</span>{{/hometext}}
+                                {{^hometext}}<span class="visually-hidden">{{text}}</span>{{/hometext}}
+                            {{/ishome}}
+                            {{^ishome}}{{text}}{{/ishome}}
+                        </a>
+                    {{/url}}
+                    {{^url}}
+                        <span {{#islast}}aria-current="page"{{/islast}} title="{{title}}">{{text}}</span>
+                    {{/url}}
+                </li>
+            {{/ellipsis}}
+        {{/items}}
+    </ol>
+</nav>

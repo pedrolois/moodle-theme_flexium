@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1668e3"/>
+      <stop offset="1" stop-color="#7a3fd1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="3" fill="#ffffff" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <!-- Dots, fading to the right -->
+  <rect x="0" y="0" width="760" height="900" fill="url(#dots)"/>
+  <!-- Soft waves -->
+  <path d="M0 640 C 300 560 520 760 860 690 C 1160 630 1340 520 1600 560 L1600 900 L0 900 Z" fill="#ffffff" fill-opacity="0.10"/>
+  <path d="M0 740 C 360 660 640 860 980 790 C 1260 735 1420 660 1600 690 L1600 900 L0 900 Z" fill="#ffffff" fill-opacity="0.12"/>
+  <path d="M0 830 C 420 770 760 900 1100 860 C 1340 832 1480 800 1600 810 L1600 900 L0 900 Z" fill="#9fc2ff" fill-opacity="0.22"/>
+  <!-- Big circles -->
+  <circle cx="1390" cy="170" r="250" fill="#ffffff" fill-opacity="0.07"/>
+  <circle cx="1460" cy="120" r="140" fill="#ffffff" fill-opacity="0.08"/>
+  <circle cx="180" cy="760" r="120" fill="#9fc2ff" fill-opacity="0.12"/>
+  <!-- Graduation cap over an open book, translucent, on the right -->
+  <g transform="translate(1010 250)" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="16"
+    stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 230 Q 120 190 240 230 Q 360 190 480 230 L480 420 Q 360 380 240 420 Q 120 380 0 420 Z"
+      fill="#ffffff" fill-opacity="0.10"/>
+    <path d="M240 230 L240 420"/>
+    <path d="M240 20 L470 110 L240 200 L10 110 Z" fill="#ffffff" fill-opacity="0.16"/>
+    <path d="M110 150 L110 240 Q 240 300 370 240 L370 150"/>
+    <path d="M470 110 L470 200"/>
+    <circle cx="470" cy="215" r="14" fill="#ffffff" fill-opacity="0.55" stroke="none"/>
+  </g>
+  <!-- Small sparkles -->
+  <g fill="#ffffff" fill-opacity="0.7">
+    <path d="M980 170 Q 986 194 1010 200 Q 986 206 980 230 Q 974 206 950 200 Q 974 194 980 170 Z"/>
+    <path d="M1550 720 Q 1554 736 1570 740 Q 1554 744 1550 760 Q 1546 744 1530 740 Q 1546 736 1550 720 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,3495 @@
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+// Flexium theme styles, compiled after the Boost default preset.
+// Colours and spacing come from Bootstrap / design-system variables so brand settings and dark mode apply.
+//
+// @package   theme_flexium
+// @author    Pedro Luis Garcia Leiva
+// @copyright 2026 Pedro Lois {@link https://github.com/pedrolois}
+// @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+
+// Typography: headings font from the theme settings (runtime variable, see \theme_flexium\local\appearance).
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--flexium-headings-font, inherit);
+}
+
+// Course catalogue.
+.flexium-catalog {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 18rem minmax(0, 1fr);
+    }
+
+    // Filters in Boost's left drawer: the results take the whole content area.
+    &.flexium-catalog--indrawer {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+// Filters inside the left drawer (layout/catalog.php).
+.flexium-drawerheading {
+    padding-left: .25rem;
+}
+
+.flexium-catalog__drawerfilters {
+    padding: 0 .25rem 1rem;
+
+    .flexium-filtergroup:first-of-type {
+        border-top: 0;
+    }
+}
+
+.flexium-catalog__filtertoggle {
+    justify-self: start;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.flexium-catalog__sidebar {
+    display: none;
+    background: var(--bs-body-bg);
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    padding: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        position: sticky;
+        top: calc(#{$navbar-height} + 1rem);
+        max-height: calc(100vh - #{$navbar-height} - 2rem);
+        overflow-y: auto;
+    }
+
+    &.flexium-catalog__sidebar--open {
+        display: block;
+    }
+}
+
+.flexium-catalog__sidebarheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+
+.flexium-catalog__sidebartitle {
+    font-size: $h5-font-size;
+    margin: 0;
+}
+
+.flexium-catalog__sidebarclose {
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+// Expand all / Collapse all, above the filter groups.
+.flexium-catalog__expandall {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem;
+    margin: -.5rem 0 .25rem;
+
+    .btn {
+        padding: .125rem .25rem;
+        font-size: $font-size-sm;
+        text-decoration: none;
+    }
+}
+
+// Search.
+.flexium-search {
+    margin-bottom: 1rem;
+}
+
+.flexium-search__field {
+    position: relative;
+}
+
+.flexium-search__icon {
+    position: absolute;
+    top: 50%;
+    left: .75rem;
+    transform: translateY(-50%);
+    color: var(--bs-secondary-color);
+    pointer-events: none;
+}
+
+.flexium-search__input {
+    padding-left: 2.25rem;
+    border-radius: var(--bs-border-radius-pill);
+}
+
+// Filter groups.
+.flexium-filtergroup {
+    border-top: $border-width solid var(--bs-border-color);
+    padding: .5rem 0;
+}
+
+.flexium-filtergroup__heading {
+    margin: 0;
+    font-size: $font-size-base;
+}
+
+.flexium-filtergroup__toggle {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    padding: .375rem 0;
+    border: 0;
+    background: none;
+    color: var(--bs-body-color);
+    font-weight: $font-weight-bold;
+    text-align: start;
+
+    &:focus-visible {
+        outline: 2px solid var(--bs-primary);
+        outline-offset: 2px;
+    }
+}
+
+.flexium-filtergroup__label {
+    flex: 1;
+}
+
+.flexium-filtergroup__count {
+    min-width: 1.5rem;
+    padding: 0 .4rem;
+    border-radius: var(--bs-border-radius-pill);
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    font-size: $font-size-sm;
+    text-align: center;
+}
+
+.flexium-filtergroup__chevron {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-filtergroup__body {
+    padding: .25rem 0 .25rem .125rem;
+}
+
+.flexium-filtergroup__empty {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    margin: 0;
+}
+
+.flexium-filtergroup__more {
+    padding-left: 0;
+}
+
+.flexium-optionlist,
+.flexium-tree,
+.flexium-tree__children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flexium-tree__children {
+    padding-left: 1.25rem;
+}
+
+.flexium-tree__row {
+    display: flex;
+    align-items: flex-start;
+    gap: .25rem;
+
+    .flexium-option {
+        flex: 1;
+    }
+}
+
+.flexium-tree__toggle,
+.flexium-tree__spacer {
+    flex: 0 0 1.25rem;
+    height: 1.5rem;
+}
+
+.flexium-tree__toggle {
+    border: 0;
+    background: none;
+    padding: 0;
+    color: var(--bs-secondary-color);
+    font-size: .7rem;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-option {
+    margin-bottom: .25rem;
+}
+
+.flexium-option__label {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.flexium-option__count {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    font-variant-numeric: tabular-nums;
+}
+
+.flexium-option--empty .flexium-option__label {
+    color: var(--bs-secondary-color);
+    cursor: default;
+}
+
+// Active filters.
+.flexium-activefilters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem .75rem;
+    margin-bottom: 1rem;
+    padding: .75rem 1rem;
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-tertiary-bg);
+}
+
+.flexium-activefilters__title {
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--bs-secondary-color);
+}
+
+.flexium-activefilters__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-activefilters__clear {
+    margin-left: auto;
+    padding: 0;
+}
+
+.flexium-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    max-width: 100%;
+    padding: .2rem .25rem .2rem .75rem;
+    border: $border-width solid var(--bs-primary);
+    border-radius: var(--bs-border-radius-pill);
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-chip__prefix {
+    color: var(--bs-secondary-color);
+}
+
+.flexium-chip__label {
+    font-weight: $font-weight-bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flexium-chip__remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: var(--bs-primary);
+
+    &:hover,
+    &:focus-visible {
+        background: var(--bs-primary);
+        color: var(--bs-white);
+    }
+}
+
+// Toolbar: result count on the left, sorting on the right.
+.flexium-catalog__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.flexium-catalog__total {
+    margin: 0;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-catalog__sort {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: auto;
+
+    .form-select {
+        width: auto;
+    }
+}
+
+.flexium-catalog__sortlabel {
+    margin: 0;
+    white-space: nowrap;
+    color: var(--bs-secondary-color);
+}
+
+// Results.
+.flexium-catalog__results {
+    transition: opacity .15s ease-in-out;
+}
+
+.flexium-catalog__results--loading {
+    opacity: .55;
+}
+
+.flexium-catalog__loading,
+.flexium-catalog__empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--bs-secondary-color);
+}
+
+.flexium-catalog__emptyicon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.flexium-catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        display: flex;
+    }
+}
+
+.flexium-catalog__pagination {
+    margin-top: 1.5rem;
+}
+
+// Course card.
+.flexium-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+    box-shadow: var(--flexium-card-shadow, none);
+    transition: box-shadow .15s ease-in-out, transform .15s ease-in-out;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: $box-shadow;
+        transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-within {
+            transform: none;
+        }
+    }
+}
+
+.flexium-card__image {
+    aspect-ratio: 16 / 9;
+    background-color: var(--bs-secondary-bg);
+    background-position: center;
+    background-size: cover;
+}
+
+.flexium-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: .4rem;
+    padding: 1rem;
+}
+
+.flexium-card__category {
+    margin: 0;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-card__title {
+    margin: 0;
+    font-size: $h5-font-size;
+    line-height: 1.3;
+}
+
+.flexium-card__link {
+    color: var(--bs-body-color);
+    text-decoration: none;
+
+    // Make the whole card clickable while keeping a single link for assistive technology.
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+    }
+
+    &:focus-visible {
+        outline: none;
+
+        &::after {
+            outline: 2px solid var(--bs-primary);
+            outline-offset: -2px;
+            border-radius: var(--bs-border-radius-lg);
+        }
+    }
+}
+
+.flexium-card__summary {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.flexium-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1rem;
+    padding: .75rem 1rem;
+    border-top: $border-width solid var(--bs-border-color);
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+// Admin filter layout editor.
+.flexium-filtereditor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+.flexium-filtereditor__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-filtereditor__list {
+    min-height: 4rem;
+    margin: 0;
+    padding: .5rem;
+    border: $border-width dashed var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    list-style: none;
+}
+
+.flexium-filtereditor__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem .75rem;
+    margin-bottom: .5rem;
+    padding: .5rem .75rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+    cursor: grab;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.flexium-filtereditor__item--dragging {
+    opacity: .4;
+}
+
+.flexium-filtereditor__item--dropbefore {
+    box-shadow: 0 -3px 0 var(--bs-primary);
+}
+
+.flexium-filtereditor__item--dropafter {
+    box-shadow: 0 3px 0 var(--bs-primary);
+}
+
+.flexium-filtereditor__handle {
+    color: var(--bs-secondary-color);
+}
+
+.flexium-filtereditor__text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 10rem;
+}
+
+.flexium-filtereditor__label {
+    font-weight: $font-weight-bold;
+}
+
+.flexium-filtereditor__kind {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-filtereditor__expanded {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-size: $font-size-sm;
+    cursor: pointer;
+}
+
+.flexium-filtereditor__actions {
+    display: inline-flex;
+    gap: .25rem;
+}
+
+.flexium-filtereditor__empty {
+    padding: .75rem;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+// In-page catalogue editor (edit mode, site administrators).
+.flexium-editor {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border: 2px dashed var(--bs-primary);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-primary-bg-subtle);
+}
+
+.flexium-editor__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.flexium-editor__title {
+    margin: 0 0 .25rem;
+    font-size: $h5-font-size;
+}
+
+.flexium-editor__help {
+    max-width: 48rem;
+    margin: 0;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-editor__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.flexium-editor__status {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-editor__subtitle {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-editor__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1.5rem;
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: minmax(12rem, 1fr) 2fr 2fr;
+    }
+}
+
+.flexium-editor__listtitle {
+    margin-bottom: .5rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--bs-secondary-color);
+}
+
+// Widget lists (filters, badges, card footer).
+.flexium-filterwidgets__title {
+    margin: .25rem 0 .75rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--bs-secondary-color);
+}
+
+.flexium-widgets__list {
+    margin: 0 0 .5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-widgets__empty {
+    padding: .75rem;
+    border: 1px dashed var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-widget {
+    margin-bottom: .4rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.flexium-widget--dragging {
+    opacity: .4;
+}
+
+.flexium-widget--dropbefore {
+    box-shadow: 0 -3px 0 var(--bs-primary);
+}
+
+.flexium-widget--dropafter {
+    box-shadow: 0 3px 0 var(--bs-primary);
+}
+
+.flexium-widget__bar {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .5rem;
+}
+
+.flexium-widget__handle {
+    color: var(--bs-secondary-color);
+}
+
+.flexium-widget__label {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    overflow-wrap: anywhere;
+}
+
+.flexium-widget__kind {
+    color: var(--bs-secondary-color);
+    font-size: .75rem;
+    font-weight: normal;
+}
+
+.flexium-widget__actions {
+    display: inline-flex;
+    gap: .1rem;
+}
+
+.flexium-widget__btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: var(--bs-border-radius-sm);
+    background: none;
+    color: var(--bs-secondary-color);
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        background: var(--bs-secondary-bg);
+        color: var(--bs-body-color);
+    }
+
+    &:disabled {
+        opacity: .35;
+    }
+}
+
+.flexium-widget__btn--remove:hover:not(:disabled),
+.flexium-widget__btn--remove:focus-visible {
+    background: var(--bs-danger-bg-subtle);
+    color: var(--bs-danger);
+}
+
+.flexium-widget__extra {
+    padding: 0 .5rem .4rem 2rem;
+    font-size: $font-size-sm;
+}
+
+.flexium-widget__check {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.flexium-widgets__add {
+    display: flex;
+    gap: .4rem;
+}
+
+// Results footer: "Showing x–y of z", pagination and courses per page, centred.
+.flexium-catalogfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--bs-border-color);
+    text-align: center;
+}
+
+.flexium-catalogfooter__showing {
+    margin: 0;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-catalogfooter__pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.flexium-catalogfooter__perpage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem 1rem;
+    font-size: $font-size-sm;
+
+    label {
+        margin: 0;
+        color: var(--bs-secondary-color);
+    }
+
+    .form-select {
+        width: auto;
+    }
+}
+
+.flexium-catalogfooter__perpage--editing {
+    padding: .5rem 1rem;
+    border: 2px dashed var(--bs-primary);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-primary-bg-subtle);
+}
+
+// Optional catalogue features (see \theme_flexium\local\catalog\features).
+
+// Filter group header with its clear button, and the search box of long groups.
+.flexium-filtergroup__header {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    .flexium-filtergroup__heading {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+.flexium-filtergroup__clear {
+    padding: .125rem .375rem;
+    border: 0;
+    border-radius: var(--bs-border-radius);
+    background: none;
+    color: var(--bs-secondary-color);
+
+    &:hover,
+    &:focus-visible {
+        background: var(--bs-tertiary-bg);
+        color: var(--bs-danger);
+    }
+}
+
+.flexium-filtergroup__search {
+    position: relative;
+    margin-bottom: .5rem;
+
+    .fa {
+        position: absolute;
+        top: 50%;
+        left: .6rem;
+        transform: translateY(-50%);
+        color: var(--bs-secondary-color);
+        font-size: .8rem;
+    }
+
+    .form-control {
+        padding-left: 1.85rem;
+    }
+}
+
+// Quick filters.
+.flexium-quickfilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+    margin-bottom: 1rem;
+}
+
+.flexium-quickfilter {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    padding: .3rem .7rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: 50rem;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-size: $font-size-sm;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    &:hover:not(:disabled) {
+        border-color: var(--bs-primary);
+    }
+
+    &:disabled {
+        opacity: .5;
+    }
+}
+
+.flexium-quickfilter--active {
+    border-color: var(--bs-primary);
+    background: var(--bs-primary);
+    color: #fff;
+}
+
+.flexium-quickfilter__count {
+    padding: 0 .35rem;
+    border-radius: 50rem;
+    background: rgba(0, 0, 0, .08);
+    font-size: .75rem;
+
+    .flexium-quickfilter--active & {
+        background: rgba(255, 255, 255, .25);
+    }
+}
+
+// Start date range.
+.flexium-daterange {
+    margin-bottom: 1rem;
+}
+
+.flexium-daterange__legend {
+    margin-bottom: .5rem;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-daterange__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.flexium-daterange__label {
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+// Toolbar: share link and view switch next to the sort order.
+.flexium-catalog__tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.flexium-catalog__toast {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    z-index: $zindex-toast;
+    padding: .5rem 1rem;
+    border-radius: 50rem;
+    background: var(--bs-dark);
+    color: #fff;
+    font-size: $font-size-sm;
+    transform: translateX(-50%);
+    box-shadow: $box-shadow;
+}
+
+// Catalogue header.
+.flexium-banner {
+    margin-bottom: 1.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-primary);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+
+    @include media-breakpoint-up(md) {
+        padding: 3.5rem 3rem;
+    }
+}
+
+.flexium-banner__title {
+    margin: 0;
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .2);
+}
+
+.flexium-banner__text {
+    max-width: 40rem;
+    margin: .5rem 0 0;
+    font-size: $font-size-lg;
+    opacity: .95;
+}
+
+// Grid columns and list view.
+@include media-breakpoint-up(lg) {
+    @each $columns in 2, 3, 4 {
+        .flexium-catalog__grid--cols-#{$columns} {
+            grid-template-columns: repeat($columns, minmax(0, 1fr));
+        }
+    }
+}
+
+// List view: the image keeps its 16:9 shape (nothing cropped), as a rounded thumbnail on the left.
+.flexium-catalog__grid--list {
+    grid-template-columns: 1fr;
+
+    .flexium-card {
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-template-columns: 18rem 1fr;
+            grid-template-rows: 1fr auto;
+
+            .flexium-card__image {
+                grid-row: 1 / span 2;
+                align-self: center;
+                margin: .75rem;
+                border-radius: var(--bs-border-radius);
+                aspect-ratio: 16 / 9;
+            }
+
+            .flexium-card__footer {
+                grid-column: 2;
+            }
+        }
+    }
+}
+
+// Status badges, actions and progress of the cards.
+.flexium-card__image {
+    position: relative;
+}
+
+.flexium-card__status {
+    position: absolute;
+    top: .6rem;
+    left: .6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-card__statusbadge {
+    padding: .15rem .55rem;
+    border-radius: 50rem;
+    background: rgba(255, 255, 255, .92);
+    color: var(--bs-body-color);
+    font-size: .75rem;
+    font-weight: $font-weight-bold;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+.flexium-card__statusbadge--enrolled {
+    color: var(--bs-primary);
+}
+
+.flexium-card__statusbadge--completed {
+    background: var(--bs-success);
+    color: #fff;
+}
+
+.flexium-card__statusbadge--new {
+    background: var(--bs-warning);
+    color: #000;
+}
+
+.flexium-card__statusbadge--favourite {
+    color: #b8860b;
+}
+
+// Above the card link (.flexium-card__link::after), so they stay clickable.
+.flexium-card__actions {
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    z-index: 2;
+    display: flex;
+    gap: .3rem;
+}
+
+.flexium-card__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .92);
+    color: var(--bs-body-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    transition: transform .15s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        transform: scale(1.08);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-visible {
+            transform: none;
+        }
+    }
+}
+
+.flexium-card__action--on {
+    color: #e0a000;
+}
+
+.flexium-card__progress {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .25rem;
+
+    .progress {
+        flex: 1;
+        height: .4rem;
+    }
+}
+
+.flexium-card__progresstext {
+    color: var(--bs-secondary-color);
+    font-size: .75rem;
+    white-space: nowrap;
+}
+
+// Loading placeholders.
+.flexium-card--skeleton {
+    pointer-events: none;
+
+    .flexium-card__image {
+        animation: flexium-pulse 1.4s ease-in-out infinite;
+    }
+}
+
+.flexium-skeleton {
+    display: block;
+    height: .8rem;
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-secondary-bg);
+    animation: flexium-pulse 1.4s ease-in-out infinite;
+}
+
+.flexium-skeleton--short {
+    width: 40%;
+}
+
+.flexium-skeleton--title {
+    width: 85%;
+    height: 1.2rem;
+}
+
+@keyframes flexium-pulse {
+    50% {
+        opacity: .45;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flexium-skeleton,
+    .flexium-card--skeleton .flexium-card__image {
+        animation: none;
+    }
+}
+
+// Quick view dialog.
+.flexium-quickview {
+    width: calc(100vw - 2rem);
+    max-width: 64rem;
+    max-height: calc(100vh - 2rem);
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    box-shadow: $box-shadow-lg;
+
+    &::backdrop {
+        background: rgba(15, 23, 42, .55);
+    }
+}
+
+.flexium-quickview__content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 2rem);
+}
+
+.flexium-quickview__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem .5rem;
+}
+
+.flexium-quickview__title {
+    margin: 0;
+    color: var(--bs-primary);
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-quickview__body {
+    padding: 0 1.5rem 1.25rem;
+    overflow-y: auto;
+}
+
+// The quick view shows the course information without the page frame, with a lower image so the facts show.
+.flexium-quickview__body.flexium-courseinfo {
+    margin: 0;
+    border: 0;
+
+    .flexium-courseinfo__image {
+        aspect-ratio: 21 / 8;
+        max-height: 16rem;
+    }
+}
+
+.flexium-quickview__loading {
+    margin: 1rem 0 0;
+    color: var(--bs-secondary-color);
+}
+
+.flexium-quickview__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    padding: 1rem 1.5rem;
+    border-top: $border-width solid var(--bs-border-color);
+}
+
+// Catalogue editor: tabs and the features panel.
+.flexium-editor__tabs {
+    display: flex;
+    gap: .25rem;
+    margin: 1rem 0;
+    border-bottom: $border-width solid var(--bs-border-color);
+}
+
+.flexium-editor__tab {
+    margin-bottom: -$border-width;
+    padding: .5rem 1rem;
+    border: $border-width solid transparent;
+    border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+    background: none;
+    color: var(--bs-secondary-color);
+    font-weight: $font-weight-bold;
+
+    &.is-active {
+        border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+        background: var(--bs-body-bg);
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-features__group {
+    margin-bottom: 1.25rem;
+}
+
+.flexium-features__legend {
+    margin-bottom: .75rem;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.flexium-features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: .75rem;
+}
+
+.flexium-feature {
+    padding: .75rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+}
+
+.flexium-feature--wide {
+    grid-row: span 2;
+}
+
+.flexium-feature__label {
+    font-weight: $font-weight-bold;
+}
+
+.flexium-feature__help {
+    margin: .25rem 0 0;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-feature__swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-top: .5rem;
+}
+
+.flexium-feature__swatch {
+    width: 3rem;
+    height: 1.7rem;
+    border: 2px solid transparent;
+    border-radius: var(--bs-border-radius);
+    background-position: center;
+    background-size: cover;
+
+    &.is-active {
+        border-color: var(--bs-body-color);
+        box-shadow: 0 0 0 2px var(--bs-body-bg) inset;
+    }
+}
+
+// Course information (enrolment page of users not enrolled, and the catalogue quick view), as on UN e-learning
+// portals: the course name as a label, the image full width, then the summary beside a column of facts.
+.flexium-courseinfo {
+    margin-bottom: 1.5rem;
+}
+
+.flexium-courseinfo__name {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 0 .5rem;
+    padding: .3rem .9rem;
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-primary);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.flexium-courseinfo__image {
+    aspect-ratio: 16 / 9;
+    max-height: 32rem;
+    width: 100%;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-secondary-bg);
+    background-position: center;
+    background-size: cover;
+}
+
+.flexium-courseinfo__body {
+    display: grid;
+    gap: 1.5rem 3rem;
+    margin-top: 1.25rem;
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 1fr);
+    }
+}
+
+.flexium-courseinfo__body--nosummary {
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr;
+    }
+
+    .flexium-courseinfo__facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+        gap: .25rem;
+    }
+}
+
+.flexium-courseinfo__summary {
+    font-size: .9375rem;
+    line-height: 1.6;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.flexium-courseinfo__sectiontitle {
+    margin: 1.5rem 0 .5rem;
+    color: var(--bs-primary);
+    font-size: 1.1rem;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-courseinfo__section > :last-child {
+    margin-bottom: 0;
+}
+
+.flexium-courseinfo__facts {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-courseinfo__fact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .9rem 1.1rem;
+    background: var(--bs-secondary-bg);
+    font-size: .9375rem;
+
+    strong {
+        margin-right: .25rem;
+    }
+
+    // Values come formatted (format_text): keep them inline.
+    p {
+        display: inline;
+        margin: 0;
+    }
+}
+
+.flexium-courseinfo__facticon {
+    flex: 0 0 2.25rem;
+    color: var(--bs-primary);
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+// Hidden courses: dashed yellow frame, slightly faded, and a yellow "Hidden" tag on the image.
+.flexium-card--hidden {
+    border: 2px dashed $warning;
+
+    .flexium-card__image {
+        filter: grayscale(30%);
+        opacity: .8;
+    }
+
+    .flexium-card__title .flexium-card__link,
+    .flexium-card__summary {
+        color: var(--bs-secondary-color);
+    }
+
+    &:hover,
+    &:focus-within {
+        box-shadow: 0 4px 12px rgba($warning, .25);
+
+        .flexium-card__image {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
+.flexium-card__statusbadge--hidden {
+    background: $warning;
+    color: #000;
+}
+
+// Teachers in the card footer: overlapping round photos and/or names.
+.flexium-card__teachers {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.flexium-card__avatars {
+    display: inline-flex;
+}
+
+.flexium-card__avatar {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 2px solid var(--bs-body-bg);
+    border-radius: 50%;
+    object-fit: cover;
+
+    & + & {
+        margin-left: -.5rem;
+    }
+}
+
+// Button opening the filters drawer: a funnel in the brand colour, big enough to be noticed
+// (more specific than Boost's grey .drawer-toggler .btn).
+.drawer-toggler .btn.flexium-filtertoggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--flexium-toggle-bg, var(--bs-primary));
+    color: #fff;
+    font-size: 1.25rem;
+    box-shadow: $box-shadow-sm;
+
+    &:hover,
+    &:focus-visible {
+        background: var(--flexium-toggle-bg, var(--bs-primary));
+        color: #fff;
+        filter: brightness(.9);
+    }
+
+    &.flexium-filtertoggle--sm {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+
+    &.flexium-filtertoggle--lg {
+        width: 3.75rem;
+        height: 3.75rem;
+        font-size: 1.6rem;
+    }
+}
+
+// Button opening the blocks drawer: Moodle's icon unless another one is chosen, Moodle's grey unless coloured.
+.drawer-toggler .btn.flexium-blocktoggle {
+    .flexium-blocktoggle__icon {
+        display: none;
+    }
+
+    .icon {
+        margin: 0;
+        color: inherit;
+    }
+
+    &.flexium-blocktoggle--custom {
+        .flexium-blocktoggle__default {
+            display: none;
+        }
+
+        .flexium-blocktoggle__icon {
+            display: inline-block;
+        }
+    }
+
+    &.flexium-blocktoggle--plain {
+        box-shadow: none;
+
+        &,
+        &:hover,
+        &:focus-visible {
+            background: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+        }
+    }
+}
+
+// Edit mode: the wand of the drawer buttons sits below them (the breadcrumbs are beside the filters one).
+.drawer-left-toggle.flexium-editzone,
+.drawer-right-toggle.flexium-editzone {
+    padding-right: 0;
+
+    > .flexium-editzone__wand {
+        top: 100%;
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, .35rem);
+    }
+}
+
+// In-place editing: magic wands on the parts of the page that can change, and the side panel with their options.
+.flexium-editzone {
+    position: relative;
+    border-radius: var(--bs-border-radius);
+    outline: 2px dashed transparent;
+    outline-offset: 2px;
+    transition: outline-color .15s ease-in-out;
+
+    &:hover {
+        outline-color: rgba($primary, .45);
+    }
+}
+
+.flexium-editzone--active {
+    outline: 2px solid var(--bs-primary);
+    background: rgba($primary, .04);
+}
+
+.flexium-editzone__wand {
+    position: absolute;
+    top: 50%;
+    right: .4rem;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    transform: translateY(-50%);
+    animation: flexium-wand 2.4s ease-in-out infinite;
+
+    &:hover,
+    &:focus-visible,
+    &[aria-expanded="true"] {
+        animation: none;
+        filter: brightness(1.1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
+
+@keyframes flexium-wand {
+    50% {
+        box-shadow: 0 0 0 6px rgba($primary, .2);
+    }
+}
+
+// On the card image the wand sits low, away from the quick view and favourite buttons.
+.flexium-editzone--image > .flexium-editzone__wand {
+    top: auto;
+    bottom: .4rem;
+    transform: none;
+}
+
+.flexium-editzone__placeholder {
+    margin: 0;
+    padding: .35rem 2.5rem .35rem .5rem;
+    border: 1px dashed var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    font-style: italic;
+}
+
+.flexium-banner--off {
+    padding: 1rem 1.5rem;
+    border: 2px dashed var(--bs-border-color);
+    background: none;
+    color: var(--bs-secondary-color);
+    font-weight: $font-weight-bold;
+}
+
+.flexium-editpanel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $zindex-fixed + 10;
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    max-width: 100vw;
+    border-left: $border-width solid var(--bs-border-color);
+    background: var(--bs-body-bg);
+    box-shadow: $box-shadow-lg;
+}
+
+.flexium-editpanel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: $border-width solid var(--bs-border-color);
+}
+
+.flexium-editpanel__title {
+    margin: 0;
+    font-size: $h5-font-size;
+}
+
+.flexium-editpanel__body {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+}
+
+.flexium-editpanel__zone + .flexium-editpanel__zone {
+    margin-top: 1.25rem;
+}
+
+.flexium-editpanel__controls {
+    display: grid;
+    gap: .75rem;
+}
+
+// Leave room for the side panel, so the highlighted part stays visible.
+@include media-breakpoint-up(lg) {
+    .flexium-catalog--editing {
+        margin-right: 24rem;
+    }
+}
+
+.flexium-editor__wandhint {
+    margin-left: .35rem;
+    color: var(--bs-primary);
+}
+
+// Site administrators outside edit mode: how to customise the catalogue.
+.flexium-edithint {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .btn-close {
+        margin-left: auto;
+    }
+}
+
+.flexium-edithint__icon {
+    font-size: 1.5rem;
+    color: var(--bs-primary);
+}
+
+// Pagination with first / last page buttons.
+.flexium-catalogfooter__pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+
+    .flexium-catalogfooter__pagination {
+        margin: 0;
+    }
+}
+
+.flexium-catalogfooter__edge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: var(--bs-border-radius);
+    background: none;
+    color: var(--bs-body-color);
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        background: var(--bs-tertiary-bg);
+    }
+
+    &:disabled {
+        color: var(--bs-secondary-color);
+        opacity: .5;
+    }
+}
+
+// Zones whose content reaches the right edge (toolbar): room for the wand, so it covers nothing.
+.flexium-editzone--padded {
+    padding-right: 2.75rem;
+}
+
+// Spotlight on the part being edited: the rest of the page is shaded (the shade lets clicks through).
+.flexium-spotlight {
+    position: fixed;
+    z-index: $zindex-fixed + 5;
+    border-radius: var(--bs-border-radius-lg);
+    box-shadow: 0 0 0 200vmax rgba(15, 23, 42, .5);
+    outline: 2px solid var(--bs-primary);
+    pointer-events: none;
+    transition: top .2s ease, left .2s ease, width .2s ease, height .2s ease;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+// "All settings": one section unfolded at a time.
+.flexium-editpanel__section {
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+
+    & + & {
+        margin-top: .5rem;
+    }
+
+    &.is-open {
+        border-color: var(--bs-primary);
+    }
+}
+
+.flexium-editpanel__sectionheading {
+    margin: 0;
+    font-size: $font-size-base;
+}
+
+.flexium-editpanel__sectiontoggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .65rem .9rem;
+    border: 0;
+    background: none;
+    color: var(--bs-body-color);
+    font-weight: $font-weight-bold;
+    text-align: start;
+
+    .is-open & {
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-editpanel__sectionbody {
+    padding: 0 .75rem .75rem;
+}
+
+// Close button of the filters drawer: a plain X.
+.flexium-drawerclose {
+    font-size: 1.25rem;
+}
+
+// Breadcrumbs (theme settings, Breadcrumbs tab).
+.flexium-breadcrumbs {
+    .breadcrumb {
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.flexium-breadcrumbs__current {
+    font-weight: $font-weight-bold;
+}
+
+.flexium-breadcrumbs--pills {
+    .breadcrumb-item {
+        a,
+        span:not(.visually-hidden),
+        summary {
+            display: inline-block;
+            padding: .15rem .65rem;
+            border-radius: 50rem;
+            background: var(--bs-tertiary-bg);
+        }
+
+        &.flexium-breadcrumbs__current > span {
+            background: var(--bs-primary);
+            color: #fff;
+        }
+
+        .flexium-breadcrumbs__hometext {
+            padding: 0;
+            background: none;
+        }
+    }
+}
+
+.flexium-breadcrumbs--boxed .breadcrumb {
+    display: inline-flex;
+    padding: .4rem .9rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+}
+
+.flexium-breadcrumbs__ellipsis {
+    position: relative;
+
+    summary {
+        padding: 0 .35rem;
+        border-radius: var(--bs-border-radius);
+        cursor: pointer;
+        list-style: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:hover {
+            background: var(--bs-tertiary-bg);
+        }
+    }
+}
+
+.flexium-breadcrumbs__collapsed {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $zindex-dropdown;
+    min-width: 12rem;
+    margin: .25rem 0 0;
+    padding: .35rem 0;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+    box-shadow: $box-shadow;
+    list-style: none;
+
+    a,
+    span {
+        display: block;
+        padding: .3rem .9rem;
+        white-space: nowrap;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .flexium-breadcrumbs--mobile-hidden {
+        display: none;
+    }
+
+    // Small screens, "Parent only": a single link back to the page before the current one.
+    .flexium-breadcrumbs--mobile-parent {
+        .breadcrumb-item:not(.flexium-breadcrumbs__parent) {
+            display: none;
+        }
+
+        .flexium-breadcrumbs__parent {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+
+            a::before {
+                content: "\2190\00a0";
+            }
+        }
+    }
+}
+
+// Card badges: one list, or one line per source.
+.flexium-card__badgegroups {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-top: auto;
+
+    .flexium-card__badges {
+        margin: 0;
+    }
+}
+
+// Colour choice of a badge source (catalogue editor).
+.flexium-colours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+.flexium-colours__swatch {
+    width: 1.35rem;
+    height: 1.35rem;
+    padding: 0;
+    border: 2px solid var(--bs-body-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--bs-border-color);
+
+    &.is-active {
+        box-shadow: 0 0 0 2px var(--bs-body-color);
+    }
+}
+
+// Page heading of the catalogue switched off (shown dimmed in edit mode, so its wand can bring it back).
+.flexium-noheading #page-header .page-context-header {
+    display: none;
+}
+
+.flexium-heading--off {
+    opacity: .35;
+}
+
+.flexium-breadcrumbs--off {
+    padding: .35rem .75rem;
+    border: 1px dashed var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    color: var(--bs-secondary-color);
+    font-style: italic;
+}
+
+// Vertical position of the buttons opening the drawers (top is Boost's place, under the navbar).
+// Small screens keep Boost's place, at the bottom.
+@include media-breakpoint-up(md) {
+    #page.drawers .drawer-left-toggle,
+    #page.drawers .drawer-right-toggle {
+        &.flexium-togglepos--upper {
+            top: 25vh;
+        }
+
+        &.flexium-togglepos--middle {
+            top: 50vh;
+        }
+
+        &.flexium-togglepos--lower {
+            top: 70vh;
+        }
+
+        &.flexium-togglepos--bottom {
+            top: calc(100vh - 6rem);
+        }
+    }
+}
+
+// The edit mode hint, closed: a small reminder that opens it again.
+.flexium-edithint__pill {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: .3rem .85rem;
+    border: $border-width solid rgba($primary, .35);
+    border-radius: 50rem;
+    background: rgba($primary, .06);
+    color: var(--bs-primary);
+    font-size: $font-size-sm;
+
+    &:hover,
+    &:focus-visible {
+        background: rgba($primary, .12);
+    }
+}
+
+// Home page builder (theme_flexium/home/HomePage).
+.flexium-home {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+// Site home built with the home page builder: wider than Moodle's reading width, and no page heading (the hero says
+// it better).
+body.pagelayout-frontpage:has(.flexium-home) {
+    #page.drawers .main-inner,
+    .header-maxwidth {
+        max-width: 1320px;
+    }
+
+    #page-header .page-context-header {
+        display: none;
+    }
+}
+
+.flexium-home__heading {
+    margin-bottom: 1.25rem;
+}
+
+.flexium-home__title {
+    margin: 0;
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-home__subtitle,
+.flexium-home__muted {
+    margin: .25rem 0 0;
+    color: var(--bs-secondary-color);
+}
+
+.flexium-home__narrow {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+// Hero.
+.flexium-hero {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-primary);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+
+    @include media-breakpoint-up(md) {
+        padding: 3rem 4rem;
+    }
+}
+
+.flexium-hero--md {
+    min-height: 18rem;
+}
+
+.flexium-hero--lg {
+    min-height: 26rem;
+}
+
+.flexium-hero--xl {
+    min-height: 34rem;
+}
+
+.flexium-hero--center {
+    justify-content: center;
+    text-align: center;
+
+    .flexium-hero__buttons,
+    .flexium-hero__search {
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.flexium-hero__content {
+    max-width: 44rem;
+}
+
+.flexium-hero__title {
+    margin: 0 0 .75rem;
+    font-size: calc(1.8rem + 1.6vw);
+    font-weight: $font-weight-bold;
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .18);
+
+    @include media-breakpoint-up(xl) {
+        font-size: 3.25rem;
+    }
+}
+
+.flexium-hero__text {
+    margin: 0 0 1.5rem;
+    font-size: $font-size-lg;
+    opacity: .95;
+}
+
+.flexium-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.flexium-hero__search {
+    position: relative;
+    display: flex;
+    gap: .5rem;
+    max-width: 36rem;
+    margin-bottom: 1.25rem;
+
+    .fa {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        color: var(--bs-secondary-color);
+    }
+
+    .form-control {
+        padding-left: 2.6rem;
+        border: 0;
+    }
+}
+
+// Courses: carousel or grid.
+.flexium-home__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+
+    .flexium-home__heading {
+        flex: 1;
+    }
+}
+
+.flexium-home__rowtools {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    margin-bottom: 1.25rem;
+}
+
+.flexium-home__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: 50%;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+
+    &:hover,
+    &:focus-visible {
+        border-color: var(--bs-primary);
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-home__viewall {
+    margin-left: .5rem;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+}
+
+.flexium-home__carousel {
+    display: grid;
+    grid-auto-columns: minmax(15rem, calc((100% - 3 * 1.25rem) / 4));
+    grid-auto-flow: column;
+    gap: 1.25rem;
+    margin: 0;
+    padding: .25rem .25rem 1rem;
+    overflow-x: auto;
+    list-style: none;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+
+    > li {
+        display: flex;
+        scroll-snap-align: start;
+    }
+}
+
+.flexium-home__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(var(--flexium-columns, 4), minmax(0, 1fr));
+    }
+
+    > li {
+        display: flex;
+    }
+}
+
+.flexium-hometile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+    transition: box-shadow .15s ease-in-out, transform .15s ease-in-out;
+
+    &:hover,
+    &:focus-within {
+        box-shadow: $box-shadow;
+        transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-within {
+            transform: none;
+        }
+    }
+}
+
+.flexium-hometile__image {
+    aspect-ratio: 16 / 9;
+    background-color: var(--bs-secondary-bg);
+    background-position: center;
+    background-size: cover;
+}
+
+.flexium-hometile__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: .35rem;
+    padding: 1rem;
+}
+
+.flexium-hometile__category {
+    margin: 0;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+}
+
+.flexium-hometile__title {
+    margin: 0;
+    font-size: $h6-font-size;
+    line-height: 1.3;
+}
+
+.flexium-hometile__link {
+    color: var(--bs-body-color);
+    text-decoration: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+    }
+}
+
+.flexium-hometile__summary {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    color: var(--bs-secondary-color);
+    font-size: $font-size-sm;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.flexium-hometile__progress {
+    height: .35rem;
+    margin-top: auto;
+}
+
+// Categories.
+.flexium-home__categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 8rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--bs-border-radius-lg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-decoration: none;
+    transition: transform .15s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-visible {
+            transform: none;
+        }
+    }
+}
+
+.flexium-home__categoryname {
+    font-size: $h5-font-size;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-home__categorycount {
+    font-size: $font-size-sm;
+    opacity: .9;
+}
+
+.flexium-home__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__chip {
+    display: inline-flex;
+    gap: .5rem;
+    padding: .45rem 1rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: 50rem;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    text-decoration: none;
+
+    .flexium-home__categoryname {
+        font-size: $font-size-base;
+    }
+
+    .flexium-home__categorycount {
+        color: var(--bs-secondary-color);
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: var(--bs-primary);
+        color: var(--bs-primary);
+    }
+}
+
+// Figures.
+.flexium-home__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+
+    .flexium-home__stats--cards & {
+        border: $border-width solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius-lg);
+        background: var(--bs-body-bg);
+    }
+}
+
+.flexium-home__staticon {
+    color: var(--bs-primary);
+    font-size: 1.5rem;
+}
+
+.flexium-home__statvalue {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    line-height: 1.1;
+}
+
+.flexium-home__statlabel {
+    color: var(--bs-secondary-color);
+}
+
+// Feature boxes and steps.
+.flexium-home__features,
+.flexium-home__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(var(--flexium-columns, 3), minmax(0, 1fr));
+    }
+}
+
+.flexium-home__feature,
+.flexium-home__step {
+    padding: 1.5rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+}
+
+.flexium-home__featureicon,
+.flexium-home__stepnumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: var(--bs-border-radius-lg);
+    background: rgba($primary, .1);
+    color: var(--bs-primary);
+    font-size: 1.35rem;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-home__stepnumber {
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: #fff;
+}
+
+.flexium-home__featuretitle {
+    font-size: $h5-font-size;
+}
+
+.flexium-home__featuretext {
+    margin: 0;
+    color: var(--bs-secondary-color);
+}
+
+// Call to action.
+.flexium-home__cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-primary);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.flexium-home__ctatitle {
+    margin: 0;
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+}
+
+.flexium-home__ctatext {
+    margin: .5rem 0 0;
+    opacity: .95;
+}
+
+// Testimonials.
+.flexium-home__quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__quote {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+}
+
+.flexium-home__quoteicon {
+    color: rgba($primary, .35);
+    font-size: 1.75rem;
+}
+
+.flexium-home__quotetext {
+    flex: 1;
+    margin: .75rem 0 1.25rem;
+    font-size: $font-size-lg;
+}
+
+.flexium-home__quotename {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: 0;
+}
+
+.flexium-home__avatar {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: #fff;
+    font-weight: $font-weight-bold;
+}
+
+// Questions and answers.
+.flexium-home__faqitem {
+    border-bottom: $border-width solid var(--bs-border-color);
+
+    summary {
+        padding: 1rem 0;
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+    }
+
+    p {
+        margin: 0 0 1rem;
+        color: var(--bs-secondary-color);
+    }
+}
+
+// Partners.
+.flexium-home__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__logo {
+    color: var(--bs-secondary-color);
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    letter-spacing: .02em;
+    text-decoration: none;
+    opacity: .75;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// News.
+.flexium-home__news {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-home__newsitem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1rem;
+    padding: .75rem 0;
+    border-bottom: $border-width solid var(--bs-border-color);
+}
+
+.flexium-home__spacer--sm {
+    height: .5rem;
+}
+
+.flexium-home__spacer--md {
+    height: 2rem;
+}
+
+.flexium-home__spacer--lg {
+    height: 5rem;
+}
+
+// Home page builder (edit mode): sections with their bar, "+" between them, side panel lists.
+.flexium-home .flexium-home__section {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.flexium-homeframe {
+    padding: 2.5rem .75rem .75rem;
+    outline: 2px dashed rgba($primary, .3);
+}
+
+.flexium-homeframe__bar {
+    position: absolute;
+    top: .4rem;
+    right: .5rem;
+    left: .75rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.flexium-homeframe__name {
+    margin-right: auto;
+    color: var(--bs-primary);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.flexium-homeframe__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: 50%;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+
+    &:disabled {
+        opacity: .4;
+    }
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        border-color: var(--bs-primary);
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-homeframe__btn--wand {
+    border-color: var(--bs-primary);
+    background: var(--bs-primary);
+    color: #fff;
+
+    &:hover:not(:disabled),
+    &:focus-visible {
+        color: #fff;
+        filter: brightness(1.1);
+    }
+}
+
+.flexium-homeframe__btn--delete:hover:not(:disabled) {
+    border-color: var(--bs-danger);
+    color: var(--bs-danger);
+}
+
+.flexium-homeinserter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        border-top: 2px dashed rgba($primary, .25);
+    }
+}
+
+.flexium-homeinserter__btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+
+    .is-active > & {
+        box-shadow: 0 0 0 4px rgba($primary, .3);
+    }
+}
+
+.flexium-homepicker,
+.flexium-hometemplates {
+    display: grid;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-homepicker__item,
+.flexium-hometemplate {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    width: 100%;
+    padding: .75rem .9rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    text-align: start;
+
+    span {
+        color: var(--bs-secondary-color);
+        font-size: $font-size-sm;
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: var(--bs-primary);
+    }
+}
+
+.flexium-hometemplate.is-current {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 1px var(--bs-primary);
+}
+
+// Template miniature: one bar per section.
+.flexium-hometemplate__preview {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: .5rem;
+    padding: 6px;
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-tertiary-bg);
+}
+
+.flexium-hometemplate__block {
+    display: block;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--bs-secondary-bg);
+    background-position: center;
+    background-size: cover;
+}
+
+.flexium-hometemplate__block--hero {
+    height: 34px;
+}
+
+.flexium-hometemplate__block--courses,
+.flexium-hometemplate__block--categories,
+.flexium-hometemplate__block--features,
+.flexium-hometemplate__block--testimonials {
+    height: 16px;
+    background-image: repeating-linear-gradient(90deg, var(--bs-secondary-bg) 0 22%, transparent 22% 26%);
+}
+
+.flexium-hometemplate__block--cta {
+    height: 12px;
+}
+
+// Settings form of a section.
+.flexium-homeform {
+    display: grid;
+    gap: .9rem;
+}
+
+.flexium-homeform__field {
+    display: grid;
+    gap: .3rem;
+    margin: 0;
+
+    // Switches keep Bootstrap's layout: the label beside the switch.
+    &.form-check {
+        display: block;
+    }
+}
+
+.flexium-homeform__items {
+    display: grid;
+    gap: .4rem;
+}
+
+.flexium-homeform__item {
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+
+    &.is-open {
+        border-color: var(--bs-primary);
+    }
+}
+
+.flexium-homeform__itembar {
+    display: flex;
+    align-items: center;
+    gap: .15rem;
+    padding: .25rem .35rem;
+}
+
+.flexium-homeform__itemtoggle {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    border: 0;
+    background: none;
+    font-size: $font-size-sm;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flexium-homeform__itembody {
+    display: grid;
+    gap: .6rem;
+    padding: .25rem .6rem .75rem;
+}
+
+.flexium-homeform__icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+.flexium-homeform__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: $border-width solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-body-bg);
+
+    &.is-active {
+        border-color: var(--bs-primary);
+        background: var(--bs-primary);
+        color: #fff;
+    }
+}
+
+// Quick view formats: centred window (default), panel from the right, or the whole screen.
+.flexium-quickview--drawer {
+    width: 34rem;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0 0 0 auto;
+    border-radius: 0;
+
+    .flexium-quickview__content {
+        height: 100%;
+        max-height: 100vh;
+    }
+
+    .flexium-quickview__body {
+        flex: 1;
+    }
+
+    &[open] {
+        animation: flexium-slidein .2s ease-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        &[open] {
+            animation: none;
+        }
+    }
+}
+
+@keyframes flexium-slidein {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+.flexium-quickview--fullscreen {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+
+    .flexium-quickview__content {
+        height: 100%;
+        max-height: 100vh;
+    }
+
+    .flexium-quickview__header,
+    .flexium-quickview__body {
+        flex: 1;
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+// Custom name of a filter group (catalogue editor).
+.flexium-widget__name {
+    margin-bottom: .35rem;
+}
+
+// List view with its own card content: hidden parts and image size.
+.flexium-catalog__grid--list {
+    &.flexium-catalog__grid--no-image .flexium-card__image,
+    &.flexium-catalog__grid--no-category .flexium-card__category,
+    &.flexium-catalog__grid--no-summary .flexium-card__summary,
+    &.flexium-catalog__grid--no-badges .flexium-card__badgegroups,
+    &.flexium-catalog__grid--no-footer .flexium-card__footer {
+        display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+        &.flexium-catalog__grid--image-sm .flexium-card {
+            grid-template-columns: 11rem 1fr;
+        }
+
+        &.flexium-catalog__grid--image-lg .flexium-card {
+            grid-template-columns: 24rem 1fr;
+        }
+
+        &.flexium-catalog__grid--no-image .flexium-card {
+            display: flex;
+        }
+    }
+}
+
+// The wand of the view switch sits after it.
+.flexium-editzone--views {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+}
+
+// Footer builder (theme_flexium/footer/SiteFooter).
+.flexium-footer {
+    padding: 3rem 1.5rem 1rem;
+    background-color: #1f2430;
+    background-position: center;
+    background-size: cover;
+    color: rgba(255, 255, 255, .85);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.flexium-footer--bg-light {
+    border-top: $border-width solid var(--bs-border-color);
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+
+    a:hover,
+    a:focus-visible {
+        color: var(--bs-primary);
+    }
+}
+
+.flexium-footer--bg-brand {
+    background-color: var(--bs-primary);
+}
+
+.flexium-footer--center {
+    text-align: center;
+
+    .flexium-footer__links,
+    .flexium-footer__contact,
+    .flexium-social,
+    .flexium-footer__inline {
+        justify-content: center;
+    }
+}
+
+.flexium-footer__columns,
+.flexium-footer__bottom {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.flexium-footer__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(var(--flexium-footer-columns, 4), minmax(0, 1fr));
+    }
+}
+
+.flexium-footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.flexium-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    font-size: $font-size-sm;
+
+    .flexium-footer--bg-light & {
+        border-top-color: var(--bs-border-color);
+    }
+}
+
+.flexium-footer__title {
+    margin-bottom: .75rem;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.flexium-footer__text,
+.flexium-footer__copyright {
+    margin: 0 0 .5rem;
+}
+
+.flexium-footer__muted {
+    margin: 0;
+    opacity: .7;
+    font-size: $font-size-sm;
+}
+
+.flexium-footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: $h5-font-size;
+    font-weight: $font-weight-bold;
+
+    img {
+        max-height: 2.5rem;
+    }
+}
+
+.flexium-footer__logo--sm img {
+    max-height: 1.75rem;
+}
+
+.flexium-footer__logo--lg img {
+    max-height: 4rem;
+}
+
+.flexium-footer__links,
+.flexium-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-footer__contact li {
+    display: flex;
+    gap: .6rem;
+    align-items: baseline;
+}
+
+.flexium-footer__inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-footer__supportbtn {
+    align-self: flex-start;
+    border: 1px solid currentColor;
+    color: inherit;
+}
+
+// Social network buttons: shape, style and size.
+.flexium-social {
+    --flexium-social-size: 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexium-social--sm {
+    --flexium-social-size: 2rem;
+}
+
+.flexium-social--lg {
+    --flexium-social-size: 3rem;
+}
+
+.flexium-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--flexium-social-size);
+    height: var(--flexium-social-size);
+    border: 2px solid transparent;
+    font-size: calc(var(--flexium-social-size) * .42);
+    transition: transform .15s ease-in-out, background-color .15s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-visible {
+            transform: none;
+        }
+    }
+}
+
+.flexium-social--round .flexium-social__link {
+    border-radius: 50%;
+}
+
+.flexium-social--rounded .flexium-social__link {
+    border-radius: .6rem;
+}
+
+.flexium-social--square .flexium-social__link {
+    border-radius: 0;
+}
+
+.flexium-social--plain .flexium-social__link {
+    width: auto;
+    border: 0;
+    background: none;
+}
+
+.flexium-social--filled .flexium-social__link {
+    background: var(--flexium-social, var(--bs-primary));
+    color: #fff;
+}
+
+.flexium-social--outline .flexium-social__link {
+    border-color: var(--flexium-social, currentColor);
+    color: var(--flexium-social, inherit);
+}
+
+.flexium-social--soft .flexium-social__link {
+    background: rgba(255, 255, 255, .12);
+    color: var(--flexium-social, inherit);
+
+    .flexium-footer--bg-light & {
+        background: rgba(0, 0, 0, .06);
+    }
+}
+
+// Moodle's "?" footer button, when the footer setting hides it.
+.flexium-nomoodlefooter #page-footer [data-region="footer-container-popover"] {
+    display: none;
+}
+
+// Footer builder (edit mode).
+.flexium-footer__editbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 1rem;
+    max-width: 1320px;
+    margin: 0 auto 1.5rem;
+    padding: .75rem 1rem;
+    border: 2px dashed rgba(255, 255, 255, .4);
+    border-radius: var(--bs-border-radius-lg);
+
+    .flexium-footer--bg-light & {
+        border-color: rgba($primary, .4);
+    }
+}
+
+.flexium-footer__edittitle {
+    font-weight: $font-weight-bold;
+}
+
+.flexium-footer__edithelp {
+    flex: 1;
+    min-width: 14rem;
+    opacity: .8;
+    font-size: $font-size-sm;
+}
+
+.flexium-footer__drop {
+    min-height: 4rem;
+    padding: .5rem;
+    border: 2px dashed rgba(255, 255, 255, .25);
+    border-radius: var(--bs-border-radius);
+
+    .flexium-footer--bg-light & {
+        border-color: rgba($primary, .25);
+    }
+}
+
+.flexium-footer__drop--end {
+    border-color: var(--bs-warning);
+}
+
+.flexium-footer__columnbar {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    opacity: .8;
+
+    > span {
+        margin-right: auto;
+    }
+}
+
+.flexium-footer__add {
+    align-self: flex-start;
+    padding: .2rem .6rem;
+    border: 1px dashed currentColor;
+    border-radius: var(--bs-border-radius);
+    background: none;
+    color: inherit;
+    font-size: $font-size-sm;
+    opacity: .8;
+}
+
+.flexium-footerblock {
+    padding: .4rem .6rem .6rem;
+    border-radius: var(--bs-border-radius);
+    background: rgba(255, 255, 255, .05);
+    cursor: grab;
+
+    .flexium-footer--bg-light & {
+        background: rgba(0, 0, 0, .03);
+    }
+}
+
+.flexium-footerblock--dropbefore {
+    box-shadow: 0 -3px 0 var(--bs-warning);
+}
+
+// Bar of a block in edit mode: a row of its own above the content (narrow columns wrap the buttons).
+.flexium-footerblock__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .15rem;
+    margin-bottom: .5rem;
+    padding-bottom: .35rem;
+    border-bottom: 1px dashed currentColor;
+
+    .flexium-homeframe__btn {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: .75rem;
+    }
+}
+
+.flexium-footerblock__handle {
+    opacity: .7;
+}
+
+.flexium-footerblock__name {
+    flex: 1 1 4rem;
+    min-width: 0;
+    margin-left: .35rem;
+    overflow: hidden;
+    font-size: .75rem;
+    font-weight: $font-weight-bold;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .8;
+}
+
+.flexium-footer .flexium-editpanel {
+    color: var(--bs-body-color);
+    text-align: start;
+
+    a {
+        color: var(--bs-link-color);
+    }
+}
+
+// Edit mode: "Upload your own image" of the default course header.
+.flexium-feature__upload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.flexium-feature__uploadstatus {
+    color: var(--bs-secondary-color);
+    font-size: .8125rem;
+}
+
+// Page margins wand (edit mode, site administrators): floating at the bottom left of the window.
+.flexium-marginswand {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1059;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--bs-border-radius-pill);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+// While the panel is open the margins are tinted: padding only (content-box keeps the page background).
+body.flexium-margins-editing #page-wrapper #page .main-inner {
+    outline: 2px dashed var(--bs-primary);
+    outline-offset: -2px;
+    background-image:
+        linear-gradient(var(--bs-body-bg), var(--bs-body-bg)),
+        linear-gradient(var(--bs-primary-bg-subtle), var(--bs-primary-bg-subtle));
+    background-clip: content-box, border-box;
+    transition: padding .15s ease-out;
+}
+
+.flexium-marginspanel {
+    position: fixed;
+    bottom: 4rem;
+    left: 1rem;
+    z-index: 1060;
+    width: min(22rem, calc(100vw - 2rem)); /* stylelint-disable-line csstree/validator */
+    padding: 1rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-lg);
+    background: var(--bs-body-bg);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .18);
+}
+
+.flexium-marginspanel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.flexium-marginspanel__help,
+.flexium-marginspanel__note {
+    color: var(--bs-secondary-color);
+    font-size: .8125rem;
+}
+
+.flexium-marginspanel__note {
+    padding: .5rem;
+    border-radius: var(--bs-border-radius);
+    background: var(--bs-warning-bg-subtle);
+    color: var(--bs-warning-text-emphasis);
+}
+
+.flexium-marginspanel__scopes {
+    margin-bottom: .5rem;
+}
+
+.flexium-marginspanel__label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: .1rem;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.flexium-marginspanel__value {
+    color: var(--bs-secondary-color);
+    font-weight: normal;
+    font-variant-numeric: tabular-nums;
+}
+
+.flexium-marginspanel__row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .5rem;
+}
+
+.flexium-marginspanel__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.flexium-marginspanel__status {
+    margin-right: auto;
+    color: var(--bs-secondary-color);
+    font-size: .8125rem;
+}

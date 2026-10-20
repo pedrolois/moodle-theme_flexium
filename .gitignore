@@ -1,0 +1,6 @@
+# Browser test artefacts and local settings (see tests/playwright/README.md).
+tests/playwright/node_modules/
+tests/playwright/test-results/
+tests/playwright/playwright-report/
+tests/playwright/.auth/
+tests/playwright/.env
