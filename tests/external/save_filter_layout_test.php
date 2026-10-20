@@ -32,6 +32,15 @@ use theme_flexium\local\catalog\filter_config;
 #[CoversClass(filter_config::class)]
 final class save_filter_layout_test extends \advanced_testcase {
     /**
+     * Whether the optional "keywords" course custom field type is installed (it is not part of Moodle).
+     *
+     * @return bool
+     */
+    private static function has_keywords(): bool {
+        return array_key_exists('keywords', \core_component::get_plugin_list('customfield'));
+    }
+
+    /**
      * Create course custom fields of several types and visibilities.
      *
      * @return \core_customfield\field_controller[] short name => field
@@ -44,12 +53,15 @@ final class save_filter_layout_test extends \advanced_testcase {
             [
             'level' => ['type' => 'select', 'configdata' => ['options' => "Beginner\nAdvanced"]],
             'venue' => ['type' => 'text'],
-            'topics' => ['type' => 'keywords'],
+            'topics' => self::has_keywords() ? ['type' => 'keywords'] : null,
             'notes' => ['type' => 'textarea'],
             'hours' => ['type' => 'number'],
             'internal' => ['type' => 'select', 'configdata' => ['options' => "A\nB", 'visibility' => 1]],
             ] as $shortname => $record
         ) {
+            if ($record === null) {
+                continue;
+            }
             $fields[$shortname] = $generator->create_field($record + ['categoryid' => $categoryid,
                 'shortname' => $shortname, 'name' => ucfirst($shortname)]);
         }
@@ -76,10 +88,11 @@ final class save_filter_layout_test extends \advanced_testcase {
         $this->create_fields();
 
         $sources = filter_config::get_available_sources();
-        $this->assertSame(
-            ['category', 'tag', 'customfield:level', 'customfield:venue', 'customfield:topics'],
-            array_keys($sources)
-        );
+        $expected = ['category', 'tag', 'customfield:level', 'customfield:venue'];
+        if (self::has_keywords()) {
+            $expected[] = 'customfield:topics';
+        }
+        $this->assertSame($expected, array_keys($sources));
         $this->assertSame('tree', $sources['category']['type']);
         $this->assertNull($sources['category']['field']);
         $this->assertSame('list', $sources['customfield:level']['type']);
@@ -99,12 +112,12 @@ final class save_filter_layout_test extends \advanced_testcase {
         $this->resetAfterTest();
         $this->create_fields();
 
-        $expected = [
+        $expected = array_values(array_filter([
             ['source' => 'category', 'expanded' => true, 'label' => ''],
             ['source' => 'customfield:level', 'expanded' => false, 'label' => ''],
-            ['source' => 'customfield:topics', 'expanded' => false, 'label' => ''],
+            self::has_keywords() ? ['source' => 'customfield:topics', 'expanded' => false, 'label' => ''] : null,
             ['source' => 'tag', 'expanded' => false, 'label' => ''],
-        ];
+        ]));
         $this->assertSame($expected, filter_config::get_default_layout());
         $this->assertSame($expected, filter_config::get_layout());
         set_config('catalogfilters', '', 'theme_flexium');

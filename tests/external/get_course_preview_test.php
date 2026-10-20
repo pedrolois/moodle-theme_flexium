@@ -114,8 +114,12 @@ final class get_course_preview_test extends \advanced_testcase {
             'objectives' => $this->create_field($fieldcategory, 'textarea', 'objectives', 'Learning outcomes'),
             'internal' => $this->create_field($fieldcategory, 'text', 'internal', 'Internal note', ['visibility' => 1]),
             'empty' => $this->create_field($fieldcategory, 'text', 'emptyfield', 'Nothing'),
-            'banner' => $this->create_field($fieldcategory, 'picture', 'banner', 'Banner'),
         ];
+        // The optional "picture" field type (not part of Moodle): a picture is not information.
+        $haspicture = array_key_exists('picture', \core_component::get_plugin_list('customfield'));
+        if ($haspicture) {
+            $fields['banner'] = $this->create_field($fieldcategory, 'picture', 'banner', 'Banner');
+        }
         $fieldgenerator->add_instance_data($fields['language'], $course->id, 2);
         $fieldgenerator->add_instance_data($fields['venue'], $course->id, 'Geneva');
         $fieldgenerator->add_instance_data($fields['certificate'], $course->id, 1);
@@ -129,11 +133,13 @@ final class get_course_preview_test extends \advanced_testcase {
 
         // A picture with a file (e.g. a second image) is not information.
         $this->setAdminUser();
-        $draftitemid = file_get_unused_draft_itemid();
-        get_file_storage()->create_file_from_string(['contextid' => \core\context\user::instance(get_admin()->id)->id,
-            'component' => 'user', 'filearea' => 'draft', 'itemid' => $draftitemid, 'filepath' => '/',
-            'filename' => 'banner.png'], base64_decode(self::PNG));
-        $fieldgenerator->add_instance_data($fields['banner'], $course->id, $draftitemid);
+        if ($haspicture) {
+            $draftitemid = file_get_unused_draft_itemid();
+            get_file_storage()->create_file_from_string(['contextid' => \core\context\user::instance(get_admin()->id)->id,
+                'component' => 'user', 'filearea' => 'draft', 'itemid' => $draftitemid, 'filepath' => '/',
+                'filename' => 'banner.png'], base64_decode(self::PNG));
+            $fieldgenerator->add_instance_data($fields['banner'], $course->id, $draftitemid);
+        }
 
         $teacher = $generator->create_user(['firstname' => 'Ada', 'lastname' => 'Lovelace']);
         $generator->enrol_user($teacher->id, $course->id, 'editingteacher');
