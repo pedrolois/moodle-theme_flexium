@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1 (2026-10-20)
+
+- Fixed: names with "&" (courses, categories, filter options, the site name, news) showed as "&amp;" in the
+  catalogue, the home page and the footer.
+- Fixed: the "Filters" heading of the filters panel is aligned with the filters below it.
+- "Latest courses" order: courses created in the same second show the newest first.
+- Tests: responsive browser tests on phones, tablets (portrait and landscape) and a small laptop, and PHPUnit tests for
+  the fixes above.
+
 ## 1.0.0 (2026-10-20)
 
 First stable release. Flexium: a flexible Moodle theme. Design more. Code less.

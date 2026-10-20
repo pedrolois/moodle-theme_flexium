@@ -362,7 +362,8 @@ class catalog {
         );
         foreach ($records as $record) {
             $context = \core\context\coursecat::instance($record->id);
-            $record->name = format_string($record->name, true, ['context' => $context]);
+            // Shown by React, which escapes it: no escaping here (an "&" would show as "&amp;").
+            $record->name = format_string($record->name, true, ['context' => $context, 'escape' => false]);
             $this->categories[$record->id] = $record;
         }
     }
@@ -462,7 +463,7 @@ class catalog {
         $text = [];
         foreach ($records as $course) {
             $context = context_course::instance($course->id);
-            $displayname = format_string($course->fullname, true, ['context' => $context]);
+            $displayname = format_string($course->fullname, true, ['context' => $context, 'escape' => false]);
             $plainsummary = self::plain_text((string) $course->summary, (int) $course->summaryformat);
             $data['courses'][$course->id] = [
                 'category' => (int) $course->category,
@@ -694,7 +695,7 @@ class catalog {
         if ($field && $field->get('type') === 'select' && method_exists($field, 'get_options')) {
             $ordered = [];
             foreach ($field->get_options() as $option) {
-                $option = trim(strip_tags(format_string($option)));
+                $option = trim(strip_tags(format_string($option, true, ['escape' => false])));
                 if (isset($labels[$option])) {
                     $ordered[$option] = $labels[$option];
                 }
@@ -845,7 +846,8 @@ class catalog {
                     ? get_string('catalog_ends', 'theme_flexium', userdate($course->enddate, $dateformat)) : '',
                 'participants' => get_string('catalog_participants', 'theme_flexium',
                     format_float($this->participants[$id] ?? 0, 0)),
-                'shortname' => format_string($course->shortname, true, ['context' => context_course::instance($id)]),
+                'shortname' => format_string($course->shortname, true, ['context' => context_course::instance($id),
+                    'escape' => false]),
                 'teachers', 'teachernames', 'teacherphotos' => implode(', ', array_column($this->teachers[$id] ?? [], 'name')),
                 default => implode(', ', array_map(
                     fn($value) => $this->labels[$item][$value] ?? $value,

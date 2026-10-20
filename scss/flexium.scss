@@ -55,8 +55,9 @@ h6,
 }
 
 // Filters inside the left drawer (layout/catalog.php).
+// Aligned with the filters below it (drawer content padding + their own).
 .flexium-drawerheading {
-    padding-left: .25rem;
+    padding-left: .625rem;
 }
 
 .flexium-catalog__drawerfilters {

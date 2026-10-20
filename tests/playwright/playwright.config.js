@@ -33,13 +33,13 @@ module.exports = defineConfig({
         },
         {
             name: 'visitor',
-            testMatch: /visitor\.spec\.js/,
+            testMatch: /(visitor|responsive)\.spec\.js/,
             use: desktop,
         },
         {
             name: 'admin',
             testMatch: /.*\.spec\.js/,
-            testIgnore: /visitor\.spec\.js/,
+            testIgnore: /(visitor|responsive)\.spec\.js/,
             dependencies: ['setup'],
             use: { ...desktop, storageState: path.join(__dirname, '.auth', 'admin.json') },
         },

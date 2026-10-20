@@ -10,6 +10,10 @@ Browser tests of the Flexium theme:
 - `home.spec.js`: the home page builder (section wands, add / move / duplicate / delete, discard, save).
 - `footer.spec.js`: the footer builder (style and block wands, blocks and columns, discard, save).
 - `layout.spec.js`: the blocks drawer next to the site home, and the page margins wand (preview and save).
+- `responsive.spec.js` (visitor) and `responsive_admin.spec.js`: small phone 360x740, phone 390x844, tablet
+  portrait 768x1024, tablet landscape 1024x768 and small laptop 1280x800. Nothing may scroll sideways, the catalogue
+  adapts its columns, the filters and search work, the top menu reaches the catalogue, the home page and the footer
+  fit, and the quick view, magic wand panels and page margins panel fit on phones and tablets.
 
 ## Setup (once)
 

@@ -26,9 +26,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'theme_flexium';
-$plugin->version   = 2026102003;
+$plugin->version   = 2026102004;
 $plugin->requires  = 2026100500; // Moodle 5.3: ESM core APIs (@moodle/lms/core/ajax, stringUtils).
-$plugin->release   = '1.0.0';
+$plugin->release   = '1.0.1';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->supported = [503, 503];
 $plugin->dependencies = [

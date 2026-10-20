@@ -191,7 +191,7 @@ class home {
                 );
                 foreach ($discussions as $discussion) {
                     $news[] = [
-                        'title' => format_string($discussion->name, true, ['context' => $context]),
+                        'title' => format_string($discussion->name, true, ['context' => $context, 'escape' => false]),
                         'url' => (new \core\url('/mod/forum/discuss.php', ['d' => $discussion->id]))->out(false),
                         'date' => userdate($discussion->timemodified, get_string('strftimedate', 'langconfig')),
                     ];

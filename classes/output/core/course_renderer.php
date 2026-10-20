@@ -117,7 +117,7 @@ class course_renderer extends \core_course_renderer {
             'page' => home::get_page(),
             // Moodle's own site home content, for the "Moodle content" section.
             'sitecontent' => parent::frontpage(),
-            'sitename' => format_string($SITE->fullname),
+            'sitename' => format_string($SITE->fullname, true, ['escape' => false]),
             'palette' => features::palette_images(),
             'catalogurl' => (new \core\url('/course/index.php'))->out(false),
             'loggedin' => isloggedin() && !isguestuser(),
