@@ -161,6 +161,72 @@ async function closeDrawers(page) {
     }
 }
 
+/**
+ * Screen sizes of the responsive tests (Chromium with the device's size, touch and pixel ratio).
+ * Moodle's breakpoints: md 768px (navigation becomes the top bar), lg 992px, xl 1200px.
+ */
+const VIEWPORTS = {
+    'small phone': { viewport: { width: 360, height: 740 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 },
+    'phone': { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 3 },
+    'tablet portrait': { viewport: { width: 768, height: 1024 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 },
+    'tablet landscape': { viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 },
+    'small laptop': { viewport: { width: 1280, height: 800 }, isMobile: false, hasTouch: false, deviceScaleFactor: 1 },
+};
+
+/**
+ * The page does not scroll sideways. On failure, lists the visible elements that stick out of the window.
+ *
+ * @param {import('@playwright/test').Page} page
+ */
+async function expectNoHorizontalScroll(page) {
+    const result = await page.evaluate(() => {
+        const width = window.innerWidth;
+        const offenders = [];
+        if (document.documentElement.scrollWidth > width + 1) {
+            for (const element of document.body.querySelectorAll('*')) {
+                const rect = element.getBoundingClientRect();
+                const style = getComputedStyle(element);
+                if (rect.width > 0 && rect.right > width + 1 && style.visibility !== 'hidden' && style.position !== 'fixed'
+                        && !element.closest('.drawer:not(.show)')) {
+                    offenders.push(`${element.tagName.toLowerCase()}.${[...element.classList].slice(0, 3).join('.')}`
+                        + ` (right ${Math.round(rect.right)}px)`);
+                }
+            }
+        }
+        return { width, scrollwidth: document.documentElement.scrollWidth, offenders: offenders.slice(0, 8) };
+    });
+    expect(result.scrollwidth, `Wider than the ${result.width}px window: ${result.offenders.join(', ')}`)
+        .toBeLessThanOrEqual(result.width + 1);
+}
+
+/**
+ * An element fits inside the window horizontally.
+ *
+ * @param {import('@playwright/test').Locator} locator
+ */
+async function expectInsideWindow(locator) {
+    const box = () => locator.evaluate(element => {
+        const rect = element.getBoundingClientRect();
+        return { left: Math.round(rect.left), right: Math.round(rect.right), width: window.innerWidth };
+    });
+    // Drawers and dialogs slide in: measure once the element stops moving.
+    let previous = null;
+    await expect.poll(async () => {
+        const current = JSON.stringify(await box());
+        const settled = current === previous;
+        previous = current;
+        return settled;
+    }, { intervals: [150, 250, 400, 600] }).toBe(true);
+    const { left, right, width } = await box();
+    expect(left, 'left edge inside the window').toBeGreaterThanOrEqual(-1);
+    expect(right, `right edge inside the ${width}px window`).toBeLessThanOrEqual(width + 1);
+}
+
+/** Number of columns of a list of elements laid out in a grid (distinct left positions). */
+const columnCount = locator => locator.evaluateAll(elements => new Set(elements
+    .filter(element => element.getBoundingClientRect().width > 0)
+    .map(element => Math.round(element.getBoundingClientRect().left))).size);
+
 /** A page of a new browser context without session: what a visitor sees. */
 async function visitorPage(browser) {
     // The test runner gives new contexts the project's options, session included: start without any.
@@ -173,5 +239,5 @@ async function visitorPage(browser) {
 module.exports = {
     fixture, KEYWORD, getSettings, setSettings, waitForResults, openCatalogue, search, cardTitles, catalogueError,
     setEditMode, menuLink, activeMenuLinks, snapshotSettings, restoreSettings, wand, control, openWand, closePanel,
-    discard, save, visitorPage, closeDrawers,
+    discard, save, visitorPage, closeDrawers, VIEWPORTS, expectNoHorizontalScroll, expectInsideWindow, columnCount,
 };

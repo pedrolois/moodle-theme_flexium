@@ -131,6 +131,37 @@ final class get_catalog_test extends \advanced_testcase {
     }
 
     /**
+     * Sort by latest: courses created in the same second, the newest (highest id) first.
+     */
+    public function test_sort_latest_same_second(): void {
+        global $DB;
+        $this->resetAfterTest();
+        $courses = $this->create_courses();
+        $DB->set_field_select('course', 'timecreated', time() - DAYSECS, 'id <> :site', ['site' => SITEID]);
+        $this->purge();
+        $this->setUser($this->getDataGenerator()->create_user());
+
+        // Created in this order: zoology, astronomy, botany (the hidden course is not listed for a student).
+        $this->assertGreaterThan($courses['zoology']->id, $courses['botany']->id);
+        $this->assertSame(['Botany', 'Astronomy', 'Zoology basics'], $this->names($this->query(['sort' => 'latest'])));
+    }
+
+    /**
+     * Names are sent as plain text for React to escape: "&" must not come back as "&amp;".
+     */
+    public function test_names_not_escaped_twice(): void {
+        $this->resetAfterTest();
+        $category = $this->getDataGenerator()->create_category(['name' => 'Data & Technology']);
+        $this->getDataGenerator()->create_course(['fullname' => 'R & D Basics', 'category' => $category->id]);
+        $this->purge();
+        $this->setUser($this->getDataGenerator()->create_user());
+
+        $course = $this->query(['search' => 'basics'])['courses'][0];
+        $this->assertSame('R & D Basics', $course['fullname']);
+        $this->assertSame('Data & Technology', $course['categoryname']);
+    }
+
+    /**
      * Hidden courses are listed for administrators only.
      */
     public function test_hidden_courses(): void {

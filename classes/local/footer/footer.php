@@ -240,7 +240,7 @@ class footer {
         $logo = $OUTPUT->get_logo_url(null, 120) ?: $OUTPUT->get_compact_logo_url(300, 120);
         return [
             'logo' => $logo ? $logo->out(false) : '',
-            'sitename' => format_string($SITE->fullname, true, ['context' => \core\context\system::instance()]),
+            'sitename' => format_string($SITE->fullname, true, ['context' => \core\context\system::instance(), 'escape' => false]),
             'homeurl' => (new url('/'))->out(false),
             'year' => userdate(time(), '%Y'),
             'legal' => $legal,
