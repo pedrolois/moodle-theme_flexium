@@ -1,6 +1,26 @@
-// Every magic wand of the catalogue (Moodle edit mode): each change shows at once (live preview), discarding puts the
-// page back, and saved changes reach everybody (checked as a visitor). Settings saved here are put back exactly after
-// each test (config.php snapshot / restore).
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Every magic wand of the catalogue (Moodle edit mode): each change shows at once (live preview), discarding puts the
+ * page back, and saved changes reach everybody (checked as a visitor). Settings saved here are put back exactly after
+ * each test (config.php snapshot / restore).
+ *
+ * @copyright  2026 Pedro Lois {@link https://github.com/pedrolois}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 const { test, expect } = require('@playwright/test');
 const {
     setEditMode, waitForResults, wand, control, openWand, closePanel, discard, save, visitorPage, snapshotSettings,

@@ -1,4 +1,21 @@
-import{useEffect as H,useId as A,useState as S}from"react";import{Spotlight as K}from"@moodle/lms/theme_flexium/catalog/EditZones";import{warnOnLeave as q}from"@moodle/lms/theme_flexium/catalog/useCatalogEditor";import V from"@moodle/lms/theme_flexium/home/SchemaForm";import O,{str as a}from"@moodle/lms/theme_flexium/home/Sections";import{getHomeData as G,saveHomePage as Q}from"./repository";import{Fragment as $,jsx as e,jsxs as m}from"react/jsx-runtime";/**
+import{useEffect as H,useId as A,useState as S}from"react";import{Spotlight as K}from"@moodle/lms/theme_flexium/catalog/EditZones";import{warnOnLeave as q}from"@moodle/lms/theme_flexium/catalog/useCatalogEditor";import V from"@moodle/lms/theme_flexium/home/SchemaForm";import O,{str as a}from"@moodle/lms/theme_flexium/home/Sections";import{getHomeData as G,saveHomePage as Q}from"./repository";import{Fragment as $,jsx as e,jsxs as m}from"react/jsx-runtime";/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *//**
  * Flexium home page: a list of sections (hero, course carousels, categories, figures...).
  *
  * Site administrators with edit mode on build it in place: a magic wand on each section opens its settings in a side

@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Quick filters (feature "Quick filters"): toggle buttons for frequent searches, in the order chosen by the admin.
  * "My courses" and "Favourites" are only offered to logged in users.
@@ -49,13 +67,13 @@ function QuickFilters({
         children: [
           /* @__PURE__ */ jsxDEV("i", { className: `${icons[key] ?? "fa fa-filter"} me-1`, "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickFilters.tsx",
-            lineNumber: 76,
+            lineNumber: 80,
             columnNumber: 25
           }, this),
           names[key] || str(strings, `quick_${key}`),
           showcount && count !== void 0 && /* @__PURE__ */ jsxDEV("span", { className: "flexium-quickfilter__count", children: formatNumber(count) }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickFilters.tsx",
-            lineNumber: 79,
+            lineNumber: 83,
             columnNumber: 29
           }, this)
         ]
@@ -64,14 +82,14 @@ function QuickFilters({
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/QuickFilters.tsx",
-        lineNumber: 73,
+        lineNumber: 77,
         columnNumber: 21
       },
       this
     );
   }) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/QuickFilters.tsx",
-    lineNumber: 68,
+    lineNumber: 72,
     columnNumber: 9
   }, this);
 }

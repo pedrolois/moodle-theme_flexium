@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * In-place editing of the catalogue (edit mode, site administrators): a magic wand on each part of the page that can
  * change (card image, texts, badges, footer, toolbar, filters, header). Clicking it highlights that part and opens a
@@ -75,7 +93,7 @@ function Wand({ zone, edit }) {
       onClick: () => edit.setActive(active ? "" : zone),
       children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 103,
+        lineNumber: 107,
         columnNumber: 13
       }, this)
     },
@@ -83,7 +101,7 @@ function Wand({ zone, edit }) {
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 100,
+      lineNumber: 104,
       columnNumber: 9
     },
     this
@@ -107,7 +125,7 @@ function ExternalZone({ zone, selector }) {
   }, [element, active]);
   return edit && element ? createPortal(/* @__PURE__ */ jsxDEV(Wand, { zone, edit }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 130,
+    lineNumber: 134,
     columnNumber: 43
   }, this), element) : null;
 }
@@ -117,7 +135,7 @@ function EditZone({ zone, children, enabled = true, className = "" }) {
   if (!edit || !enabled) {
     return /* @__PURE__ */ jsxDEV(Fragment, { children }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 140,
+      lineNumber: 144,
       columnNumber: 16
     }, this);
   }
@@ -126,12 +144,12 @@ function EditZone({ zone, children, enabled = true, className = "" }) {
     children,
     /* @__PURE__ */ jsxDEV(Wand, { zone, edit }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 146,
+      lineNumber: 150,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 144,
+    lineNumber: 148,
     columnNumber: 9
   }, this);
 }
@@ -150,7 +168,7 @@ function CardControl({ setting, edit }) {
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-feature flexium-feature--wide", "data-feature": "card-badges", children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__label mb-1", children: str(strings, "cardbadges") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 169,
+          lineNumber: 173,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV(
@@ -184,7 +202,7 @@ function CardControl({ setting, edit }) {
                     false,
                     {
                       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-                      lineNumber: 177,
+                      lineNumber: 181,
                       columnNumber: 37
                     },
                     this
@@ -194,7 +212,7 @@ function CardControl({ setting, edit }) {
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-                  lineNumber: 174,
+                  lineNumber: 178,
                   columnNumber: 29
                 },
                 this
@@ -205,14 +223,14 @@ function CardControl({ setting, edit }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-            lineNumber: 170,
+            lineNumber: 174,
             columnNumber: 21
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 168,
+        lineNumber: 172,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-feature", "data-feature": "card-badgerows", children: [
@@ -231,34 +249,34 @@ function CardControl({ setting, edit }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-              lineNumber: 187,
+              lineNumber: 191,
               columnNumber: 25
             },
             this
           ),
           /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "form-check-label flexium-feature__label", children: str(strings, "cardbadgerows") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-            lineNumber: 189,
+            lineNumber: 193,
             columnNumber: 25
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 186,
+          lineNumber: 190,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help", children: str(strings, "cardbadgerows_desc") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 193,
+          lineNumber: 197,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 185,
+        lineNumber: 189,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 167,
+      lineNumber: 171,
       columnNumber: 13
     }, this);
   }
@@ -266,7 +284,7 @@ function CardControl({ setting, edit }) {
     return /* @__PURE__ */ jsxDEV("div", { className: "flexium-feature flexium-feature--wide", "data-feature": "card-footer", children: [
       /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__label mb-1", children: str(strings, "cardfooter") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 201,
+        lineNumber: 205,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -282,14 +300,14 @@ function CardControl({ setting, edit }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 202,
+          lineNumber: 206,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 200,
+      lineNumber: 204,
       columnNumber: 13
     }, this);
   }
@@ -312,23 +330,23 @@ function CardControl({ setting, edit }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 214,
+        lineNumber: 218,
         columnNumber: 17
       },
       this
     ),
     /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "form-check-label flexium-feature__label", children: str(strings, key) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 216,
+      lineNumber: 220,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 213,
+    lineNumber: 217,
     columnNumber: 13
   }, this) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 212,
+    lineNumber: 216,
     columnNumber: 9
   }, this);
 }
@@ -350,23 +368,23 @@ function OptionControl({ edit }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 233,
+        lineNumber: 237,
         columnNumber: 17
       },
       this
     ),
     /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "form-check-label flexium-feature__label", children: str(edit.editor.strings, "editor_filtersdraweropen") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 236,
+      lineNumber: 240,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 232,
+    lineNumber: 236,
     columnNumber: 13
   }, this) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 231,
+    lineNumber: 235,
     columnNumber: 9
   }, this);
 }
@@ -389,18 +407,18 @@ function QuickLabels({ edit }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-feature", "data-feature": "quicklabels", children: [
     /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__label mb-1", children: str(strings, "feature_quicklabels") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 267,
+      lineNumber: 271,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help", children: str(strings, "feature_quicklabels_desc") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 268,
+      lineNumber: 272,
       columnNumber: 13
     }, this),
     keys.map((key) => /* @__PURE__ */ jsxDEV("div", { className: "mt-2", children: [
       /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-${key}`, className: "visually-hidden", children: str(strings, `quick_${key}`) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 271,
+        lineNumber: 275,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -419,19 +437,19 @@ function QuickLabels({ edit }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 272,
+          lineNumber: 276,
           columnNumber: 21
         },
         this
       )
     ] }, key, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 270,
+      lineNumber: 274,
       columnNumber: 17
     }, this))
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 266,
+    lineNumber: 270,
     columnNumber: 9
   }, this);
 }
@@ -441,17 +459,17 @@ function ZoneControls({ zone, edit }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-editpanel__controls", children: [
     definition.card?.map((setting) => /* @__PURE__ */ jsxDEV(CardControl, { setting, edit }, setting, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 292,
+      lineNumber: 296,
       columnNumber: 46
     }, this)),
     definition.options?.map((option) => /* @__PURE__ */ jsxDEV(OptionControl, { edit }, option, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 293,
+      lineNumber: 297,
       columnNumber: 48
     }, this)),
     (zone === "filters" || zone === "quickfilters") && /* @__PURE__ */ jsxDEV(QuickLabels, { edit }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 294,
+      lineNumber: 298,
       columnNumber: 65
     }, this),
     definition.features.map((key) => {
@@ -471,7 +489,7 @@ function ZoneControls({ zone, edit }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 298,
+          lineNumber: 302,
           columnNumber: 21
         },
         this
@@ -479,7 +497,7 @@ function ZoneControls({ zone, edit }) {
     })
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 291,
+    lineNumber: 295,
     columnNumber: 9
   }, this);
 }
@@ -514,7 +532,7 @@ function Spotlight({ zone }) {
     height: rect.height + 2 * margin
   } }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 339,
+    lineNumber: 343,
     columnNumber: 9
   }, this);
 }
@@ -538,7 +556,7 @@ function Accordion({ edit }) {
             str(strings, `editzone_${zone}`),
             /* @__PURE__ */ jsxDEV("i", { className: `fa fa-chevron-${open ? "up" : "down"}`, "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-              lineNumber: 368,
+              lineNumber: 372,
               columnNumber: 33
             }, this)
           ]
@@ -547,13 +565,13 @@ function Accordion({ edit }) {
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 365,
+          lineNumber: 369,
           columnNumber: 29
         },
         this
       ) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 364,
+        lineNumber: 368,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -566,7 +584,7 @@ function Accordion({ edit }) {
           "aria-labelledby": `${id}-${zone}`,
           children: open && /* @__PURE__ */ jsxDEV(ZoneControls, { zone, edit }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-            lineNumber: 373,
+            lineNumber: 377,
             columnNumber: 38
           }, this)
         },
@@ -574,19 +592,19 @@ function Accordion({ edit }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 371,
+          lineNumber: 375,
           columnNumber: 25
         },
         this
       )
     ] }, zone, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 363,
+      lineNumber: 367,
       columnNumber: 21
     }, this);
   }) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 359,
+    lineNumber: 363,
     columnNumber: 9
   }, this);
 }
@@ -612,7 +630,7 @@ function EditSidePanel() {
   return /* @__PURE__ */ jsxDEV(Fragment, { children: [
     highlighted && /* @__PURE__ */ jsxDEV(Spotlight, { zone: highlighted }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 407,
+      lineNumber: 411,
       columnNumber: 25
     }, this),
     /* @__PURE__ */ jsxDEV("aside", { className: "flexium-editpanel", "aria-labelledby": `${id}-title`, children: [
@@ -620,13 +638,13 @@ function EditSidePanel() {
         /* @__PURE__ */ jsxDEV("h2", { id: `${id}-title`, className: "flexium-editpanel__title", children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-            lineNumber: 411,
+            lineNumber: 415,
             columnNumber: 21
           }, this),
           str(strings, `editzone_${active}`)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 410,
+          lineNumber: 414,
           columnNumber: 17
         }, this),
         /* @__PURE__ */ jsxDEV(
@@ -641,44 +659,44 @@ function EditSidePanel() {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-            lineNumber: 414,
+            lineNumber: 418,
             columnNumber: 17
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 409,
+        lineNumber: 413,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-editpanel__body", children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help mb-3", children: str(strings, "editor_aftersave") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 418,
+          lineNumber: 422,
           columnNumber: 17
         }, this),
         active === "all" ? /* @__PURE__ */ jsxDEV(Accordion, { edit }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 419,
+          lineNumber: 423,
           columnNumber: 37
         }, this) : /* @__PURE__ */ jsxDEV(ZoneControls, { zone: active, edit }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-          lineNumber: 419,
+          lineNumber: 423,
           columnNumber: 65
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-        lineNumber: 417,
+        lineNumber: 421,
         columnNumber: 13
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-      lineNumber: 408,
+      lineNumber: 412,
       columnNumber: 9
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/EditZones.tsx",
-    lineNumber: 406,
+    lineNumber: 410,
     columnNumber: 9
   }, this);
 }

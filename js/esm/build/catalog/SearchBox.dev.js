@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Debounced catalogue search box.
  *
@@ -42,13 +60,13 @@ function SearchBox({ value, onSearch, strings }) {
       children: [
         /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "visually-hidden", children: str(strings, "catalog_search") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/SearchBox.tsx",
-          lineNumber: 70,
+          lineNumber: 74,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-search__field", children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-search flexium-search__icon", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/SearchBox.tsx",
-            lineNumber: 72,
+            lineNumber: 76,
             columnNumber: 17
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -66,14 +84,14 @@ function SearchBox({ value, onSearch, strings }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/SearchBox.tsx",
-              lineNumber: 73,
+              lineNumber: 77,
               columnNumber: 17
             },
             this
           )
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/SearchBox.tsx",
-          lineNumber: 71,
+          lineNumber: 75,
           columnNumber: 13
         }, this)
       ]
@@ -82,7 +100,7 @@ function SearchBox({ value, onSearch, strings }) {
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/SearchBox.tsx",
-      lineNumber: 62,
+      lineNumber: 66,
       columnNumber: 9
     },
     this

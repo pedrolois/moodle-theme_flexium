@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Flexium home page: a list of sections (hero, course carousels, categories, figures...).
  *
@@ -61,36 +79,36 @@ function EditHint({ strings }) {
     return /* @__PURE__ */ jsxDEV("button", { type: "button", className: "flexium-edithint__pill", onClick: () => toggle(false), children: [
       /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 112,
+        lineNumber: 116,
         columnNumber: 17
       }, this),
       str(strings, "home_edithint_title")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 111,
+      lineNumber: 115,
       columnNumber: 13
     }, this);
   }
   return /* @__PURE__ */ jsxDEV("div", { className: "alert alert-info flexium-edithint", role: "note", children: [
     /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles flexium-edithint__icon", "aria-hidden": "true" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 118,
+      lineNumber: 122,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { children: [
       /* @__PURE__ */ jsxDEV("strong", { children: str(strings, "home_edithint_title") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 120,
+        lineNumber: 124,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV("p", { className: "mb-0", children: str(strings, "home_edithint") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 121,
+        lineNumber: 125,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 119,
+      lineNumber: 123,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -105,14 +123,14 @@ function EditHint({ strings }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 123,
+        lineNumber: 127,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 117,
+    lineNumber: 121,
     columnNumber: 9
   }, this);
 }
@@ -139,7 +157,7 @@ function SectionFrame({
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeframe__bar", children: [
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-homeframe__name", children: name }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 152,
+            lineNumber: 156,
             columnNumber: 17
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -154,7 +172,7 @@ function SectionFrame({
               onClick: onSettings,
               children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 156,
+                lineNumber: 160,
                 columnNumber: 21
               }, this)
             },
@@ -162,7 +180,7 @@ function SectionFrame({
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-              lineNumber: 153,
+              lineNumber: 157,
               columnNumber: 17
             },
             this
@@ -179,7 +197,7 @@ function SectionFrame({
               "aria-label": str(strings, "home_moveup"),
               children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-up", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 161,
+                lineNumber: 165,
                 columnNumber: 21
               }, this)
             },
@@ -187,7 +205,7 @@ function SectionFrame({
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-              lineNumber: 158,
+              lineNumber: 162,
               columnNumber: 17
             },
             this
@@ -203,30 +221,6 @@ function SectionFrame({
               title: str(strings, "home_movedown"),
               "aria-label": str(strings, "home_movedown"),
               children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-down", "aria-hidden": "true" }, void 0, false, {
-                fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 165,
-                columnNumber: 21
-              }, this)
-            },
-            void 0,
-            false,
-            {
-              fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-              lineNumber: 163,
-              columnNumber: 17
-            },
-            this
-          ),
-          /* @__PURE__ */ jsxDEV(
-            "button",
-            {
-              type: "button",
-              className: "flexium-homeframe__btn",
-              "data-action": "duplicate",
-              onClick: onDuplicate,
-              title: str(strings, "home_duplicate"),
-              "aria-label": str(strings, "home_duplicate"),
-              children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-clone", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
                 lineNumber: 169,
                 columnNumber: 21
@@ -245,14 +239,14 @@ function SectionFrame({
             "button",
             {
               type: "button",
-              className: "flexium-homeframe__btn flexium-homeframe__btn--delete",
-              "data-action": "delete",
-              onClick: onDelete,
-              title: str(strings, "home_delete"),
-              "aria-label": str(strings, "home_delete"),
-              children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-trash-can", "aria-hidden": "true" }, void 0, false, {
+              className: "flexium-homeframe__btn",
+              "data-action": "duplicate",
+              onClick: onDuplicate,
+              title: str(strings, "home_duplicate"),
+              "aria-label": str(strings, "home_duplicate"),
+              children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-clone", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 174,
+                lineNumber: 173,
                 columnNumber: 21
               }, this)
             },
@@ -264,10 +258,34 @@ function SectionFrame({
               columnNumber: 17
             },
             this
+          ),
+          /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              type: "button",
+              className: "flexium-homeframe__btn flexium-homeframe__btn--delete",
+              "data-action": "delete",
+              onClick: onDelete,
+              title: str(strings, "home_delete"),
+              "aria-label": str(strings, "home_delete"),
+              children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-trash-can", "aria-hidden": "true" }, void 0, false, {
+                fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
+                lineNumber: 178,
+                columnNumber: 21
+              }, this)
+            },
+            void 0,
+            false,
+            {
+              fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
+              lineNumber: 175,
+              columnNumber: 17
+            },
+            this
           )
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 151,
+          lineNumber: 155,
           columnNumber: 13
         }, this),
         children
@@ -277,7 +295,7 @@ function SectionFrame({
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 149,
+      lineNumber: 153,
       columnNumber: 9
     },
     this
@@ -296,7 +314,7 @@ function Inserter({ strings, onClick, active }) {
       "aria-label": str(strings, "home_addsection"),
       children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-plus", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 190,
+        lineNumber: 194,
         columnNumber: 17
       }, this)
     },
@@ -304,13 +322,13 @@ function Inserter({ strings, onClick, active }) {
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 188,
+      lineNumber: 192,
       columnNumber: 13
     },
     this
   ) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 187,
+    lineNumber: 191,
     columnNumber: 9
   }, this);
 }
@@ -321,23 +339,23 @@ function EditBar({ strings, dirty, status, onTemplates, onSave, onReset }) {
       /* @__PURE__ */ jsxDEV("h2", { className: "flexium-editor__title", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-pen-to-square me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 214,
+          lineNumber: 218,
           columnNumber: 25
         }, this),
         str(strings, "home_editor_title")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 213,
+        lineNumber: 217,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV("p", { className: "flexium-editor__help", children: str(strings, "home_editor_help") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 216,
+        lineNumber: 220,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 212,
+      lineNumber: 216,
       columnNumber: 17
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-editor__actions", children: [
@@ -348,19 +366,19 @@ function EditBar({ strings, dirty, status, onTemplates, onSave, onReset }) {
         status !== "saving" && dirty && str(strings, "editor_unsaved")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 219,
+        lineNumber: 223,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV("button", { type: "button", className: "btn btn-outline-primary", "data-action": "templates", onClick: onTemplates, children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-swatchbook me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 226,
+          lineNumber: 230,
           columnNumber: 25
         }, this),
         str(strings, "home_templates")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 225,
+        lineNumber: 229,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -377,7 +395,7 @@ function EditBar({ strings, dirty, status, onTemplates, onSave, onReset }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 228,
+          lineNumber: 232,
           columnNumber: 21
         },
         this
@@ -396,23 +414,23 @@ function EditBar({ strings, dirty, status, onTemplates, onSave, onReset }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 230,
+          lineNumber: 234,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 218,
+      lineNumber: 222,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 211,
+    lineNumber: 215,
     columnNumber: 13
   }, this) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 210,
+    lineNumber: 214,
     columnNumber: 9
   }, this);
 }
@@ -440,13 +458,13 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
       /* @__PURE__ */ jsxDEV("h2", { id: `${id}-title`, className: "flexium-editpanel__title", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 278,
+          lineNumber: 282,
           columnNumber: 21
         }, this),
         title
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 277,
+        lineNumber: 281,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -461,21 +479,21 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 280,
+          lineNumber: 284,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 276,
+      lineNumber: 280,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-editpanel__body", children: [
       section && /* @__PURE__ */ jsxDEV(Fragment, { children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help mb-3", children: str(strings, `home_type_${section.type}_desc`) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 286,
+          lineNumber: 290,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ jsxDEV(
@@ -493,20 +511,20 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 287,
+            lineNumber: 291,
             columnNumber: 25
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 285,
+        lineNumber: 289,
         columnNumber: 21
       }, this),
       panel.kind === "add" && /* @__PURE__ */ jsxDEV(Fragment, { children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help mb-3", children: str(strings, "home_addsection_help") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 294,
+          lineNumber: 298,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ jsxDEV("ul", { className: "flexium-homepicker", children: editor.types.map((type) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
@@ -519,12 +537,12 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
             children: [
               /* @__PURE__ */ jsxDEV("strong", { children: str(strings, `home_type_${type}`) }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 300,
+                lineNumber: 304,
                 columnNumber: 41
               }, this),
               /* @__PURE__ */ jsxDEV("span", { children: str(strings, `home_type_${type}_desc`) }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-                lineNumber: 301,
+                lineNumber: 305,
                 columnNumber: 41
               }, this)
             ]
@@ -533,28 +551,28 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
           true,
           {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 298,
+            lineNumber: 302,
             columnNumber: 37
           },
           this
         ) }, type, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 297,
+          lineNumber: 301,
           columnNumber: 33
         }, this)) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 295,
+          lineNumber: 299,
           columnNumber: 25
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 293,
+        lineNumber: 297,
         columnNumber: 21
       }, this),
       panel.kind === "templates" && /* @__PURE__ */ jsxDEV(Fragment, { children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help mb-3", children: str(strings, "home_templates_help") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 310,
+          lineNumber: 314,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ jsxDEV("ul", { className: "flexium-hometemplates", children: editor.templates.map((template) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("button", { type: "button", className: `flexium-hometemplate${page.template === template.key ? " is-current" : ""}`, onClick: () => onTemplate(template.key), children: [
@@ -568,58 +586,58 @@ function SidePanel({ panel, page, editor, palette, data, onClose, onSettings, on
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-              lineNumber: 319,
+              lineNumber: 323,
               columnNumber: 49
             },
             this
           )) }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 317,
+            lineNumber: 321,
             columnNumber: 41
           }, this),
           /* @__PURE__ */ jsxDEV("strong", { children: [
             template.name,
             page.template === template.key && /* @__PURE__ */ jsxDEV("span", { className: "badge text-bg-primary ms-2", children: str(strings, "home_current") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-              lineNumber: 326,
+              lineNumber: 330,
               columnNumber: 49
             }, this)
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 323,
+            lineNumber: 327,
             columnNumber: 41
           }, this),
           /* @__PURE__ */ jsxDEV("span", { children: template.description }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 329,
+            lineNumber: 333,
             columnNumber: 41
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 314,
+          lineNumber: 318,
           columnNumber: 37
         }, this) }, template.key, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 313,
+          lineNumber: 317,
           columnNumber: 33
         }, this)) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 311,
+          lineNumber: 315,
           columnNumber: 25
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 309,
+        lineNumber: 313,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 283,
+      lineNumber: 287,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 275,
+    lineNumber: 279,
     columnNumber: 9
   }, this);
 }
@@ -690,7 +708,7 @@ function HomePage({
   return /* @__PURE__ */ jsxDEV("div", { className: `flexium-home${panel ? " flexium-catalog--editing" : ""}`, children: [
     canedit && /* @__PURE__ */ jsxDEV(EditHint, { strings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 406,
+      lineNumber: 410,
       columnNumber: 25
     }, this),
     editor && /* @__PURE__ */ jsxDEV(
@@ -710,14 +728,14 @@ function HomePage({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 408,
+        lineNumber: 412,
         columnNumber: 17
       },
       this
     ),
     editor && page.sections.length === 0 && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__muted", children: str(allstrings, "home_empty") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 414,
+      lineNumber: 418,
       columnNumber: 54
     }, this),
     page.sections.map((section, index) => /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__section", children: [
@@ -732,7 +750,7 @@ function HomePage({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 418,
+          lineNumber: 422,
           columnNumber: 25
         },
         this
@@ -751,7 +769,7 @@ function HomePage({
           onDelete: () => remove(index),
           children: /* @__PURE__ */ jsxDEV(SectionView, { section, context }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-            lineNumber: 427,
+            lineNumber: 431,
             columnNumber: 29
           }, this)
         },
@@ -759,18 +777,18 @@ function HomePage({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 422,
+          lineNumber: 426,
           columnNumber: 25
         },
         this
       ) : /* @__PURE__ */ jsxDEV(SectionView, { section, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 429,
+        lineNumber: 433,
         columnNumber: 25
       }, this)
     ] }, section.id, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 416,
+      lineNumber: 420,
       columnNumber: 17
     }, this)),
     editor && /* @__PURE__ */ jsxDEV(
@@ -784,7 +802,7 @@ function HomePage({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 433,
+        lineNumber: 437,
         columnNumber: 17
       },
       this
@@ -792,7 +810,7 @@ function HomePage({
     editor && /* @__PURE__ */ jsxDEV(Fragment, { children: [
       activeid && /* @__PURE__ */ jsxDEV(Spotlight, { zone: activeid }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-        lineNumber: 438,
+        lineNumber: 442,
         columnNumber: 34
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -812,19 +830,19 @@ function HomePage({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-          lineNumber: 439,
+          lineNumber: 443,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-      lineNumber: 437,
+      lineNumber: 441,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/HomePage.tsx",
-    lineNumber: 405,
+    lineNumber: 409,
     columnNumber: 9
   }, this);
 }

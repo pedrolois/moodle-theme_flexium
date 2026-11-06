@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Course card of the catalogue grid (or row of the list view).
  *
@@ -23,7 +41,7 @@ function MetaItem({ item }) {
         ": "
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 57,
+        lineNumber: 61,
         columnNumber: 17
       }, this),
       photos && /* @__PURE__ */ jsxDEV("span", { className: "flexium-card__avatars", children: item.people.slice(0, 3).map((person) => /* @__PURE__ */ jsxDEV(
@@ -38,31 +56,31 @@ function MetaItem({ item }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 61,
+          lineNumber: 65,
           columnNumber: 29
         },
         this
       )) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 59,
+        lineNumber: 63,
         columnNumber: 21
       }, this),
       !photos && /* @__PURE__ */ jsxDEV("i", { className: `${item.icon} me-1`, "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 66,
+        lineNumber: 70,
         columnNumber: 29
       }, this),
       names && item.text
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 56,
+      lineNumber: 60,
       columnNumber: 13
     }, this);
   }
   return /* @__PURE__ */ jsxDEV("span", { className: "flexium-card__meta", title: item.label, children: [
     /* @__PURE__ */ jsxDEV("i", { className: `${item.icon} me-1`, "aria-hidden": "true" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 73,
+      lineNumber: 77,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("span", { className: "visually-hidden", children: [
@@ -70,13 +88,13 @@ function MetaItem({ item }) {
       ": "
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 74,
+      lineNumber: 78,
       columnNumber: 13
     }, this),
     item.text
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-    lineNumber: 72,
+    lineNumber: 76,
     columnNumber: 9
   }, this);
 }
@@ -99,34 +117,34 @@ function CardImage({ course, strings, features, loggedin, onFavourite, onQuickVi
       !course.visible && /* @__PURE__ */ jsxDEV("li", { className: "flexium-card__statusbadge flexium-card__statusbadge--hidden", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-eye-slash me-1", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 116,
+          lineNumber: 120,
           columnNumber: 33
         }, this),
         str(strings, "catalog_hidden")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 115,
+        lineNumber: 119,
         columnNumber: 29
       }, this),
       statuses.map((key) => /* @__PURE__ */ jsxDEV("li", { className: `flexium-card__statusbadge flexium-card__statusbadge--${key}`, children: [
         /* @__PURE__ */ jsxDEV("i", { className: `${status[key][0]} me-1`, "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 122,
+          lineNumber: 126,
           columnNumber: 33
         }, this),
         str(strings, `status_${key}`)
       ] }, key, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 121,
+        lineNumber: 125,
         columnNumber: 29
       }, this))
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 113,
+      lineNumber: 117,
       columnNumber: 21
     }, this) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 111,
+      lineNumber: 115,
       columnNumber: 13
     }, this),
     (favourites || quickview) && // Above the card link (see .flexium-card__link::after), so they stay clickable.
@@ -142,7 +160,7 @@ function CardImage({ course, strings, features, loggedin, onFavourite, onQuickVi
           onClick: () => onQuickView(course),
           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-eye", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-            lineNumber: 136,
+            lineNumber: 140,
             columnNumber: 29
           }, this)
         },
@@ -150,7 +168,7 @@ function CardImage({ course, strings, features, loggedin, onFavourite, onQuickVi
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 133,
+          lineNumber: 137,
           columnNumber: 25
         },
         this
@@ -167,7 +185,7 @@ function CardImage({ course, strings, features, loggedin, onFavourite, onQuickVi
           onClick: () => onFavourite(course),
           children: /* @__PURE__ */ jsxDEV("i", { className: `fa-${course.favourite ? "solid" : "regular"} fa-star`, "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-            lineNumber: 144,
+            lineNumber: 148,
             columnNumber: 29
           }, this)
         },
@@ -175,19 +193,19 @@ function CardImage({ course, strings, features, loggedin, onFavourite, onQuickVi
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 140,
+          lineNumber: 144,
           columnNumber: 25
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 131,
+      lineNumber: 135,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-    lineNumber: 110,
+    lineNumber: 114,
     columnNumber: 9
   }, this);
 }
@@ -208,29 +226,29 @@ function CardBadges({ course, strings, features, wands, placeholder, badgestyle 
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 174,
+        lineNumber: 178,
         columnNumber: 45
       },
       this
     ) }, `${badge.source}-${badge.label}`, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 173,
+      lineNumber: 177,
       columnNumber: 41
     }, this)) }, list[0].source, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 171,
+      lineNumber: 175,
       columnNumber: 33
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 169,
+      lineNumber: 173,
       columnNumber: 25
     }, this) : /* @__PURE__ */ jsxDEV("p", { className: "flexium-editzone__placeholder", children: placeholder }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 181,
+      lineNumber: 185,
       columnNumber: 25
     }, this) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 167,
+      lineNumber: 171,
       columnNumber: 17
     }, this),
     showprogress && /* @__PURE__ */ jsxDEV("div", { className: "flexium-card__progress", children: [
@@ -245,7 +263,7 @@ function CardBadges({ course, strings, features, wands, placeholder, badgestyle 
           "aria-label": str(strings, "catalog_progress", course.progress),
           children: /* @__PURE__ */ jsxDEV("div", { className: "progress-bar", style: { width: `${course.progress}%` } }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-            lineNumber: 188,
+            lineNumber: 192,
             columnNumber: 25
           }, this)
         },
@@ -253,24 +271,24 @@ function CardBadges({ course, strings, features, wands, placeholder, badgestyle 
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 186,
+          lineNumber: 190,
           columnNumber: 21
         },
         this
       ),
       /* @__PURE__ */ jsxDEV("span", { className: "flexium-card__progresstext", children: str(strings, "catalog_progress", course.progress) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 190,
+        lineNumber: 194,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 185,
+      lineNumber: 189,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-    lineNumber: 165,
+    lineNumber: 169,
     columnNumber: 9
   }, this);
 }
@@ -302,20 +320,20 @@ function CourseCard({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 206,
+        lineNumber: 210,
         columnNumber: 17
       },
       this
     ) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 205,
+      lineNumber: 209,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-card__body", children: [
       /* @__PURE__ */ jsxDEV(EditZone, { zone: "text", enabled: wands, className: "flexium-editzone--padded", children: [
         course.categoryname && /* @__PURE__ */ jsxDEV("p", { className: "flexium-card__category", children: course.categoryname }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 211,
+          lineNumber: 215,
           columnNumber: 45
         }, this),
         /* @__PURE__ */ jsxDEV("h3", { className: "flexium-card__title", children: /* @__PURE__ */ jsxDEV(
@@ -330,23 +348,23 @@ function CourseCard({
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-            lineNumber: 214,
+            lineNumber: 218,
             columnNumber: 25
           },
           this
         ) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 212,
+          lineNumber: 216,
           columnNumber: 21
         }, this),
         course.summary && /* @__PURE__ */ jsxDEV("p", { className: "flexium-card__summary", children: course.summary }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 217,
+          lineNumber: 221,
           columnNumber: 40
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 210,
+        lineNumber: 214,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -363,40 +381,40 @@ function CourseCard({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-          lineNumber: 219,
+          lineNumber: 223,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 209,
+      lineNumber: 213,
       columnNumber: 13
     }, this),
     (course.meta.length > 0 || placeholder) && // Items chosen in the theme settings (Course cards tab), formatted on the server.
     /* @__PURE__ */ jsxDEV(EditZone, { zone: "footer", enabled: wands, className: "flexium-editzone--padded", children: /* @__PURE__ */ jsxDEV("footer", { className: "flexium-card__footer", children: [
       course.meta.map((item) => /* @__PURE__ */ jsxDEV(MetaItem, { item }, item.key, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 226,
+        lineNumber: 230,
         columnNumber: 50
       }, this)),
       course.meta.length === 0 && /* @__PURE__ */ jsxDEV("span", { className: "flexium-editzone__placeholder", children: placeholder }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-        lineNumber: 227,
+        lineNumber: 231,
         columnNumber: 54
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 225,
+      lineNumber: 229,
       columnNumber: 21
     }, this) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-      lineNumber: 224,
+      lineNumber: 228,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CourseCard.tsx",
-    lineNumber: 204,
+    lineNumber: 208,
     columnNumber: 9
   }, this);
 }

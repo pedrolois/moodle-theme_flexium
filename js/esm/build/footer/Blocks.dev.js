@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * The blocks of the site footer: how each block type looks with its settings.
  *
@@ -30,7 +48,7 @@ const BRAND = {
 function Title({ settings }) {
   return text(settings, "title") ? /* @__PURE__ */ jsxDEV("h2", { className: "flexium-footer__title", children: text(settings, "title") }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 64,
+    lineNumber: 68,
     columnNumber: 38
   }, this) : null;
 }
@@ -42,7 +60,7 @@ function Nothing({ context, label }) {
     str(context.strings, "footer_notavailable")
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 71,
+    lineNumber: 75,
     columnNumber: 30
   }, this) : null;
 }
@@ -67,17 +85,17 @@ function UserTour({ context }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-footer__tour", children: [
     /* @__PURE__ */ jsxDEV("div", { ref: holder }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 97,
+      lineNumber: 101,
       columnNumber: 13
     }, this),
     context.editing && /* @__PURE__ */ jsxDEV("span", { className: "flexium-footer__muted", children: context.data.tourreset }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 98,
+      lineNumber: 102,
       columnNumber: 33
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 96,
+    lineNumber: 100,
     columnNumber: 9
   }, this);
 }
@@ -87,17 +105,17 @@ function LogoBlock({ settings, context }) {
   return /* @__PURE__ */ jsxDEV("a", { href: data.homeurl, className: `flexium-footer__logo flexium-footer__logo--${text(settings, "size") || "md"}`, children: [
     data.logo && /* @__PURE__ */ jsxDEV("img", { src: data.logo, alt: settings.showname === true ? "" : data.sitename }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 110,
+      lineNumber: 114,
       columnNumber: 27
     }, this),
     (settings.showname === true || !data.logo) && /* @__PURE__ */ jsxDEV("span", { children: data.sitename }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 111,
+      lineNumber: 115,
       columnNumber: 60
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 109,
+    lineNumber: 113,
     columnNumber: 9
   }, this);
 }
@@ -106,17 +124,17 @@ function TextBlock({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Title, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 122,
+      lineNumber: 126,
       columnNumber: 13
     }, this),
     text(settings, "text").split(/\n{2,}/).filter(Boolean).map((paragraph, index) => /* @__PURE__ */ jsxDEV("p", { className: "flexium-footer__text", children: paragraph }, index, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 124,
+      lineNumber: 128,
       columnNumber: 44
     }, this))
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 121,
+    lineNumber: 125,
     columnNumber: 9
   }, this);
 }
@@ -125,7 +143,7 @@ function LinksBlock({ settings }) {
   return /* @__PURE__ */ jsxDEV("nav", { "aria-label": text(settings, "title") || void 0, children: [
     /* @__PURE__ */ jsxDEV(Title, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 135,
+      lineNumber: 139,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-footer__links", children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
@@ -139,22 +157,22 @@ function LinksBlock({ settings }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 139,
+        lineNumber: 143,
         columnNumber: 25
       },
       this
     ) }, index, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 138,
+      lineNumber: 142,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 136,
+      lineNumber: 140,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 134,
+    lineNumber: 138,
     columnNumber: 9
   }, this);
 }
@@ -173,36 +191,36 @@ function ContactBlock({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Title, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 166,
+      lineNumber: 170,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-footer__contact", children: rows.map((row) => /* @__PURE__ */ jsxDEV("li", { children: [
       /* @__PURE__ */ jsxDEV("i", { className: row.icon, "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 170,
+        lineNumber: 174,
         columnNumber: 25
       }, this),
       row.href ? /* @__PURE__ */ jsxDEV("a", { href: row.href, children: row.label }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 171,
+        lineNumber: 175,
         columnNumber: 37
       }, this) : /* @__PURE__ */ jsxDEV("span", { children: row.label }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 171,
+        lineNumber: 175,
         columnNumber: 74
       }, this)
     ] }, row.icon, true, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 169,
+      lineNumber: 173,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 167,
+      lineNumber: 171,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 165,
+    lineNumber: 169,
     columnNumber: 9
   }, this);
 }
@@ -218,7 +236,7 @@ function SocialBlock({ settings, context }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Title, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 188,
+      lineNumber: 192,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: classes.join(" "), children: items(settings).filter((item) => item.url).map((item, index) => {
@@ -237,12 +255,12 @@ function SocialBlock({ settings, context }) {
           children: [
             /* @__PURE__ */ jsxDEV("i", { className: context.networks[network] ?? "fa-solid fa-link", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-              lineNumber: 199,
+              lineNumber: 203,
               columnNumber: 33
             }, this),
             /* @__PURE__ */ jsxDEV("span", { className: "visually-hidden", children: label }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-              lineNumber: 200,
+              lineNumber: 204,
               columnNumber: 33
             }, this)
           ]
@@ -251,23 +269,23 @@ function SocialBlock({ settings, context }) {
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-          lineNumber: 196,
+          lineNumber: 200,
           columnNumber: 29
         },
         this
       ) }, index, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 195,
+        lineNumber: 199,
         columnNumber: 25
       }, this);
     }) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 189,
+      lineNumber: 193,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 187,
+    lineNumber: 191,
     columnNumber: 9
   }, this);
 }
@@ -278,32 +296,32 @@ function LegalBlock({ settings, context }) {
   if (!chosen.length) {
     return /* @__PURE__ */ jsxDEV(Nothing, { context, label: str(strings, "footer_type_legal") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 217,
+      lineNumber: 221,
       columnNumber: 16
     }, this);
   }
   return /* @__PURE__ */ jsxDEV("nav", { children: [
     /* @__PURE__ */ jsxDEV(Title, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 221,
+      lineNumber: 225,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-footer__inline", children: chosen.map((key) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("a", { href: data.legal[key].url, children: data.legal[key].label }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 223,
+      lineNumber: 227,
       columnNumber: 50
     }, this) }, key, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 223,
+      lineNumber: 227,
       columnNumber: 36
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 222,
+      lineNumber: 226,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-    lineNumber: 220,
+    lineNumber: 224,
     columnNumber: 9
   }, this);
 }
@@ -313,7 +331,7 @@ function SupportBlock({ settings, context }) {
   if (!support) {
     return /* @__PURE__ */ jsxDEV(Nothing, { context, label: str(context.strings, "footer_type_support") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 235,
+      lineNumber: 239,
       columnNumber: 16
     }, this);
   }
@@ -326,7 +344,7 @@ function SupportBlock({ settings, context }) {
       children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa-regular fa-life-ring me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-          lineNumber: 241,
+          lineNumber: 245,
           columnNumber: 13
         }, this),
         support.label
@@ -336,7 +354,7 @@ function SupportBlock({ settings, context }) {
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 238,
+      lineNumber: 242,
       columnNumber: 9
     },
     this
@@ -362,7 +380,7 @@ function BlockView({ block, context }) {
   if (isEmptyBlock(block)) {
     return context.editing ? /* @__PURE__ */ jsxDEV("p", { className: "flexium-footer__muted", children: str(context.strings, "footer_empty") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-      lineNumber: 273,
+      lineNumber: 277,
       columnNumber: 34
     }, this) : null;
   }
@@ -372,61 +390,61 @@ function BlockView({ block, context }) {
     case "logo":
       return /* @__PURE__ */ jsxDEV(LogoBlock, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 278,
+        lineNumber: 282,
         columnNumber: 29
       }, this);
     case "text":
       return /* @__PURE__ */ jsxDEV(TextBlock, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 279,
+        lineNumber: 283,
         columnNumber: 29
       }, this);
     case "links":
       return /* @__PURE__ */ jsxDEV(LinksBlock, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 280,
+        lineNumber: 284,
         columnNumber: 30
       }, this);
     case "contact":
       return /* @__PURE__ */ jsxDEV(ContactBlock, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 281,
+        lineNumber: 285,
         columnNumber: 32
       }, this);
     case "social":
       return /* @__PURE__ */ jsxDEV(SocialBlock, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 282,
+        lineNumber: 286,
         columnNumber: 31
       }, this);
     case "legal":
       return /* @__PURE__ */ jsxDEV(LegalBlock, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 283,
+        lineNumber: 287,
         columnNumber: 30
       }, this);
     case "support":
       return /* @__PURE__ */ jsxDEV(SupportBlock, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 284,
+        lineNumber: 288,
         columnNumber: 32
       }, this);
     case "usertour":
       return /* @__PURE__ */ jsxDEV(UserTour, { context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 285,
+        lineNumber: 289,
         columnNumber: 33
       }, this);
     case "copyright":
       return /* @__PURE__ */ jsxDEV("p", { className: "flexium-footer__copyright", children: (text(settings, "text") || "\xA9 {year} {sitename}").replace("{year}", data.year).replace("{sitename}", data.sitename) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 288,
+        lineNumber: 292,
         columnNumber: 17
       }, this);
     case "logininfo":
       return /* @__PURE__ */ jsxDEV("p", { className: "flexium-footer__muted", children: data.login }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/Blocks.tsx",
-        lineNumber: 293,
+        lineNumber: 297,
         columnNumber: 34
       }, this);
     default:

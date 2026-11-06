@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 (2026-11-06)
+
+- Every source file carries the Moodle licence header, including the built JavaScript files (js/esm/build) and the
+  browser tests (#1).
+- The heading of the catalogue filters drawer is its own template (theme_flexium/catalogdrawerheading), like Boost's
+  course index drawer heading (#2).
+
 ## 1.0.1 (2026-10-20)
 
 - Fixed: names with "&" (courses, categories, filter options, the site name, news) showed as "&amp;" in the

@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Results footer, centred: "Showing 13–24 of 45 courses", pagination and the courses per page selector.
  *
@@ -35,7 +53,7 @@ function CatalogFooter({
   return /* @__PURE__ */ jsxDEV("footer", { className: "flexium-catalogfooter", children: [
     total > 0 && /* @__PURE__ */ jsxDEV("p", { className: "flexium-catalogfooter__showing", children: showing }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-      lineNumber: 62,
+      lineNumber: 66,
       columnNumber: 27
     }, this),
     pages > 1 && // First and last page buttons around the design system pagination.
@@ -51,7 +69,7 @@ function CatalogFooter({
           onClick: () => onPageChange(0),
           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-angles-left", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-            lineNumber: 70,
+            lineNumber: 74,
             columnNumber: 25
           }, this)
         },
@@ -59,7 +77,7 @@ function CatalogFooter({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 67,
+          lineNumber: 71,
           columnNumber: 21
         },
         this
@@ -79,7 +97,7 @@ function CatalogFooter({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 72,
+          lineNumber: 76,
           columnNumber: 21
         },
         this
@@ -95,7 +113,7 @@ function CatalogFooter({
           onClick: () => onPageChange(pages - 1),
           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-angles-right", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-            lineNumber: 84,
+            lineNumber: 88,
             columnNumber: 25
           }, this)
         },
@@ -103,20 +121,20 @@ function CatalogFooter({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 81,
+          lineNumber: 85,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-      lineNumber: 66,
+      lineNumber: 70,
       columnNumber: 17
     }, this),
     editoptions && onEditOptions && editorstrings ? /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalogfooter__perpage flexium-catalogfooter__perpage--editing", children: [
       /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-perpage`, children: str(editorstrings, "editor_perpage") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-        lineNumber: 91,
+        lineNumber: 95,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -128,7 +146,7 @@ function CatalogFooter({
           onChange: (event) => onEditOptions({ ...editoptions, perpage: Number(event.target.value) }),
           children: perpageoptions.map((option) => /* @__PURE__ */ jsxDEV("option", { value: option, children: option }, option, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-            lineNumber: 94,
+            lineNumber: 98,
             columnNumber: 55
           }, this))
         },
@@ -136,7 +154,7 @@ function CatalogFooter({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 92,
+          lineNumber: 96,
           columnNumber: 21
         },
         this
@@ -156,29 +174,29 @@ function CatalogFooter({
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-            lineNumber: 97,
+            lineNumber: 101,
             columnNumber: 25
           },
           this
         ),
         /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-userperpage`, className: "form-check-label", children: str(editorstrings, "editor_userperpage") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 100,
+          lineNumber: 104,
           columnNumber: 25
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-        lineNumber: 96,
+        lineNumber: 100,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-      lineNumber: 90,
+      lineNumber: 94,
       columnNumber: 17
     }, this) : showperpage && total > 0 && /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalogfooter__perpage", children: [
       /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-perpage`, children: str(strings, "catalog_perpage") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-        lineNumber: 107,
+        lineNumber: 111,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -190,7 +208,7 @@ function CatalogFooter({
           onChange: (event) => onPerpageChange(Number(event.target.value)),
           children: perpageoptions.map((option) => /* @__PURE__ */ jsxDEV("option", { value: option, children: option }, option, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-            lineNumber: 110,
+            lineNumber: 114,
             columnNumber: 55
           }, this))
         },
@@ -198,19 +216,19 @@ function CatalogFooter({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-          lineNumber: 108,
+          lineNumber: 112,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-      lineNumber: 106,
+      lineNumber: 110,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CatalogFooter.tsx",
-    lineNumber: 61,
+    lineNumber: 65,
     columnNumber: 9
   }, this);
 }
