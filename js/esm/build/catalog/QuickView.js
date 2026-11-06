@@ -1,4 +1,21 @@
-import{useEffect as p,useId as y,useRef as b,useState as _}from"react";import{getCoursePreview as N}from"./repository";import{str as s}from"./utils";import{jsx as e,jsxs as r}from"react/jsx-runtime";/**
+import{useEffect as p,useId as y,useRef as b,useState as _}from"react";import{getCoursePreview as N}from"./repository";import{str as s}from"./utils";import{jsx as e,jsxs as r}from"react/jsx-runtime";/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *//**
  * Quick view of a course (feature "Quick view"): a modal dialog with the full summary, dates, teachers and custom
  * fields, loaded with theme_flexium_get_course_preview, and a button to the course.
  *

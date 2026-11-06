@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Page margins wand (edit mode, site administrators): left and right space around the page content, for the whole
  * site or only the home page / catalogue, with a live preview. Mounted on every page by core_renderer::margins_wand().
@@ -110,12 +128,12 @@ function MarginsWand({ margins, pagescope, max, strings }) {
       children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 152,
+          lineNumber: 156,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-left-right me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 153,
+          lineNumber: 157,
           columnNumber: 13
         }, this),
         str("margins_title")
@@ -125,7 +143,7 @@ function MarginsWand({ margins, pagescope, max, strings }) {
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 150,
+      lineNumber: 154,
       columnNumber: 9
     },
     this
@@ -135,13 +153,13 @@ function MarginsWand({ margins, pagescope, max, strings }) {
       /* @__PURE__ */ jsxDEV("h2", { id: `${id}-title`, className: "h6 m-0", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-left-right me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 162,
+          lineNumber: 166,
           columnNumber: 21
         }, this),
         str("margins_title")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 161,
+        lineNumber: 165,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -156,25 +174,25 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 164,
+          lineNumber: 168,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 160,
+      lineNumber: 164,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("p", { className: "flexium-marginspanel__help", children: str("margins_help") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 167,
+      lineNumber: 171,
       columnNumber: 13
     }, this),
     scopes.length > 1 && /* @__PURE__ */ jsxDEV("fieldset", { className: "flexium-marginspanel__scopes", children: [
       /* @__PURE__ */ jsxDEV("legend", { className: "flexium-marginspanel__label", children: str("margins_scope") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 171,
+        lineNumber: 175,
         columnNumber: 21
       }, this),
       scopes.map((key) => /* @__PURE__ */ jsxDEV("div", { className: "form-check form-check-inline", children: [
@@ -192,24 +210,24 @@ function MarginsWand({ margins, pagescope, max, strings }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-            lineNumber: 174,
+            lineNumber: 178,
             columnNumber: 29
           },
           this
         ),
         /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-scope-${key}`, className: "form-check-label", children: str(`margins_scope_${key}`) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 176,
+          lineNumber: 180,
           columnNumber: 29
         }, this)
       ] }, key, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 173,
+        lineNumber: 177,
         columnNumber: 25
       }, this))
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 170,
+      lineNumber: 174,
       columnNumber: 17
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "form-check form-switch mb-2", children: [
@@ -227,19 +245,19 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 185,
+          lineNumber: 189,
           columnNumber: 17
         },
         this
       ),
       /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-link`, className: "form-check-label", children: str("margins_link") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 187,
+        lineNumber: 191,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 184,
+      lineNumber: 188,
       columnNumber: 13
     }, this),
     SIDES.map((side) => /* @__PURE__ */ jsxDEV("div", { className: "flexium-marginspanel__side", children: [
@@ -247,12 +265,12 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         str(`margins_${side}`),
         /* @__PURE__ */ jsxDEV("span", { className: "flexium-marginspanel__value", children: sides[side] === null ? str("margins_default") : `${sides[side]} px` }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 194,
+          lineNumber: 198,
           columnNumber: 25
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 192,
+        lineNumber: 196,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-marginspanel__row", children: [
@@ -273,7 +291,7 @@ function MarginsWand({ margins, pagescope, max, strings }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-            lineNumber: 199,
+            lineNumber: 203,
             columnNumber: 25
           },
           this
@@ -291,25 +309,25 @@ function MarginsWand({ margins, pagescope, max, strings }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-            lineNumber: 202,
+            lineNumber: 206,
             columnNumber: 25
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 198,
+        lineNumber: 202,
         columnNumber: 21
       }, this)
     ] }, side, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 191,
+      lineNumber: 195,
       columnNumber: 17
     }, this)),
     /* @__PURE__ */ jsxDEV("fieldset", { className: "flexium-marginspanel__parts", children: [
       /* @__PURE__ */ jsxDEV("legend", { className: "flexium-marginspanel__label", children: str("margins_alsoapply") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 209,
+        lineNumber: 213,
         columnNumber: 17
       }, this),
       Object.keys(PARTS).map((part) => /* @__PURE__ */ jsxDEV("div", { className: "form-check form-switch", children: [
@@ -327,29 +345,29 @@ function MarginsWand({ margins, pagescope, max, strings }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-            lineNumber: 212,
+            lineNumber: 216,
             columnNumber: 25
           },
           this
         ),
         /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-${part}`, className: "form-check-label", children: str(`margins_${part}`) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 214,
+          lineNumber: 218,
           columnNumber: 25
         }, this)
       ] }, part, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 211,
+        lineNumber: 215,
         columnNumber: 21
       }, this))
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 208,
+      lineNumber: 212,
       columnNumber: 13
     }, this),
     overridden && /* @__PURE__ */ jsxDEV("p", { className: "flexium-marginspanel__note", children: str("margins_override") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 219,
+      lineNumber: 223,
       columnNumber: 28
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-marginspanel__actions", children: [
@@ -360,7 +378,7 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         status !== "saving" && dirty && str("editor_unsaved")
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-        lineNumber: 222,
+        lineNumber: 226,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -379,7 +397,7 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 228,
+          lineNumber: 232,
           columnNumber: 17
         },
         this
@@ -397,19 +415,19 @@ function MarginsWand({ margins, pagescope, max, strings }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-          lineNumber: 233,
+          lineNumber: 237,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-      lineNumber: 221,
+      lineNumber: 225,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-    lineNumber: 159,
+    lineNumber: 163,
     columnNumber: 9
   }, this);
   return /* @__PURE__ */ jsxDEV(Fragment, { children: [
@@ -417,7 +435,7 @@ function MarginsWand({ margins, pagescope, max, strings }) {
     panel
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/margins/MarginsWand.tsx",
-    lineNumber: 240,
+    lineNumber: 244,
     columnNumber: 9
   }, this);
 }

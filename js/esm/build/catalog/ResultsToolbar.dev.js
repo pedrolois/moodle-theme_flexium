@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Toolbar above the results: number of courses, share link, grid / list switch and sort order.
  *
@@ -45,7 +63,7 @@ function ResultsToolbar({
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__toolbar", children: [
     /* @__PURE__ */ jsxDEV("p", { className: "flexium-catalog__total", "aria-live": "polite", children: totaltext }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-      lineNumber: 75,
+      lineNumber: 79,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__tools", children: [
@@ -59,12 +77,12 @@ function ResultsToolbar({
           children: [
             /* @__PURE__ */ jsxDEV("i", { className: "fa fa-link", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-              lineNumber: 80,
+              lineNumber: 84,
               columnNumber: 25
             }, this),
             /* @__PURE__ */ jsxDEV("span", { className: "visually-hidden", children: str(strings, "catalog_sharelink") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-              lineNumber: 81,
+              lineNumber: 85,
               columnNumber: 25
             }, this)
           ]
@@ -73,7 +91,7 @@ function ResultsToolbar({
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-          lineNumber: 78,
+          lineNumber: 82,
           columnNumber: 21
         },
         this
@@ -95,12 +113,12 @@ function ResultsToolbar({
               children: [
                 /* @__PURE__ */ jsxDEV("i", { className: `fa ${key === "grid" ? "fa-table-cells-large" : "fa-list"}`, "aria-hidden": "true" }, void 0, false, {
                   fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-                  lineNumber: 92,
+                  lineNumber: 96,
                   columnNumber: 33
                 }, this),
                 /* @__PURE__ */ jsxDEV("span", { className: "visually-hidden", children: str(strings, `catalog_view${key}`) }, void 0, false, {
                   fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-                  lineNumber: 93,
+                  lineNumber: 97,
                   columnNumber: 33
                 }, this)
               ]
@@ -109,7 +127,7 @@ function ResultsToolbar({
             true,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-              lineNumber: 89,
+              lineNumber: 93,
               columnNumber: 29
             },
             this
@@ -119,53 +137,53 @@ function ResultsToolbar({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-          lineNumber: 86,
+          lineNumber: 90,
           columnNumber: 21
         },
         this
       ) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-        lineNumber: 84,
+        lineNumber: 88,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__sort", children: [
         /* @__PURE__ */ jsxDEV("label", { htmlFor: sortid, className: "flexium-catalog__sortlabel", children: str(strings, "catalog_sortby") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-          lineNumber: 100,
+          lineNumber: 104,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("select", { id: sortid, className: "form-select", value: sort, onChange: (event) => onSortChange(event.target.value), children: sorts.map((option) => /* @__PURE__ */ jsxDEV("option", { value: option.value, children: option.label }, option.value, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-          lineNumber: 102,
+          lineNumber: 106,
           columnNumber: 46
         }, this)) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-          lineNumber: 101,
+          lineNumber: 105,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-        lineNumber: 99,
+        lineNumber: 103,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-      lineNumber: 76,
+      lineNumber: 80,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "visually-hidden", role: "status", children: copied }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-      lineNumber: 106,
+      lineNumber: 110,
       columnNumber: 13
     }, this),
     copied && /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__toast", "aria-hidden": "true", children: copied }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-      lineNumber: 107,
+      lineNumber: 111,
       columnNumber: 24
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/ResultsToolbar.tsx",
-    lineNumber: 74,
+    lineNumber: 78,
     columnNumber: 9
   }, this);
 }

@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Quick view of a course (feature "Quick view"): a modal dialog with the full summary, dates, teachers and custom
  * fields, loaded with theme_flexium_get_course_preview, and a button to the course.
@@ -52,7 +70,7 @@ function QuickView({ course, onClose, strings, variant }) {
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-quickview__header", children: [
           /* @__PURE__ */ jsxDEV("h2", { id: `${id}-title`, className: "flexium-quickview__title", children: course.fullname }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 79,
+            lineNumber: 83,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -67,20 +85,20 @@ function QuickView({ course, onClose, strings, variant }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 80,
+              lineNumber: 84,
               columnNumber: 25
             },
             this
           )
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-          lineNumber: 78,
+          lineNumber: 82,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-quickview__body flexium-courseinfo", children: [
           (preview?.categoryname || course.categoryname) && /* @__PURE__ */ jsxDEV("p", { className: "flexium-courseinfo__name", children: preview?.categoryname || course.categoryname }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 85,
+            lineNumber: 89,
             columnNumber: 29
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -95,7 +113,7 @@ function QuickView({ course, onClose, strings, variant }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 87,
+              lineNumber: 91,
               columnNumber: 25
             },
             this
@@ -103,31 +121,31 @@ function QuickView({ course, onClose, strings, variant }) {
           !preview && !error && /* @__PURE__ */ jsxDEV("p", { className: "flexium-quickview__loading", children: [
             /* @__PURE__ */ jsxDEV("span", { className: "spinner-border spinner-border-sm me-2", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 91,
+              lineNumber: 95,
               columnNumber: 33
             }, this),
             str(strings, "catalog_loading")
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 90,
+            lineNumber: 94,
             columnNumber: 29
           }, this),
           error && /* @__PURE__ */ jsxDEV("div", { className: "alert alert-danger", children: str(strings, "catalog_error") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 95,
+            lineNumber: 99,
             columnNumber: 35
           }, this),
           preview && /* @__PURE__ */ jsxDEV("div", { className: "flexium-courseinfo__body" + (hastext ? "" : " flexium-courseinfo__body--nosummary"), children: [
             hastext && /* @__PURE__ */ jsxDEV("div", { className: "flexium-courseinfo__summary", children: [
               /* @__PURE__ */ jsxDEV("div", { dangerouslySetInnerHTML: { __html: preview.summary } }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                lineNumber: 102,
+                lineNumber: 106,
                 columnNumber: 41
               }, this),
               preview.sections.map((section) => /* @__PURE__ */ jsxDEV("div", { children: [
                 /* @__PURE__ */ jsxDEV("h3", { className: "flexium-courseinfo__sectiontitle", children: section.label }, void 0, false, {
                   fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                  lineNumber: 105,
+                  lineNumber: 109,
                   columnNumber: 49
                 }, this),
                 /* @__PURE__ */ jsxDEV(
@@ -140,19 +158,19 @@ function QuickView({ course, onClose, strings, variant }) {
                   false,
                   {
                     fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                    lineNumber: 106,
+                    lineNumber: 110,
                     columnNumber: 49
                   },
                   this
                 )
               ] }, section.key, true, {
                 fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                lineNumber: 104,
+                lineNumber: 108,
                 columnNumber: 45
               }, this))
             ] }, void 0, true, {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 101,
+              lineNumber: 105,
               columnNumber: 37
             }, this),
             preview.facts.length > 0 && /* @__PURE__ */ jsxDEV("ul", { className: "flexium-courseinfo__facts", children: preview.facts.map((fact) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-courseinfo__fact", children: [
@@ -166,7 +184,7 @@ function QuickView({ course, onClose, strings, variant }) {
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                  lineNumber: 116,
+                  lineNumber: 120,
                   columnNumber: 49
                 },
                 this
@@ -174,65 +192,65 @@ function QuickView({ course, onClose, strings, variant }) {
               /* @__PURE__ */ jsxDEV("span", { children: [
                 /* @__PURE__ */ jsxDEV("strong", { children: fact.label }, void 0, false, {
                   fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                  lineNumber: 119,
+                  lineNumber: 123,
                   columnNumber: 53
                 }, this),
                 " ",
                 /* @__PURE__ */ jsxDEV("span", { dangerouslySetInnerHTML: { __html: fact.value } }, void 0, false, {
                   fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                  lineNumber: 120,
+                  lineNumber: 124,
                   columnNumber: 53
                 }, this)
               ] }, void 0, true, {
                 fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-                lineNumber: 118,
+                lineNumber: 122,
                 columnNumber: 49
               }, this)
             ] }, fact.key, true, {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 115,
+              lineNumber: 119,
               columnNumber: 45
             }, this)) }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 113,
+              lineNumber: 117,
               columnNumber: 37
             }, this)
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 97,
+            lineNumber: 101,
             columnNumber: 29
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-          lineNumber: 83,
+          lineNumber: 87,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-quickview__footer", children: [
           /* @__PURE__ */ jsxDEV("button", { type: "button", className: "btn btn-outline-secondary", onClick: () => dialog.current?.close(), children: str(strings, "catalog_close") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 130,
+            lineNumber: 134,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ jsxDEV("a", { href: course.url, className: "btn btn-primary", children: [
             str(strings, course.enrolled ? "catalog_gotocourse" : "catalog_viewcourse"),
             /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-right ms-2", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-              lineNumber: 135,
+              lineNumber: 139,
               columnNumber: 29
             }, this)
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-            lineNumber: 133,
+            lineNumber: 137,
             columnNumber: 25
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-          lineNumber: 129,
+          lineNumber: 133,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-        lineNumber: 77,
+        lineNumber: 81,
         columnNumber: 17
       }, this)
     },
@@ -240,7 +258,7 @@ function QuickView({ course, onClose, strings, variant }) {
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/QuickView.tsx",
-      lineNumber: 72,
+      lineNumber: 76,
       columnNumber: 9
     },
     this

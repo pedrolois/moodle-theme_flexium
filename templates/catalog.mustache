@@ -67,7 +67,7 @@
     {{#catalogfilters}}
         {{< theme_boost/drawer }}
             {{$id}}theme_boost-drawers-courseindex{{/id}}
-            {{$drawerheading}}<h2 class="flexium-drawerheading h5 m-0">{{#str}}catalog_filters, theme_flexium{{/str}}</h2>{{/drawerheading}}
+            {{$drawerheading}}{{> theme_flexium/catalogdrawerheading}}{{/drawerheading}}
 
             {{$drawerclasses}}drawer drawer-left {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
             {{$drawercontent}}

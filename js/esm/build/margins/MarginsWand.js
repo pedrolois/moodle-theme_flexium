@@ -1,4 +1,21 @@
-import{useEffect as W,useId as D,useState as u}from"react";import{fetchOne as I}from"@moodle/lms/core/ajax";import{Fragment as Y,jsx as t,jsxs as i}from"react/jsx-runtime";/**
+import{useEffect as W,useId as D,useState as u}from"react";import{fetchOne as I}from"@moodle/lms/core/ajax";import{Fragment as Y,jsx as t,jsxs as i}from"react/jsx-runtime";/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *//**
  * Page margins wand (edit mode, site administrators): left and right space around the page content, for the whole
  * site or only the home page / catalogue, with a live preview. Mounted on every page by core_renderer::margins_wand().
  *

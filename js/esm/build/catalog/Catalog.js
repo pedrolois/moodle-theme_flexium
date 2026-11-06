@@ -1,4 +1,21 @@
-import{useEffect as L,useMemo as A,useRef as de,useState as f}from"react";import{createPortal as Be}from"react-dom";import Ve from"@moodle/lms/theme_flexium/catalog/ActiveFilters";import $e from"@moodle/lms/theme_flexium/catalog/Banner";import He from"@moodle/lms/theme_flexium/catalog/CatalogFooter";import Ae from"@moodle/lms/theme_flexium/catalog/CourseCard";import Ie from"@moodle/lms/theme_flexium/catalog/DateRange";import Ge from"@moodle/lms/theme_flexium/catalog/EditorPanel";import{EditSidePanel as Me,EditZone as z,EditZonesProvider as De,ExternalZone as Z,useEditZones as We}from"@moodle/lms/theme_flexium/catalog/EditZones";import je from"@moodle/lms/theme_flexium/catalog/FilterGroupPanel";import Ue from"@moodle/lms/theme_flexium/catalog/QuickFilters";import Je from"@moodle/lms/theme_flexium/catalog/QuickView";import Ke from"@moodle/lms/theme_flexium/catalog/ResultsToolbar";import Xe from"@moodle/lms/theme_flexium/catalog/SearchBox";import Ye from"@moodle/lms/theme_flexium/catalog/WidgetList";import et from"@moodle/lms/theme_flexium/catalog/useCatalogEditor";import{getCatalog as tt,setFavourite as ot,setPreference as at}from"./repository";import{decodeFeatures as lt,readLocal as ve,readQueryFromUrl as st,str as g,toggleValue as it,writeLocal as I,writeQueryToUrl as nt}from"./utils";import{Fragment as Q,jsx as o,jsxs as d}from"react/jsx-runtime";/**
+import{useEffect as L,useMemo as A,useRef as de,useState as f}from"react";import{createPortal as Be}from"react-dom";import Ve from"@moodle/lms/theme_flexium/catalog/ActiveFilters";import $e from"@moodle/lms/theme_flexium/catalog/Banner";import He from"@moodle/lms/theme_flexium/catalog/CatalogFooter";import Ae from"@moodle/lms/theme_flexium/catalog/CourseCard";import Ie from"@moodle/lms/theme_flexium/catalog/DateRange";import Ge from"@moodle/lms/theme_flexium/catalog/EditorPanel";import{EditSidePanel as Me,EditZone as z,EditZonesProvider as De,ExternalZone as Z,useEditZones as We}from"@moodle/lms/theme_flexium/catalog/EditZones";import je from"@moodle/lms/theme_flexium/catalog/FilterGroupPanel";import Ue from"@moodle/lms/theme_flexium/catalog/QuickFilters";import Je from"@moodle/lms/theme_flexium/catalog/QuickView";import Ke from"@moodle/lms/theme_flexium/catalog/ResultsToolbar";import Xe from"@moodle/lms/theme_flexium/catalog/SearchBox";import Ye from"@moodle/lms/theme_flexium/catalog/WidgetList";import et from"@moodle/lms/theme_flexium/catalog/useCatalogEditor";import{getCatalog as tt,setFavourite as ot,setPreference as at}from"./repository";import{decodeFeatures as lt,readLocal as ve,readQueryFromUrl as st,str as g,toggleValue as it,writeLocal as I,writeQueryToUrl as nt}from"./utils";import{Fragment as Q,jsx as o,jsxs as d}from"react/jsx-runtime";/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *//**
  * Flexium course catalogue: filter sidebar, active filters, sorting and the course grid.
  *
  * Mounted by theme_flexium\output\core\course_renderer::course_category(). The query lives in the

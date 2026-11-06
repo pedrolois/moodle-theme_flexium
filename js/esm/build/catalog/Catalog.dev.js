@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Flexium course catalogue: filter sidebar, active filters, sorting and the course grid.
  *
@@ -50,11 +68,11 @@ function FilterWidgets({ editor, layout, onChange }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-filterwidgets", children: [
     /* @__PURE__ */ jsxDEV(EditZone, { zone: "filters", children: /* @__PURE__ */ jsxDEV("h3", { className: "flexium-filterwidgets__title", children: str(editor.strings, "editor_filterstitle") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 17
     }, this) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 76,
+      lineNumber: 80,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -84,7 +102,7 @@ function FilterWidgets({ editor, layout, onChange }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 88,
+              lineNumber: 92,
               columnNumber: 25
             },
             this
@@ -102,7 +120,7 @@ function FilterWidgets({ editor, layout, onChange }) {
               false,
               {
                 fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-                lineNumber: 93,
+                lineNumber: 97,
                 columnNumber: 29
               },
               this
@@ -110,12 +128,12 @@ function FilterWidgets({ editor, layout, onChange }) {
             str(editor.strings, "filtereditor_expanded")
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 92,
+            lineNumber: 96,
             columnNumber: 25
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 86,
+          lineNumber: 90,
           columnNumber: 21
         }, this),
         strings: editor.strings
@@ -124,14 +142,14 @@ function FilterWidgets({ editor, layout, onChange }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 79,
+        lineNumber: 83,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 75,
+    lineNumber: 79,
     columnNumber: 9
   }, this);
 }
@@ -170,78 +188,78 @@ function Results({
         !data && loading && (features.skeletons ? /* @__PURE__ */ jsxDEV("ul", { className: gridclass, "aria-hidden": "true", children: Array.from({ length: SKELETON_CARDS }, (_, index) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV("div", { className: "flexium-card flexium-card--skeleton", children: [
           /* @__PURE__ */ jsxDEV("div", { className: "flexium-card__image" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 153,
+            lineNumber: 157,
             columnNumber: 33
           }, this),
           /* @__PURE__ */ jsxDEV("div", { className: "flexium-card__body", children: [
             /* @__PURE__ */ jsxDEV("span", { className: "flexium-skeleton flexium-skeleton--short" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 155,
+              lineNumber: 159,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ jsxDEV("span", { className: "flexium-skeleton flexium-skeleton--title" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 156,
+              lineNumber: 160,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ jsxDEV("span", { className: "flexium-skeleton" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 157,
+              lineNumber: 161,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ jsxDEV("span", { className: "flexium-skeleton" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 158,
+              lineNumber: 162,
               columnNumber: 37
             }, this)
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 154,
+            lineNumber: 158,
             columnNumber: 33
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 152,
+          lineNumber: 156,
           columnNumber: 29
         }, this) }, index, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 151,
+          lineNumber: 155,
           columnNumber: 25
         }, this)) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 149,
+          lineNumber: 153,
           columnNumber: 17
         }, this) : /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__loading", children: [
           /* @__PURE__ */ jsxDEV("span", { className: "spinner-border spinner-border-sm me-2", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 166,
+            lineNumber: 170,
             columnNumber: 21
           }, this),
           str(strings, "catalog_loading")
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 165,
+          lineNumber: 169,
           columnNumber: 17
         }, this)),
         data && data.courses.length === 0 && !error && /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__empty", children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-magnifying-glass flexium-catalog__emptyicon", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 172,
+            lineNumber: 176,
             columnNumber: 21
           }, this),
           /* @__PURE__ */ jsxDEV("h2", { className: "h4", children: str(strings, "catalog_noresults") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 173,
+            lineNumber: 177,
             columnNumber: 21
           }, this),
           /* @__PURE__ */ jsxDEV("p", { children: str(strings, "catalog_noresults_help") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 174,
+            lineNumber: 178,
             columnNumber: 21
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 171,
+          lineNumber: 175,
           columnNumber: 17
         }, this),
         data && data.courses.length > 0 && /* @__PURE__ */ jsxDEV("ul", { className: gridclass, children: data.courses.map((course, index) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
@@ -260,17 +278,17 @@ function Results({
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 181,
+            lineNumber: 185,
             columnNumber: 29
           },
           this
         ) }, course.id, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 180,
+          lineNumber: 184,
           columnNumber: 25
         }, this)) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 178,
+          lineNumber: 182,
           columnNumber: 17
         }, this)
       ]
@@ -279,7 +297,7 @@ function Results({
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 146,
+      lineNumber: 150,
       columnNumber: 9
     },
     this
@@ -338,17 +356,17 @@ function QuickFiltersZone({ features, data, selected, loggedin, quickicons, stri
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 317,
+      lineNumber: 321,
       columnNumber: 17
     },
     this
   ) : /* @__PURE__ */ jsxDEV("p", { className: "flexium-filtergroup__empty", children: str(strings, "catalog_noquickfilters") }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 320,
+    lineNumber: 324,
     columnNumber: 17
   }, this) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 315,
+    lineNumber: 319,
     columnNumber: 9
   }, this);
 }
@@ -382,7 +400,7 @@ function CatalogFilters({
   return /* @__PURE__ */ jsxDEV(Fragment, { children: [
     /* @__PURE__ */ jsxDEV(SearchBox, { value: query.search, onSearch: (search) => onUpdate({ search }), strings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 346,
+      lineNumber: 350,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -400,7 +418,7 @@ function CatalogFilters({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 347,
+        lineNumber: 351,
         columnNumber: 13
       },
       this
@@ -417,7 +435,7 @@ function CatalogFilters({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 350,
+        lineNumber: 354,
         columnNumber: 17
       },
       this
@@ -425,17 +443,17 @@ function CatalogFilters({
     features.expandall && !!data?.groups.length && /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__expandall", children: /* @__PURE__ */ jsxDEV("button", { type: "button", className: "btn btn-link btn-sm", onClick: () => onBulk({ open: !allopen }), children: [
       /* @__PURE__ */ jsxDEV("i", { className: `fa fa-angles-${allopen ? "up" : "down"} me-1`, "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 356,
+        lineNumber: 360,
         columnNumber: 25
       }, this),
       str(strings, allopen ? "catalog_collapseall" : "catalog_expandall")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 355,
+      lineNumber: 359,
       columnNumber: 21
     }, this) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 354,
+      lineNumber: 358,
       columnNumber: 17
     }, this),
     data?.groups.map((group) => /* @__PURE__ */ jsxDEV(
@@ -455,14 +473,14 @@ function CatalogFilters({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 362,
+        lineNumber: 366,
         columnNumber: 17
       },
       this
     ))
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 345,
+    lineNumber: 349,
     columnNumber: 9
   }, this);
 }
@@ -477,36 +495,36 @@ function EditHint({ strings }) {
     return /* @__PURE__ */ jsxDEV("button", { type: "button", className: "flexium-edithint__pill", onClick: () => toggle(false), children: [
       /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 383,
+        lineNumber: 387,
         columnNumber: 17
       }, this),
       str(strings, "catalog_edithint_title")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 382,
+      lineNumber: 386,
       columnNumber: 13
     }, this);
   }
   return /* @__PURE__ */ jsxDEV("div", { className: "alert alert-info flexium-edithint", role: "note", children: [
     /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles flexium-edithint__icon", "aria-hidden": "true" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 390,
+      lineNumber: 394,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { children: [
       /* @__PURE__ */ jsxDEV("strong", { children: str(strings, "catalog_edithint_title") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 392,
+        lineNumber: 396,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV("p", { className: "mb-0", children: str(strings, "catalog_edithint") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 393,
+        lineNumber: 397,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 391,
+      lineNumber: 395,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -521,14 +539,14 @@ function EditHint({ strings }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 395,
+        lineNumber: 399,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 389,
+    lineNumber: 393,
     columnNumber: 9
   }, this);
 }
@@ -602,27 +620,27 @@ function HeaderZones({ features, toggleicons, blockicons }) {
   return /* @__PURE__ */ jsxDEV(Fragment, { children: [
     /* @__PURE__ */ jsxDEV(ExternalZone, { zone: "heading", selector: "#page-header .page-context-header" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 523,
+      lineNumber: 527,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(ExternalZone, { zone: "filtertoggle", selector: ".drawer-left-toggle" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 524,
+      lineNumber: 528,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(ExternalZone, { zone: "blocktoggle", selector: ".drawer-right-toggle" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 525,
+      lineNumber: 529,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(ExternalZone, { zone: "breadcrumbs", selector: "#page-navbar .flexium-breadcrumbs" }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 526,
+      lineNumber: 530,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 522,
+    lineNumber: 526,
     columnNumber: 9
   }, this);
 }
@@ -643,17 +661,17 @@ function BannerZone({ features, palette, strings, editing }) {
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 548,
+      lineNumber: 552,
       columnNumber: 17
     },
     this
   ) : /* @__PURE__ */ jsxDEV("div", { className: "flexium-banner flexium-banner--off", children: str(strings, "catalog_bannertitle") }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 551,
+    lineNumber: 555,
     columnNumber: 17
   }, this) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 546,
+    lineNumber: 550,
     columnNumber: 9
   }, this);
 }
@@ -664,7 +682,7 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
     return createPortal(
       /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__drawerfilters", role: "region", "aria-label": str(strings, "catalog_filters"), children }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 572,
+        lineNumber: 576,
         columnNumber: 13
       }, this),
       drawer
@@ -681,13 +699,13 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
         children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-sliders me-2", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 582,
+            lineNumber: 586,
             columnNumber: 17
           }, this),
           str(strings, "catalog_togglefilters"),
           activecount > 0 && /* @__PURE__ */ jsxDEV("span", { className: "badge rounded-pill text-bg-primary ms-2", children: activecount }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 584,
+            lineNumber: 588,
             columnNumber: 37
           }, this)
         ]
@@ -696,7 +714,7 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 580,
+        lineNumber: 584,
         columnNumber: 13
       },
       this
@@ -710,7 +728,7 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
           /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__sidebarheader", children: [
             /* @__PURE__ */ jsxDEV("h2", { className: "flexium-catalog__sidebartitle", children: str(strings, "catalog_filters") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-              lineNumber: 590,
+              lineNumber: 594,
               columnNumber: 21
             }, this),
             /* @__PURE__ */ jsxDEV(
@@ -725,14 +743,14 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
               false,
               {
                 fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-                lineNumber: 591,
+                lineNumber: 595,
                 columnNumber: 21
               },
               this
             )
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-            lineNumber: 589,
+            lineNumber: 593,
             columnNumber: 17
           }, this),
           children
@@ -742,14 +760,14 @@ function FiltersContainer({ drawer, activecount, strings, children }) {
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 587,
+        lineNumber: 591,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 579,
+    lineNumber: 583,
     columnNumber: 9
   }, this);
 }
@@ -901,19 +919,19 @@ function Catalog({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 736,
+        lineNumber: 740,
         columnNumber: 13
       },
       this
     ),
     /* @__PURE__ */ jsxDEV(FilterWidgets, { editor, layout: draftlayout, onChange: edit.setLayout }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 740,
+      lineNumber: 744,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 735,
+    lineNumber: 739,
     columnNumber: 9
   }, this) : /* @__PURE__ */ jsxDEV(
     CatalogFilters,
@@ -936,7 +954,7 @@ function Catalog({
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 743,
+      lineNumber: 747,
       columnNumber: 9
     },
     this
@@ -957,7 +975,7 @@ function Catalog({
   const page = /* @__PURE__ */ jsxDEV("div", { className: `flexium-catalog${drawer ? " flexium-catalog--indrawer" : ""}` + (activezone ? " flexium-catalog--editing" : ""), children: [
     /* @__PURE__ */ jsxDEV(FiltersContainer, { drawer, activecount, strings, children: filters }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 761,
+      lineNumber: 765,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-catalog__main", ref: resultsref, children: [
@@ -975,23 +993,23 @@ function Catalog({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 765,
+          lineNumber: 769,
           columnNumber: 21
         },
         this
       ) : canedit && /* @__PURE__ */ jsxDEV(EditHint, { strings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 767,
+        lineNumber: 771,
         columnNumber: 32
       }, this),
       editzones && /* @__PURE__ */ jsxDEV(HeaderZones, { features, toggleicons, blockicons }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 769,
+        lineNumber: 773,
         columnNumber: 31
       }, this),
       /* @__PURE__ */ jsxDEV(BannerZone, { features, palette: palettestate, strings, editing: !!editzones }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 770,
+        lineNumber: 774,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -1009,14 +1027,14 @@ function Catalog({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 772,
+          lineNumber: 776,
           columnNumber: 17
         },
         this
       ),
       notice && /* @__PURE__ */ jsxDEV("div", { className: "alert alert-info flexium-catalog__notice", role: "status", children: notice }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 783,
+        lineNumber: 787,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ jsxDEV(EditZone, { zone: "toolbar", className: "flexium-editzone--padded", children: /* @__PURE__ */ jsxDEV(
@@ -1035,18 +1053,18 @@ function Catalog({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 787,
+          lineNumber: 791,
           columnNumber: 21
         },
         this
       ) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 786,
+        lineNumber: 790,
         columnNumber: 17
       }, this),
       error && /* @__PURE__ */ jsxDEV("div", { className: "alert alert-danger", role: "alert", children: str(strings, "catalog_error") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 791,
+        lineNumber: 795,
         columnNumber: 27
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -1068,7 +1086,7 @@ function Catalog({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 793,
+          lineNumber: 797,
           columnNumber: 17
         },
         this
@@ -1092,14 +1110,14 @@ function Catalog({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-          lineNumber: 798,
+          lineNumber: 802,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 763,
+      lineNumber: 767,
       columnNumber: 13
     }, this),
     features.quickview && /* @__PURE__ */ jsxDEV(
@@ -1114,24 +1132,24 @@ function Catalog({
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-        lineNumber: 814,
+        lineNumber: 818,
         columnNumber: 36
       },
       this
     ),
     /* @__PURE__ */ jsxDEV(EditSidePanel, {}, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-      lineNumber: 816,
+      lineNumber: 820,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 759,
+    lineNumber: 763,
     columnNumber: 9
   }, this);
   return editzones ? /* @__PURE__ */ jsxDEV(EditZonesProvider, { value: editzones, children: page }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/Catalog.tsx",
-    lineNumber: 819,
+    lineNumber: 823,
     columnNumber: 24
   }, this) : page;
 }

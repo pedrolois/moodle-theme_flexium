@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * The sections of the home page: how each section type looks with its settings.
  *
@@ -23,17 +41,17 @@ function Heading({ settings, centred = false }) {
   return /* @__PURE__ */ jsxDEV("div", { className: `flexium-home__heading${centred ? " text-center" : ""}`, children: [
     title && /* @__PURE__ */ jsxDEV("h2", { className: "flexium-home__title", children: title }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 67,
+      lineNumber: 71,
       columnNumber: 23
     }, this),
     subtitle && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__subtitle", children: subtitle }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 68,
+      lineNumber: 72,
       columnNumber: 26
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 66,
+    lineNumber: 70,
     columnNumber: 9
   }, this);
 }
@@ -49,18 +67,18 @@ function Hero({ settings, context }) {
       children: /* @__PURE__ */ jsxDEV("div", { className: "flexium-hero__content", children: [
         /* @__PURE__ */ jsxDEV("h2", { className: "flexium-hero__title", children: text(settings, "title") || context.sitename }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 83,
+          lineNumber: 87,
           columnNumber: 17
         }, this),
         text(settings, "text") && /* @__PURE__ */ jsxDEV("p", { className: "flexium-hero__text", children: text(settings, "text") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 84,
+          lineNumber: 88,
           columnNumber: 44
         }, this),
         settings.search === true && /* @__PURE__ */ jsxDEV("form", { className: "flexium-hero__search", action: context.catalogurl, method: "get", role: "search", children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-magnifying-glass", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 87,
+            lineNumber: 91,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -76,40 +94,40 @@ function Hero({ settings, context }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-              lineNumber: 88,
+              lineNumber: 92,
               columnNumber: 25
             },
             this
           ),
           /* @__PURE__ */ jsxDEV("button", { type: "submit", className: "btn btn-primary btn-lg", children: str(context.strings, "home_search") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 91,
+            lineNumber: 95,
             columnNumber: 25
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 86,
+          lineNumber: 90,
           columnNumber: 21
         }, this),
         (text(settings, "buttontext") || text(settings, "button2text")) && /* @__PURE__ */ jsxDEV("div", { className: "flexium-hero__buttons", children: [
           text(settings, "buttontext") && /* @__PURE__ */ jsxDEV("a", { className: "btn btn-light btn-lg", href: text(settings, "buttonurl") || context.catalogurl, children: text(settings, "buttontext") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 97,
+            lineNumber: 101,
             columnNumber: 29
           }, this),
           text(settings, "button2text") && /* @__PURE__ */ jsxDEV("a", { className: "btn btn-outline-light btn-lg", href: text(settings, "button2url") || "#", children: text(settings, "button2text") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 102,
+            lineNumber: 106,
             columnNumber: 29
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 95,
+          lineNumber: 99,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 82,
+        lineNumber: 86,
         columnNumber: 13
       }, this)
     },
@@ -117,7 +135,7 @@ function Hero({ settings, context }) {
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 80,
+      lineNumber: 84,
       columnNumber: 9
     },
     this
@@ -128,27 +146,27 @@ function CourseTile({ course }) {
   return /* @__PURE__ */ jsxDEV("article", { className: "flexium-hometile", children: [
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-hometile__image", style: { backgroundImage: `url("${course.image}")` } }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 119,
+      lineNumber: 123,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-hometile__body", children: [
       course.categoryname && /* @__PURE__ */ jsxDEV("p", { className: "flexium-hometile__category", children: course.categoryname }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 121,
+        lineNumber: 125,
         columnNumber: 41
       }, this),
       /* @__PURE__ */ jsxDEV("h3", { className: "flexium-hometile__title", children: /* @__PURE__ */ jsxDEV("a", { href: course.url, className: "flexium-hometile__link", children: course.fullname }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 123,
+        lineNumber: 127,
         columnNumber: 21
       }, this) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 122,
+        lineNumber: 126,
         columnNumber: 17
       }, this),
       course.summary && /* @__PURE__ */ jsxDEV("p", { className: "flexium-hometile__summary", children: course.summary }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 125,
+        lineNumber: 129,
         columnNumber: 36
       }, this),
       course.progress >= 0 && /* @__PURE__ */ jsxDEV(
@@ -161,7 +179,7 @@ function CourseTile({ course }) {
           "aria-valuemax": 100,
           children: /* @__PURE__ */ jsxDEV("div", { className: "progress-bar", style: { width: `${course.progress}%` } }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 129,
+            lineNumber: 133,
             columnNumber: 25
           }, this)
         },
@@ -169,19 +187,19 @@ function CourseTile({ course }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 127,
+          lineNumber: 131,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 120,
+      lineNumber: 124,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 118,
+    lineNumber: 122,
     columnNumber: 9
   }, this);
 }
@@ -237,7 +255,7 @@ function Courses({ settings, context }) {
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__row", children: [
           /* @__PURE__ */ jsxDEV(Heading, { settings }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 193,
+            lineNumber: 197,
             columnNumber: 17
           }, this),
           /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__rowtools", children: [
@@ -251,7 +269,7 @@ function Courses({ settings, context }) {
                   "aria-label": str(context.strings, "home_previous"),
                   children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-chevron-left", "aria-hidden": "true" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-                    lineNumber: 199,
+                    lineNumber: 203,
                     columnNumber: 33
                   }, this)
                 },
@@ -259,7 +277,7 @@ function Courses({ settings, context }) {
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-                  lineNumber: 197,
+                  lineNumber: 201,
                   columnNumber: 29
                 },
                 this
@@ -273,7 +291,7 @@ function Courses({ settings, context }) {
                   "aria-label": str(context.strings, "home_next"),
                   children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-chevron-right", "aria-hidden": "true" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-                    lineNumber: 203,
+                    lineNumber: 207,
                     columnNumber: 33
                   }, this)
                 },
@@ -281,39 +299,39 @@ function Courses({ settings, context }) {
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-                  lineNumber: 201,
+                  lineNumber: 205,
                   columnNumber: 29
                 },
                 this
               )
             ] }, void 0, true, {
               fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-              lineNumber: 196,
+              lineNumber: 200,
               columnNumber: 25
             }, this),
             /* @__PURE__ */ jsxDEV("a", { className: "flexium-home__viewall", href: context.catalogurl, children: str(context.strings, "home_viewall") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-              lineNumber: 207,
+              lineNumber: 211,
               columnNumber: 21
             }, this)
           ] }, void 0, true, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 194,
+            lineNumber: 198,
             columnNumber: 17
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 192,
+          lineNumber: 196,
           columnNumber: 13
         }, this),
         !courses && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__muted", children: str(context.strings, "catalog_loading") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 210,
+          lineNumber: 214,
           columnNumber: 26
         }, this),
         courses && courses.length === 0 && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__muted", children: str(context.strings, "home_nocourses") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 211,
+          lineNumber: 215,
           columnNumber: 49
         }, this),
         courses && courses.length > 0 && /* @__PURE__ */ jsxDEV(
@@ -324,11 +342,11 @@ function Courses({ settings, context }) {
             style: { "--flexium-columns": columns },
             children: courses.map((course) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(CourseTile, { course }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-              lineNumber: 215,
+              lineNumber: 219,
               columnNumber: 64
             }, this) }, course.id, false, {
               fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-              lineNumber: 215,
+              lineNumber: 219,
               columnNumber: 44
             }, this))
           },
@@ -336,7 +354,7 @@ function Courses({ settings, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 213,
+            lineNumber: 217,
             columnNumber: 17
           },
           this
@@ -347,7 +365,7 @@ function Courses({ settings, context }) {
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 190,
+      lineNumber: 194,
       columnNumber: 9
     },
     this
@@ -360,7 +378,7 @@ function Categories({ settings, context }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 230,
+      lineNumber: 234,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: chips ? "flexium-home__chips" : "flexium-home__categories", children: categories.map((category, index) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
@@ -372,12 +390,12 @@ function Categories({ settings, context }) {
         children: [
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__categoryname", children: category.name }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 236,
+            lineNumber: 240,
             columnNumber: 29
           }, this),
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__categorycount", children: str(context.strings, "home_coursecount", category.coursecount) }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 237,
+            lineNumber: 241,
             columnNumber: 29
           }, this)
         ]
@@ -386,22 +404,22 @@ function Categories({ settings, context }) {
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 234,
+        lineNumber: 238,
         columnNumber: 25
       },
       this
     ) }, category.id, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 233,
+      lineNumber: 237,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 231,
+      lineNumber: 235,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 229,
+    lineNumber: 233,
     columnNumber: 9
   }, this);
 }
@@ -418,37 +436,37 @@ function Stats({ settings, context }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 262,
+      lineNumber: 266,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: `flexium-home__stats flexium-home__stats--${text(settings, "style") || "cards"}`, children: keys.map((key) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-home__stat", children: [
       /* @__PURE__ */ jsxDEV("i", { className: `${STAT_ICONS[key] ?? "fa fa-circle"} flexium-home__staticon`, "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 266,
+        lineNumber: 270,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__statvalue", children: format.format(context.data?.stats[key] ?? 0) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 267,
+        lineNumber: 271,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__statlabel", children: str(context.strings, `home_stat_${key}`) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 268,
+        lineNumber: 272,
         columnNumber: 25
       }, this)
     ] }, key, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 265,
+      lineNumber: 269,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 263,
+      lineNumber: 267,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 261,
+    lineNumber: 265,
     columnNumber: 9
   }, this);
 }
@@ -457,7 +475,7 @@ function Features({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 282,
+      lineNumber: 286,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -468,26 +486,26 @@ function Features({ settings }) {
         children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-home__feature", children: [
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__featureicon", children: /* @__PURE__ */ jsxDEV("i", { className: item.icon || "fa fa-star", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 288,
+            lineNumber: 292,
             columnNumber: 29
           }, this) }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 287,
+            lineNumber: 291,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ jsxDEV("h3", { className: "flexium-home__featuretitle", children: item.title }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 290,
+            lineNumber: 294,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__featuretext", children: item.text }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 291,
+            lineNumber: 295,
             columnNumber: 25
           }, this)
         ] }, index, true, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 286,
+          lineNumber: 290,
           columnNumber: 21
         }, this))
       },
@@ -495,14 +513,14 @@ function Features({ settings }) {
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 283,
+        lineNumber: 287,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 281,
+    lineNumber: 285,
     columnNumber: 9
   }, this);
 }
@@ -511,37 +529,37 @@ function Steps({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 305,
+      lineNumber: 309,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ol", { className: "flexium-home__steps", children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-home__step", children: [
       /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__stepnumber", "aria-hidden": "true", children: index + 1 }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 309,
+        lineNumber: 313,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("h3", { className: "flexium-home__featuretitle", children: item.title }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 310,
+        lineNumber: 314,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__featuretext", children: item.text }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 311,
+        lineNumber: 315,
         columnNumber: 25
       }, this)
     ] }, index, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 308,
+      lineNumber: 312,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 306,
+      lineNumber: 310,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 304,
+    lineNumber: 308,
     columnNumber: 9
   }, this);
 }
@@ -552,27 +570,27 @@ function Cta({ settings, context }) {
     /* @__PURE__ */ jsxDEV("div", { children: [
       /* @__PURE__ */ jsxDEV("h2", { className: "flexium-home__ctatitle", children: text(settings, "title") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 327,
+        lineNumber: 331,
         columnNumber: 17
       }, this),
       text(settings, "text") && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__ctatext", children: text(settings, "text") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 328,
+        lineNumber: 332,
         columnNumber: 44
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 326,
+      lineNumber: 330,
       columnNumber: 13
     }, this),
     text(settings, "buttontext") && /* @__PURE__ */ jsxDEV("a", { className: "btn btn-light btn-lg", href: text(settings, "buttonurl") || context.catalogurl, children: text(settings, "buttontext") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 331,
+      lineNumber: 335,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 325,
+    lineNumber: 329,
     columnNumber: 9
   }, this);
 }
@@ -581,59 +599,59 @@ function Testimonials({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 345,
+      lineNumber: 349,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-home__quotes", children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-home__quote", children: [
       /* @__PURE__ */ jsxDEV("i", { className: "fa fa-quote-left flexium-home__quoteicon", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 349,
+        lineNumber: 353,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("blockquote", { className: "flexium-home__quotetext", children: item.quote }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 350,
+        lineNumber: 354,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__quotename", children: [
         /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__avatar", "aria-hidden": "true", children: (item.name || "?").charAt(0) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 352,
+          lineNumber: 356,
           columnNumber: 29
         }, this),
         /* @__PURE__ */ jsxDEV("span", { children: [
           /* @__PURE__ */ jsxDEV("strong", { children: item.name }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 354,
+            lineNumber: 358,
             columnNumber: 33
           }, this),
           item.role && /* @__PURE__ */ jsxDEV("span", { className: "d-block flexium-home__muted", children: item.role }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-            lineNumber: 355,
+            lineNumber: 359,
             columnNumber: 47
           }, this)
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-          lineNumber: 353,
+          lineNumber: 357,
           columnNumber: 29
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 351,
+        lineNumber: 355,
         columnNumber: 25
       }, this)
     ] }, index, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 348,
+      lineNumber: 352,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 346,
+      lineNumber: 350,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 344,
+    lineNumber: 348,
     columnNumber: 9
   }, this);
 }
@@ -642,32 +660,32 @@ function Faq({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__narrow", children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 371,
+      lineNumber: 375,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__faq", children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("details", { className: "flexium-home__faqitem", children: [
       /* @__PURE__ */ jsxDEV("summary", { children: item.question }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 375,
+        lineNumber: 379,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("p", { children: item.answer }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 376,
+        lineNumber: 380,
         columnNumber: 25
       }, this)
     ] }, index, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 374,
+      lineNumber: 378,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 372,
+      lineNumber: 376,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 370,
+    lineNumber: 374,
     columnNumber: 9
   }, this);
 }
@@ -676,29 +694,29 @@ function Logos({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings, centred: true }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 390,
+      lineNumber: 394,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-home__logos", children: items(settings).map((item, index) => /* @__PURE__ */ jsxDEV("li", { children: item.url ? /* @__PURE__ */ jsxDEV("a", { href: item.url, className: "flexium-home__logo", children: item.name }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 394,
+      lineNumber: 398,
       columnNumber: 37
     }, this) : /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__logo", children: item.name }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 395,
+      lineNumber: 399,
       columnNumber: 31
     }, this) }, index, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 393,
+      lineNumber: 397,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 391,
+      lineNumber: 395,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 389,
+    lineNumber: 393,
     columnNumber: 9
   }, this);
 }
@@ -708,37 +726,37 @@ function News({ settings, context }) {
   return /* @__PURE__ */ jsxDEV("div", { children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 410,
+      lineNumber: 414,
       columnNumber: 13
     }, this),
     news.length === 0 && /* @__PURE__ */ jsxDEV("p", { className: "flexium-home__muted", children: str(context.strings, "home_nonews") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 411,
+      lineNumber: 415,
       columnNumber: 35
     }, this),
     /* @__PURE__ */ jsxDEV("ul", { className: "flexium-home__news", children: news.map((item) => /* @__PURE__ */ jsxDEV("li", { className: "flexium-home__newsitem", children: [
       /* @__PURE__ */ jsxDEV("span", { className: "flexium-home__muted", children: item.date }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 415,
+        lineNumber: 419,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ jsxDEV("a", { href: item.url, children: item.title }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 416,
+        lineNumber: 420,
         columnNumber: 25
       }, this)
     ] }, item.url, true, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 414,
+      lineNumber: 418,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 412,
+      lineNumber: 416,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 409,
+    lineNumber: 413,
     columnNumber: 9
   }, this);
 }
@@ -747,17 +765,17 @@ function Text({ settings }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__narrow", children: [
     /* @__PURE__ */ jsxDEV(Heading, { settings }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 430,
+      lineNumber: 434,
       columnNumber: 13
     }, this),
     text(settings, "html").split(/\n{2,}/).map((paragraph, index) => /* @__PURE__ */ jsxDEV("p", { children: paragraph }, index, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 431,
+      lineNumber: 435,
       columnNumber: 79
     }, this))
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 429,
+    lineNumber: 433,
     columnNumber: 9
   }, this);
 }
@@ -780,17 +798,17 @@ function SiteContent({ html }) {
   return /* @__PURE__ */ jsxDEV("div", { className: "flexium-home__sitecontent", children: [
     /* @__PURE__ */ jsxDEV("div", { ref: holder }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 458,
+      lineNumber: 462,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { dangerouslySetInnerHTML: { __html: html } }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-      lineNumber: 459,
+      lineNumber: 463,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-    lineNumber: 457,
+    lineNumber: 461,
     columnNumber: 9
   }, this);
 }
@@ -801,86 +819,86 @@ function SectionView({ section, context }) {
     case "hero":
       return /* @__PURE__ */ jsxDEV(Hero, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 470,
+        lineNumber: 474,
         columnNumber: 29
       }, this);
     case "courses":
       return /* @__PURE__ */ jsxDEV(Courses, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 471,
+        lineNumber: 475,
         columnNumber: 32
       }, this);
     case "categories":
       return /* @__PURE__ */ jsxDEV(Categories, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 472,
+        lineNumber: 476,
         columnNumber: 35
       }, this);
     case "stats":
       return /* @__PURE__ */ jsxDEV(Stats, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 473,
+        lineNumber: 477,
         columnNumber: 30
       }, this);
     case "features":
       return /* @__PURE__ */ jsxDEV(Features, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 474,
+        lineNumber: 478,
         columnNumber: 33
       }, this);
     case "steps":
       return /* @__PURE__ */ jsxDEV(Steps, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 475,
+        lineNumber: 479,
         columnNumber: 30
       }, this);
     case "cta":
       return /* @__PURE__ */ jsxDEV(Cta, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 476,
+        lineNumber: 480,
         columnNumber: 28
       }, this);
     case "testimonials":
       return /* @__PURE__ */ jsxDEV(Testimonials, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 477,
+        lineNumber: 481,
         columnNumber: 37
       }, this);
     case "faq":
       return /* @__PURE__ */ jsxDEV(Faq, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 478,
+        lineNumber: 482,
         columnNumber: 28
       }, this);
     case "logos":
       return /* @__PURE__ */ jsxDEV(Logos, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 479,
+        lineNumber: 483,
         columnNumber: 30
       }, this);
     case "news":
       return /* @__PURE__ */ jsxDEV(News, { settings, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 480,
+        lineNumber: 484,
         columnNumber: 29
       }, this);
     case "text":
       return /* @__PURE__ */ jsxDEV(Text, { settings }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 481,
+        lineNumber: 485,
         columnNumber: 29
       }, this);
     // Moodle's own site home content, rendered by Moodle.
     case "sitecontent":
       return /* @__PURE__ */ jsxDEV(SiteContent, { html: context.sitecontent }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 484,
+        lineNumber: 488,
         columnNumber: 20
       }, this);
     case "spacer":
       return /* @__PURE__ */ jsxDEV("div", { className: `flexium-home__spacer flexium-home__spacer--${text(settings, "size") || "md"}` }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/Sections.tsx",
-        lineNumber: 486,
+        lineNumber: 490,
         columnNumber: 20
       }, this);
     default:

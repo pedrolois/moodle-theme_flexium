@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Category and subcategory tree with checkboxes and subtree course counts.
  *
@@ -52,7 +70,7 @@ function CategoryTree({ options, onToggle, strings, bulk, showcount, filter }) {
             onClick: () => setExpanded({ ...expanded, [value]: !isOpen }),
             children: /* @__PURE__ */ jsxDEV("i", { className: `fa fa-${isOpen ? "minus" : "plus"}`, "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-              lineNumber: 105,
+              lineNumber: 109,
               columnNumber: 37
             }, this)
           },
@@ -60,34 +78,34 @@ function CategoryTree({ options, onToggle, strings, bulk, showcount, filter }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-            lineNumber: 98,
+            lineNumber: 102,
             columnNumber: 33
           },
           this
         ) : /* @__PURE__ */ jsxDEV("span", { className: "flexium-tree__spacer", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-          lineNumber: 108,
+          lineNumber: 112,
           columnNumber: 33
         }, this),
         /* @__PURE__ */ jsxDEV(OptionCheckbox, { option: node.option, onToggle, showcount }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-          lineNumber: 110,
+          lineNumber: 114,
           columnNumber: 29
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-        lineNumber: 96,
+        lineNumber: 100,
         columnNumber: 25
       }, this),
       hasChildren && isOpen && renderNodes(node.children, level + 1)
     ] }, value, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-      lineNumber: 95,
+      lineNumber: 99,
       columnNumber: 21
     }, this);
   }) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-    lineNumber: 88,
+    lineNumber: 92,
     columnNumber: 9
   }, this), "renderNodes");
   const needle = normalise(filter.trim());
@@ -95,15 +113,15 @@ function CategoryTree({ options, onToggle, strings, bulk, showcount, filter }) {
     const matches = options.filter((option) => normalise(option.label).includes(needle));
     return /* @__PURE__ */ jsxDEV("ul", { className: "flexium-optionlist", children: matches.map((option) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(OptionCheckbox, { option, onToggle, showcount }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-      lineNumber: 126,
+      lineNumber: 130,
       columnNumber: 44
     }, this) }, option.value, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-      lineNumber: 126,
+      lineNumber: 130,
       columnNumber: 21
     }, this)) }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/CategoryTree.tsx",
-      lineNumber: 124,
+      lineNumber: 128,
       columnNumber: 13
     }, this);
   }

@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Settings form of a home page section, generated from its fields (\theme_flexium\local\home\fields).
  *
@@ -36,7 +54,7 @@ function ItemsControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 72,
+            lineNumber: 76,
             columnNumber: 25
           },
           this
@@ -51,7 +69,7 @@ function ItemsControl({ field, value, onChange, context }) {
             onClick: () => set(swap(list, index, index - 1)),
             children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-up", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 79,
+              lineNumber: 83,
               columnNumber: 29
             }, this)
           },
@@ -59,7 +77,7 @@ function ItemsControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 76,
+            lineNumber: 80,
             columnNumber: 25
           },
           this
@@ -74,7 +92,7 @@ function ItemsControl({ field, value, onChange, context }) {
             onClick: () => set(swap(list, index, index + 1)),
             children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-down", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 84,
+              lineNumber: 88,
               columnNumber: 29
             }, this)
           },
@@ -82,7 +100,7 @@ function ItemsControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 81,
+            lineNumber: 85,
             columnNumber: 25
           },
           this
@@ -96,7 +114,7 @@ function ItemsControl({ field, value, onChange, context }) {
             onClick: () => set(list.filter((_, position) => position !== index)),
             children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-xmark", "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 89,
+              lineNumber: 93,
               columnNumber: 29
             }, this)
           },
@@ -104,14 +122,14 @@ function ItemsControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 86,
+            lineNumber: 90,
             columnNumber: 25
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 71,
+        lineNumber: 75,
         columnNumber: 21
       }, this),
       open === index && /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeform__itembody", children: field.fields.map((subfield) => /* @__PURE__ */ jsxDEV(
@@ -126,18 +144,18 @@ function ItemsControl({ field, value, onChange, context }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 95,
+          lineNumber: 99,
           columnNumber: 33
         },
         this
       )) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 93,
+        lineNumber: 97,
         columnNumber: 25
       }, this)
     ] }, index, true, {
       fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-      lineNumber: 70,
+      lineNumber: 74,
       columnNumber: 17
     }, this)),
     /* @__PURE__ */ jsxDEV("button", { type: "button", className: "btn btn-sm btn-outline-primary", onClick: () => {
@@ -150,18 +168,18 @@ function ItemsControl({ field, value, onChange, context }) {
     }, children: [
       /* @__PURE__ */ jsxDEV("i", { className: "fa fa-plus me-1", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 111,
+        lineNumber: 115,
         columnNumber: 17
       }, this),
       str(context.strings, "home_additem")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-      lineNumber: 103,
+      lineNumber: 107,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-    lineNumber: 68,
+    lineNumber: 72,
     columnNumber: 9
   }, this);
 }
@@ -170,7 +188,7 @@ function FieldControl({ field, value, onChange, context }) {
   const id = useId();
   const label = /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "flexium-feature__label", children: field.label }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-    lineNumber: 122,
+    lineNumber: 126,
     columnNumber: 19
   }, this);
   const textvalue = typeof value === "string" || typeof value === "number" ? String(value) : "";
@@ -191,19 +209,19 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 129,
+            lineNumber: 133,
             columnNumber: 21
           },
           this
         ),
         /* @__PURE__ */ jsxDEV("label", { htmlFor: id, className: "form-check-label flexium-feature__label", children: field.label }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 131,
+          lineNumber: 135,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 128,
+        lineNumber: 132,
         columnNumber: 17
       }, this);
     case "textarea":
@@ -222,14 +240,14 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 138,
+            lineNumber: 142,
             columnNumber: 21
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 136,
+        lineNumber: 140,
         columnNumber: 17
       }, this);
     case "select":
@@ -244,7 +262,7 @@ function FieldControl({ field, value, onChange, context }) {
             onChange: (event) => onChange(event.target.value),
             children: field.choices.map((choice) => /* @__PURE__ */ jsxDEV("option", { value: choice.key, children: choice.label }, choice.key, false, {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 148,
+              lineNumber: 152,
               columnNumber: 54
             }, this))
           },
@@ -252,14 +270,14 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 146,
+            lineNumber: 150,
             columnNumber: 21
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 144,
+        lineNumber: 148,
         columnNumber: 17
       }, this);
     case "category":
@@ -275,12 +293,12 @@ function FieldControl({ field, value, onChange, context }) {
             children: [
               /* @__PURE__ */ jsxDEV("option", { value: "0", children: "-" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-                lineNumber: 158,
+                lineNumber: 162,
                 columnNumber: 25
               }, this),
               (context.data?.categories ?? []).map((category) => /* @__PURE__ */ jsxDEV("option", { value: category.id, children: category.name }, category.id, false, {
                 fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-                lineNumber: 160,
+                lineNumber: 164,
                 columnNumber: 29
               }, this))
             ]
@@ -289,21 +307,21 @@ function FieldControl({ field, value, onChange, context }) {
           true,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 156,
+            lineNumber: 160,
             columnNumber: 21
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 154,
+        lineNumber: 158,
         columnNumber: 17
       }, this);
     case "palette":
       return /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeform__field", "data-field": field.key, children: [
         /* @__PURE__ */ jsxDEV("span", { className: "flexium-feature__label", children: field.label }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 168,
+          lineNumber: 172,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-feature__swatches", role: "radiogroup", "aria-label": field.label, children: Object.entries(context.palette).map(([key, url]) => /* @__PURE__ */ jsxDEV(
@@ -321,25 +339,25 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 171,
+            lineNumber: 175,
             columnNumber: 29
           },
           this
         )) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 169,
+          lineNumber: 173,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 167,
+        lineNumber: 171,
         columnNumber: 17
       }, this);
     case "icon":
       return /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeform__field", "data-field": field.key, children: [
         /* @__PURE__ */ jsxDEV("span", { className: "flexium-feature__label", children: field.label }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 181,
+          lineNumber: 185,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeform__icons", role: "radiogroup", "aria-label": field.label, children: Object.entries(context.icons).map(([key, classes]) => /* @__PURE__ */ jsxDEV(
@@ -353,7 +371,7 @@ function FieldControl({ field, value, onChange, context }) {
             onClick: () => onChange(classes),
             children: /* @__PURE__ */ jsxDEV("i", { className: classes, "aria-hidden": "true" }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 187,
+              lineNumber: 191,
               columnNumber: 33
             }, this)
           },
@@ -361,18 +379,18 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 184,
+            lineNumber: 188,
             columnNumber: 29
           },
           this
         )) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 182,
+          lineNumber: 186,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 180,
+        lineNumber: 184,
         columnNumber: 17
       }, this);
     case "checklist": {
@@ -380,7 +398,7 @@ function FieldControl({ field, value, onChange, context }) {
       return /* @__PURE__ */ jsxDEV("fieldset", { className: "flexium-homeform__field", "data-field": field.key, children: [
         /* @__PURE__ */ jsxDEV("legend", { className: "flexium-feature__label", children: field.label }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 197,
+          lineNumber: 201,
           columnNumber: 21
         }, this),
         field.choices.map((choice) => /* @__PURE__ */ jsxDEV("div", { className: "form-check", children: [
@@ -397,24 +415,24 @@ function FieldControl({ field, value, onChange, context }) {
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-              lineNumber: 200,
+              lineNumber: 204,
               columnNumber: 29
             },
             this
           ),
           /* @__PURE__ */ jsxDEV("label", { htmlFor: `${id}-${choice.key}`, className: "form-check-label", children: choice.label }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 205,
+            lineNumber: 209,
             columnNumber: 29
           }, this)
         ] }, choice.key, true, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 199,
+          lineNumber: 203,
           columnNumber: 25
         }, this))
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 196,
+        lineNumber: 200,
         columnNumber: 17
       }, this);
     }
@@ -422,17 +440,17 @@ function FieldControl({ field, value, onChange, context }) {
       return /* @__PURE__ */ jsxDEV("div", { className: "flexium-homeform__field", "data-field": field.key, children: [
         /* @__PURE__ */ jsxDEV("span", { className: "flexium-feature__label", children: field.label }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 214,
+          lineNumber: 218,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ jsxDEV(ItemsControl, { field, value, onChange, context }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-          lineNumber: 215,
+          lineNumber: 219,
           columnNumber: 21
         }, this)
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 213,
+        lineNumber: 217,
         columnNumber: 17
       }, this);
     default:
@@ -451,14 +469,14 @@ function FieldControl({ field, value, onChange, context }) {
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-            lineNumber: 222,
+            lineNumber: 226,
             columnNumber: 21
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-        lineNumber: 220,
+        lineNumber: 224,
         columnNumber: 17
       }, this);
   }
@@ -478,13 +496,13 @@ function SchemaForm({ fields, settings, onChange, strings, palette, icons, data 
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-      lineNumber: 240,
+      lineNumber: 244,
       columnNumber: 17
     },
     this
   )) }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/home/SchemaForm.tsx",
-    lineNumber: 238,
+    lineNumber: 242,
     columnNumber: 9
   }, this);
 }

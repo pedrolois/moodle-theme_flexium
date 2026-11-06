@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Widget style list editor: drag (or use the arrow buttons) to reorder, remove with ×, add from a menu.
  *
@@ -61,7 +79,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
         children: [
           value.length === 0 && /* @__PURE__ */ jsxDEV("li", { className: "flexium-widgets__empty", children: str(strings, "editor_empty") }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-            lineNumber: 95,
+            lineNumber: 99,
             columnNumber: 40
           }, this),
           value.map((key, index) => {
@@ -100,7 +118,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                         "aria-hidden": "true",
                         children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-grip-vertical" }, void 0, false, {
                           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                          lineNumber: 126,
+                          lineNumber: 130,
                           columnNumber: 37
                         }, this)
                       },
@@ -108,7 +126,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                       false,
                       {
                         fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                        lineNumber: 124,
+                        lineNumber: 128,
                         columnNumber: 33
                       },
                       this
@@ -117,12 +135,12 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                       label,
                       bykey.get(key)?.kind && /* @__PURE__ */ jsxDEV("span", { className: "flexium-widget__kind", children: bykey.get(key)?.kind }, void 0, false, {
                         fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                        lineNumber: 131,
+                        lineNumber: 135,
                         columnNumber: 41
                       }, this)
                     ] }, void 0, true, {
                       fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                      lineNumber: 128,
+                      lineNumber: 132,
                       columnNumber: 33
                     }, this),
                     /* @__PURE__ */ jsxDEV("span", { className: "flexium-widget__actions", children: [
@@ -136,7 +154,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                           "aria-label": str(strings, "filtereditor_moveup", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-up", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                            lineNumber: 138,
+                            lineNumber: 142,
                             columnNumber: 41
                           }, this)
                         },
@@ -144,7 +162,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                          lineNumber: 135,
+                          lineNumber: 139,
                           columnNumber: 37
                         },
                         this
@@ -159,7 +177,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                           "aria-label": str(strings, "filtereditor_movedown", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-down", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                            lineNumber: 143,
+                            lineNumber: 147,
                             columnNumber: 41
                           }, this)
                         },
@@ -167,7 +185,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                          lineNumber: 140,
+                          lineNumber: 144,
                           columnNumber: 37
                         },
                         this
@@ -181,7 +199,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                           "aria-label": str(strings, "filtereditor_remove", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-xmark", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                            lineNumber: 148,
+                            lineNumber: 152,
                             columnNumber: 41
                           }, this)
                         },
@@ -189,24 +207,24 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                          lineNumber: 145,
+                          lineNumber: 149,
                           columnNumber: 37
                         },
                         this
                       )
                     ] }, void 0, true, {
                       fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                      lineNumber: 134,
+                      lineNumber: 138,
                       columnNumber: 33
                     }, this)
                   ] }, void 0, true, {
                     fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                    lineNumber: 123,
+                    lineNumber: 127,
                     columnNumber: 29
                   }, this),
                   renderExtra && /* @__PURE__ */ jsxDEV("div", { className: "flexium-widget__extra", children: renderExtra(key) }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                    lineNumber: 152,
+                    lineNumber: 156,
                     columnNumber: 45
                   }, this)
                 ]
@@ -215,7 +233,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
               true,
               {
                 fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-                lineNumber: 108,
+                lineNumber: 112,
                 columnNumber: 25
               },
               this
@@ -227,7 +245,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-        lineNumber: 93,
+        lineNumber: 97,
         columnNumber: 13
       },
       this
@@ -235,7 +253,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-widgets__add", children: [
       /* @__PURE__ */ jsxDEV("label", { htmlFor: addid, className: "visually-hidden", children: str(strings, "editor_add") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-        lineNumber: 159,
+        lineNumber: 163,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -249,12 +267,12 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
           children: [
             /* @__PURE__ */ jsxDEV("option", { value: "", children: available.length ? str(strings, "editor_add") : str(strings, "editor_nothingtoadd") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-              lineNumber: 162,
+              lineNumber: 166,
               columnNumber: 21
             }, this),
             available.map((choice) => /* @__PURE__ */ jsxDEV("option", { value: choice.key, children: choice.label }, choice.key, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-              lineNumber: 165,
+              lineNumber: 169,
               columnNumber: 46
             }, this))
           ]
@@ -263,7 +281,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-          lineNumber: 160,
+          lineNumber: 164,
           columnNumber: 17
         },
         this
@@ -281,7 +299,7 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
           },
           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-plus", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-            lineNumber: 173,
+            lineNumber: 177,
             columnNumber: 21
           }, this)
         },
@@ -289,24 +307,24 @@ function WidgetList({ title, value, choices, onChange, renderExtra, strings }) {
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-          lineNumber: 167,
+          lineNumber: 171,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-      lineNumber: 158,
+      lineNumber: 162,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "visually-hidden", "aria-live": "polite", children: announcement }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-      lineNumber: 177,
+      lineNumber: 181,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/WidgetList.tsx",
-    lineNumber: 92,
+    lineNumber: 96,
     columnNumber: 9
   }, this);
 }

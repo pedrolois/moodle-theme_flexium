@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Admin editor of the catalogue filter layout: drag and drop (or arrow buttons) to reorder,
  * add and remove filter groups, and choose which start expanded.
@@ -89,7 +107,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-filtereditor__column", children: [
       /* @__PURE__ */ jsxDEV("h4", { className: "flexium-filtereditor__title", children: str("filtereditor_shown") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-        lineNumber: 141,
+        lineNumber: 145,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -106,7 +124,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
           children: [
             layout.length === 0 && /* @__PURE__ */ jsxDEV("li", { className: "flexium-filtereditor__empty", children: str("filtereditor_empty") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-              lineNumber: 152,
+              lineNumber: 156,
               columnNumber: 45
             }, this),
             layout.map((item, index) => {
@@ -138,7 +156,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                         "aria-hidden": "true",
                         children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-grip-vertical" }, void 0, false, {
                           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                          lineNumber: 176,
+                          lineNumber: 180,
                           columnNumber: 37
                         }, this)
                       },
@@ -146,7 +164,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                       false,
                       {
                         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                        lineNumber: 174,
+                        lineNumber: 178,
                         columnNumber: 33
                       },
                       this
@@ -154,17 +172,17 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                     /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__text", children: [
                       /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__label", children: label }, void 0, false, {
                         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                        lineNumber: 179,
+                        lineNumber: 183,
                         columnNumber: 37
                       }, this),
                       /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__kind", children: bysource.get(item.source)?.kind }, void 0, false, {
                         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                        lineNumber: 180,
+                        lineNumber: 184,
                         columnNumber: 37
                       }, this)
                     ] }, void 0, true, {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 178,
+                      lineNumber: 182,
                       columnNumber: 33
                     }, this),
                     /* @__PURE__ */ jsxDEV("label", { className: "flexium-filtereditor__expanded", children: [
@@ -180,7 +198,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                          lineNumber: 183,
+                          lineNumber: 187,
                           columnNumber: 37
                         },
                         this
@@ -188,7 +206,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                       str("filtereditor_expanded")
                     ] }, void 0, true, {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 182,
+                      lineNumber: 186,
                       columnNumber: 33
                     }, this),
                     /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__actions", children: [
@@ -202,7 +220,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                           "aria-label": str("filtereditor_moveup", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-up", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                            lineNumber: 191,
+                            lineNumber: 195,
                             columnNumber: 41
                           }, this)
                         },
@@ -210,7 +228,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                          lineNumber: 188,
+                          lineNumber: 192,
                           columnNumber: 37
                         },
                         this
@@ -225,7 +243,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                           "aria-label": str("filtereditor_movedown", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-down", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                            lineNumber: 196,
+                            lineNumber: 200,
                             columnNumber: 41
                           }, this)
                         },
@@ -233,7 +251,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                          lineNumber: 193,
+                          lineNumber: 197,
                           columnNumber: 37
                         },
                         this
@@ -247,7 +265,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                           "aria-label": str("filtereditor_remove", label),
                           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-xmark", "aria-hidden": "true" }, void 0, false, {
                             fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                            lineNumber: 200,
+                            lineNumber: 204,
                             columnNumber: 41
                           }, this)
                         },
@@ -255,14 +273,14 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                         false,
                         {
                           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                          lineNumber: 198,
+                          lineNumber: 202,
                           columnNumber: 37
                         },
                         this
                       )
                     ] }, void 0, true, {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 187,
+                      lineNumber: 191,
                       columnNumber: 33
                     }, this)
                   ]
@@ -271,7 +289,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                 true,
                 {
                   fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                  lineNumber: 166,
+                  lineNumber: 170,
                   columnNumber: 29
                 },
                 this
@@ -283,20 +301,20 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-          lineNumber: 142,
+          lineNumber: 146,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-      lineNumber: 140,
+      lineNumber: 144,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-filtereditor__column", children: [
       /* @__PURE__ */ jsxDEV("h4", { className: "flexium-filtereditor__title", children: str("filtereditor_available") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-        lineNumber: 210,
+        lineNumber: 214,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -312,7 +330,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
           children: [
             available.length === 0 && /* @__PURE__ */ jsxDEV("li", { className: "flexium-filtereditor__empty", children: str("filtereditor_noavailable") }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-              lineNumber: 221,
+              lineNumber: 225,
               columnNumber: 25
             }, this),
             available.map((source) => /* @__PURE__ */ jsxDEV(
@@ -325,27 +343,27 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                 children: [
                   /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__handle", "aria-hidden": "true", children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-grip-vertical" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                    lineNumber: 227,
+                    lineNumber: 231,
                     columnNumber: 33
                   }, this) }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                    lineNumber: 226,
+                    lineNumber: 230,
                     columnNumber: 29
                   }, this),
                   /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__text", children: [
                     /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__label", children: source.label }, void 0, false, {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 230,
+                      lineNumber: 234,
                       columnNumber: 33
                     }, this),
                     /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__kind", children: source.kind }, void 0, false, {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 231,
+                      lineNumber: 235,
                       columnNumber: 33
                     }, this)
                   ] }, void 0, true, {
                     fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                    lineNumber: 229,
+                    lineNumber: 233,
                     columnNumber: 29
                   }, this),
                   /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtereditor__actions", children: /* @__PURE__ */ jsxDEV(
@@ -357,7 +375,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                       "aria-label": str("filtereditor_add", source.label),
                       children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-plus", "aria-hidden": "true" }, void 0, false, {
                         fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                        lineNumber: 236,
+                        lineNumber: 240,
                         columnNumber: 37
                       }, this)
                     },
@@ -365,13 +383,13 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
                     false,
                     {
                       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                      lineNumber: 234,
+                      lineNumber: 238,
                       columnNumber: 33
                     },
                     this
                   ) }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                    lineNumber: 233,
+                    lineNumber: 237,
                     columnNumber: 29
                   }, this)
                 ]
@@ -380,7 +398,7 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
               true,
               {
                 fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-                lineNumber: 224,
+                lineNumber: 228,
                 columnNumber: 25
               },
               this
@@ -391,24 +409,24 @@ function FilterEditor({ inputid, layout: initiallayout, sources, strings }) {
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-          lineNumber: 211,
+          lineNumber: 215,
           columnNumber: 17
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-      lineNumber: 209,
+      lineNumber: 213,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "visually-hidden", "aria-live": "polite", children: announcement }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-      lineNumber: 244,
+      lineNumber: 248,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/admin/FilterEditor.tsx",
-    lineNumber: 139,
+    lineNumber: 143,
     columnNumber: 9
   }, this);
 }

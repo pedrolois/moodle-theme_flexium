@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * One collapsible filter group of the catalogue sidebar: a checkbox list or the category tree.
  *
@@ -84,12 +102,12 @@ function FilterGroupPanel({
           children: [
             /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtergroup__label", children: group.label }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-              lineNumber: 129,
+              lineNumber: 133,
               columnNumber: 25
             }, this),
             selectedcount > 0 && /* @__PURE__ */ jsxDEV("span", { className: "flexium-filtergroup__count", children: selectedcount }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-              lineNumber: 131,
+              lineNumber: 135,
               columnNumber: 29
             }, this),
             /* @__PURE__ */ jsxDEV(
@@ -102,7 +120,7 @@ function FilterGroupPanel({
               false,
               {
                 fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-                lineNumber: 133,
+                lineNumber: 137,
                 columnNumber: 25
               },
               this
@@ -113,13 +131,13 @@ function FilterGroupPanel({
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 122,
+          lineNumber: 126,
           columnNumber: 21
         },
         this
       ) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-        lineNumber: 121,
+        lineNumber: 125,
         columnNumber: 17
       }, this),
       features.groupclear && selectedcount > 0 && /* @__PURE__ */ jsxDEV(
@@ -136,7 +154,7 @@ function FilterGroupPanel({
           onClick: () => onClear(group.source),
           children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-eraser", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-            lineNumber: 141,
+            lineNumber: 145,
             columnNumber: 25
           }, this)
         },
@@ -144,21 +162,21 @@ function FilterGroupPanel({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 138,
+          lineNumber: 142,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-      lineNumber: 120,
+      lineNumber: 124,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("div", { id: bodyid, className: "flexium-filtergroup__body", hidden: !open, onKeyDown: moveFocus, children: [
       searchable && /* @__PURE__ */ jsxDEV("div", { className: "flexium-filtergroup__search", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-magnifying-glass", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 148,
+          lineNumber: 152,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ jsxDEV(
@@ -175,19 +193,19 @@ function FilterGroupPanel({
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-            lineNumber: 149,
+            lineNumber: 153,
             columnNumber: 25
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-        lineNumber: 147,
+        lineNumber: 151,
         columnNumber: 21
       }, this),
       matching.length === 0 && /* @__PURE__ */ jsxDEV("p", { className: "flexium-filtergroup__empty", children: str(strings, "catalog_nooptions") }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-        lineNumber: 156,
+        lineNumber: 160,
         columnNumber: 21
       }, this),
       group.type === "tree" ? /* @__PURE__ */ jsxDEV(
@@ -204,7 +222,7 @@ function FilterGroupPanel({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 159,
+          lineNumber: 163,
           columnNumber: 21
         },
         this
@@ -219,17 +237,17 @@ function FilterGroupPanel({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 171,
+          lineNumber: 175,
           columnNumber: 33
         },
         this
       ) }, option.value, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-        lineNumber: 170,
+        lineNumber: 174,
         columnNumber: 29
       }, this)) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-        lineNumber: 168,
+        lineNumber: 172,
         columnNumber: 21
       }, this),
       group.type === "list" && !needle && matching.length > COLLAPSED_OPTIONS && /* @__PURE__ */ jsxDEV(
@@ -244,19 +262,19 @@ function FilterGroupPanel({
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-          lineNumber: 178,
+          lineNumber: 182,
           columnNumber: 21
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-      lineNumber: 145,
+      lineNumber: 149,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/catalog/FilterGroupPanel.tsx",
-    lineNumber: 119,
+    lineNumber: 123,
     columnNumber: 9
   }, this);
 }

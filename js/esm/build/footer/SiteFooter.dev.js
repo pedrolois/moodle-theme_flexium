@@ -1,6 +1,24 @@
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
+/*
+ * This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 /**
  * Flexium site footer: columns of blocks (logo, text, links, contact, social networks, legal links, support, user
  * tour reset, copyright) and a bottom bar.
@@ -96,16 +114,16 @@ function BlockFrame({
         /* @__PURE__ */ jsxDEV("div", { className: "flexium-footerblock__bar", children: [
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-footerblock__handle", title: str(strings, "footer_drag", name), "aria-hidden": "true", children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-grip-vertical" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 190,
+            lineNumber: 194,
             columnNumber: 21
           }, this) }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 189,
+            lineNumber: 193,
             columnNumber: 17
           }, this),
           /* @__PURE__ */ jsxDEV("span", { className: "flexium-footerblock__name", title: name, children: name }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 192,
+            lineNumber: 196,
             columnNumber: 17
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -120,7 +138,7 @@ function BlockFrame({
               title: str(strings, "editor_wand", name),
               children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                lineNumber: 196,
+                lineNumber: 200,
                 columnNumber: 21
               }, this)
             },
@@ -128,7 +146,7 @@ function BlockFrame({
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 193,
+              lineNumber: 197,
               columnNumber: 17
             },
             this
@@ -144,7 +162,7 @@ function BlockFrame({
               title: str(strings, MOVE_LABELS[direction]),
               children: /* @__PURE__ */ jsxDEV("i", { className: `fa fa-arrow-${direction}`, "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                lineNumber: 202,
+                lineNumber: 206,
                 columnNumber: 25
               }, this)
             },
@@ -152,7 +170,7 @@ function BlockFrame({
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 199,
+              lineNumber: 203,
               columnNumber: 21
             },
             this
@@ -168,7 +186,7 @@ function BlockFrame({
               title: str(strings, "footer_deleteblock"),
               children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-trash-can", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                lineNumber: 208,
+                lineNumber: 212,
                 columnNumber: 21
               }, this)
             },
@@ -176,14 +194,14 @@ function BlockFrame({
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 205,
+              lineNumber: 209,
               columnNumber: 17
             },
             this
           )
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 188,
+          lineNumber: 192,
           columnNumber: 13
         }, this),
         children
@@ -193,7 +211,7 @@ function BlockFrame({
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 185,
+      lineNumber: 189,
       columnNumber: 9
     },
     this
@@ -206,18 +224,18 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
     /* @__PURE__ */ jsxDEV("span", { className: "flexium-footer__edittitle", children: [
       /* @__PURE__ */ jsxDEV("i", { className: "fa fa-pen-to-square me-2", "aria-hidden": "true" }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 235,
+        lineNumber: 239,
         columnNumber: 17
       }, this),
       str(strings, "footer_editor_title")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 234,
+      lineNumber: 238,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("span", { className: "flexium-footer__edithelp", children: str(strings, "footer_editor_help") }, void 0, false, {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 237,
+      lineNumber: 241,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV("span", { className: "flexium-editor__status", role: "status", children: [
@@ -227,7 +245,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
       status !== "saving" && dirty && str(strings, "editor_unsaved")
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 238,
+      lineNumber: 242,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV(
@@ -241,7 +259,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
         title: str(strings, "editor_wand", style),
         children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 246,
+          lineNumber: 250,
           columnNumber: 17
         }, this)
       },
@@ -249,7 +267,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 244,
+        lineNumber: 248,
         columnNumber: 13
       },
       this
@@ -265,7 +283,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
         children: [
           /* @__PURE__ */ jsxDEV("i", { className: "fa fa-table-columns me-1", "aria-hidden": "true" }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 250,
+            lineNumber: 254,
             columnNumber: 17
           }, this),
           str(strings, "footer_addcolumn")
@@ -275,7 +293,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
       true,
       {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 248,
+        lineNumber: 252,
         columnNumber: 13
       },
       this
@@ -294,7 +312,7 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 252,
+        lineNumber: 256,
         columnNumber: 13
       },
       this
@@ -313,14 +331,14 @@ function FooterEditBar({ strings, status, dirty, canaddcolumn, onStyle, onAddCol
       false,
       {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 254,
+        lineNumber: 258,
         columnNumber: 13
       },
       this
     )
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-    lineNumber: 233,
+    lineNumber: 237,
     columnNumber: 9
   }, this);
 }
@@ -343,13 +361,13 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
       /* @__PURE__ */ jsxDEV("h2", { id: `${id}-title`, className: "flexium-editpanel__title", children: [
         /* @__PURE__ */ jsxDEV("i", { className: "fa fa-wand-magic-sparkles me-2", "aria-hidden": "true" }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 291,
+          lineNumber: 295,
           columnNumber: 33
         }, this),
         paneltitle
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 290,
+        lineNumber: 294,
         columnNumber: 29
       }, this),
       /* @__PURE__ */ jsxDEV(
@@ -364,14 +382,14 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 293,
+          lineNumber: 297,
           columnNumber: 29
         },
         this
       )
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 289,
+      lineNumber: 293,
       columnNumber: 25
     }, this),
     /* @__PURE__ */ jsxDEV("div", { className: "flexium-editpanel__body", children: [
@@ -390,7 +408,7 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
         false,
         {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 298,
+          lineNumber: 302,
           columnNumber: 33
         },
         this
@@ -398,7 +416,7 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
       block && panelblock && /* @__PURE__ */ jsxDEV(Fragment, { children: [
         /* @__PURE__ */ jsxDEV("p", { className: "flexium-feature__help mb-3", children: str(strings, `footer_type_${block.type}_desc`) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 303,
+          lineNumber: 307,
           columnNumber: 37
         }, this),
         /* @__PURE__ */ jsxDEV(
@@ -420,14 +438,14 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 306,
+            lineNumber: 310,
             columnNumber: 37
           },
           this
         )
       ] }, void 0, true, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 302,
+        lineNumber: 306,
         columnNumber: 33
       }, this),
       panel.kind === "add" && /* @__PURE__ */ jsxDEV("ul", { className: "flexium-homepicker", children: editor.types.map((type) => /* @__PURE__ */ jsxDEV("li", { children: /* @__PURE__ */ jsxDEV(
@@ -440,12 +458,12 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
           children: [
             /* @__PURE__ */ jsxDEV("strong", { children: str(strings, `footer_type_${type}`) }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 319,
+              lineNumber: 323,
               columnNumber: 49
             }, this),
             /* @__PURE__ */ jsxDEV("span", { children: str(strings, `footer_type_${type}_desc`) }, void 0, false, {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 320,
+              lineNumber: 324,
               columnNumber: 49
             }, this)
           ]
@@ -454,27 +472,27 @@ function FooterPanel({ panel, layout, editor, strings, palette, onClose, onChang
         true,
         {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 317,
+          lineNumber: 321,
           columnNumber: 45
         },
         this
       ) }, type, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 316,
+        lineNumber: 320,
         columnNumber: 41
       }, this)) }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 314,
+        lineNumber: 318,
         columnNumber: 33
       }, this)
     ] }, void 0, true, {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 296,
+      lineNumber: 300,
       columnNumber: 25
     }, this)
   ] }, void 0, true, {
     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-    lineNumber: 288,
+    lineNumber: 292,
     columnNumber: 21
   }, this);
 }
@@ -584,7 +602,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
       onDragOver: (event) => overBlock(event, target, index),
       children: /* @__PURE__ */ jsxDEV(BlockView, { block, context }, void 0, false, {
         fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-        lineNumber: 443,
+        lineNumber: 447,
         columnNumber: 13
       }, this)
     },
@@ -592,17 +610,17 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
     false,
     {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 429,
+      lineNumber: 433,
       columnNumber: 9
     },
     this
   ) : !isEmptyBlock(block) && /* @__PURE__ */ jsxDEV("div", { className: "flexium-footer__block", children: /* @__PURE__ */ jsxDEV(BlockView, { block, context }, void 0, false, {
     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-    lineNumber: 446,
+    lineNumber: 450,
     columnNumber: 63
   }, this) }, block.id, false, {
     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-    lineNumber: 446,
+    lineNumber: 450,
     columnNumber: 9
   }, this)), "renderBlocks");
   const container = /* @__PURE__ */ __name((target, className, extra) => /* @__PURE__ */ jsxDEV(
@@ -624,7 +642,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
             children: [
               /* @__PURE__ */ jsxDEV("i", { className: "fa fa-plus me-1", "aria-hidden": "true" }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                lineNumber: 458,
+                lineNumber: 462,
                 columnNumber: 21
               }, this),
               str(strings, "footer_addblock")
@@ -634,7 +652,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
           true,
           {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 456,
+            lineNumber: 460,
             columnNumber: 17
           },
           this
@@ -645,7 +663,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 450,
+      lineNumber: 454,
       columnNumber: 9
     },
     this
@@ -672,7 +690,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 469,
+            lineNumber: 473,
             columnNumber: 17
           },
           this
@@ -685,7 +703,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
             children: layout.columns.map((column, index) => container(column.id, "flexium-footer__column", editing ? /* @__PURE__ */ jsxDEV("div", { className: "flexium-footer__columnbar", children: [
               /* @__PURE__ */ jsxDEV("span", { children: str(strings, "footer_column", index + 1) }, void 0, false, {
                 fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                lineNumber: 478,
+                lineNumber: 482,
                 columnNumber: 25
               }, this),
               /* @__PURE__ */ jsxDEV(
@@ -702,7 +720,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                   },
                   children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-left", "aria-hidden": "true" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                    lineNumber: 485,
+                    lineNumber: 489,
                     columnNumber: 29
                   }, this)
                 },
@@ -710,7 +728,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                  lineNumber: 479,
+                  lineNumber: 483,
                   columnNumber: 25
                 },
                 this
@@ -729,7 +747,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                   },
                   children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-arrow-right", "aria-hidden": "true" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                    lineNumber: 493,
+                    lineNumber: 497,
                     columnNumber: 29
                   }, this)
                 },
@@ -737,7 +755,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                  lineNumber: 487,
+                  lineNumber: 491,
                   columnNumber: 25
                 },
                 this
@@ -755,7 +773,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                   },
                   children: /* @__PURE__ */ jsxDEV("i", { className: "fa fa-trash-can", "aria-hidden": "true" }, void 0, false, {
                     fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                    lineNumber: 502,
+                    lineNumber: 506,
                     columnNumber: 29
                   }, this)
                 },
@@ -763,14 +781,14 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
                 false,
                 {
                   fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-                  lineNumber: 495,
+                  lineNumber: 499,
                   columnNumber: 25
                 },
                 this
               )
             ] }, void 0, true, {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 477,
+              lineNumber: 481,
               columnNumber: 21
             }, this) : void 0))
           },
@@ -778,24 +796,24 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
           false,
           {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 474,
+            lineNumber: 478,
             columnNumber: 13
           },
           this
         ),
         (layout.style.bottombar !== false || editing) && container("bottom", "flexium-footer__bottom", editing ? /* @__PURE__ */ jsxDEV("span", { className: "flexium-footer__columnbar", children: /* @__PURE__ */ jsxDEV("span", { children: str(strings, "footer_bottom") }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 508,
+          lineNumber: 512,
           columnNumber: 63
         }, this) }, void 0, false, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 508,
+          lineNumber: 512,
           columnNumber: 19
         }, this) : void 0),
         editing && editor && panel && /* @__PURE__ */ jsxDEV(Fragment, { children: [
           activeid && /* @__PURE__ */ jsxDEV(Spotlight, { zone: activeid }, void 0, false, {
             fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-            lineNumber: 512,
+            lineNumber: 516,
             columnNumber: 34
           }, this),
           /* @__PURE__ */ jsxDEV(
@@ -814,14 +832,14 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
             false,
             {
               fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-              lineNumber: 513,
+              lineNumber: 517,
               columnNumber: 21
             },
             this
           )
         ] }, void 0, true, {
           fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-          lineNumber: 511,
+          lineNumber: 515,
           columnNumber: 17
         }, this)
       ]
@@ -830,7 +848,7 @@ function SiteFooter({ layout: savedlayout, data, networks, palette, strings, edi
     true,
     {
       fileName: "public/theme/flexium/js/esm/src/footer/SiteFooter.tsx",
-      lineNumber: 465,
+      lineNumber: 469,
       columnNumber: 9
     },
     this
