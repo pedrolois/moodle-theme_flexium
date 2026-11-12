@@ -1,0 +1,19 @@
+# camp listing manifest (https://github.com/camp-registry/camp-docs/blob/main/AUTHORS.md).
+# Ingested and hash-pinned by camp at each tagged release.
+
+name: Flexium
+summary: A Boost-based theme with a searchable course catalogue and in-place editing of home page, footer and margins.
+description: |
+  Flexium is a configurable theme based on Boost. It replaces the course index
+  with a searchable, filterable course catalogue and lets site administrators
+  edit the catalogue, the site home page, the footer and the page margins in
+  place, with a live preview.
+
+  - Searchable, filterable course catalogue with a "Quick view" course field
+  - In-place editing with live preview, no web developer needed
+  - Requires Moodle 5.3 or later
+labels:
+  - fully-free
+links:
+  docs: https://github.com/pedrolois/moodle-theme_flexium#readme
+  issues: https://github.com/pedrolois/moodle-theme_flexium/issues
